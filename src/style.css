@@ -1,0 +1,19 @@
+:root {}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  background: var(--background);
+  color: var(--color);
+  text-shadow: 0 0 3px var(--color);
+  overflow: hidden;
+}
+
+#app {
+  width: 100dvw;
+  height: 100dvh;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
