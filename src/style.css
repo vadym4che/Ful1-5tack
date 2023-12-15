@@ -1,19 +1,50 @@
-:root {}
+:root {
+  font-size: 16px;
+  line-height: 100%;
+  font-family: 'Victor Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.h1, .h2, .h3 {
+  font-family: 'Syne', sans-serif;
+}
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  background: var(--background);
-  color: var(--color);
-  text-shadow: 0 0 3px var(--color);
+  color: var(--color0);
+  background: var(--bg0);
   overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, p, menu, ul, ol, li {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: var(--color0);
+}
+a:visited {
+  color: var(--color0);
+}
+a:hover {
+  color: var(--color0);
+}
+a:active {
+  color: var(--color0);
 }
 
 #app {
   width: 100dvw;
   height: 100dvh;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  font-size: 1rem;
+  padding: 0 11dvw;
 }

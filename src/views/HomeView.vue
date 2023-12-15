@@ -1,29 +1,59 @@
 <template>
-  <div>
-    <h1>🌱 1 seed 2 tree 3 🌳</h1>
-    <h2>
-      Only one thing you need<br>
-      is to give us the seed<br>
-      we'll grow a tree from it<br>
-      for you and that's it<br>
-    </h2>
-    <h2>
-      Home
-    </h2>
-  </div>
+  <section class="header">
+    <h1 class="h1">
+      Full-stack Web Development<br>
+      for Your Brand
+
+      <HighLight />
+    </h1>
+
+    <button>EXPLORE WORKS <ArrowRight /></button>
+
+    <div class="hero">
+      hero
+    </div>
+  </section>
 </template>
 
 <script setup>
-
+import ArrowRight from '../components/ArrowRight.vue';
+import HighLight from '../components/HighLight.vue';
 </script>
 
 <style lang="scss" scoped>
-h2:first-of-type {
-  text-align: right;
+.header {
+  margin: 12rem 0 0;
+  text-align: center;
 }
 
-h1, h2:first-of-type {
-  width: 25dvw;
+.h1 {
+  font-family: Syne;
+  font-size: 5rem;
+  line-height: 5rem;
+  font-weight: 700;
+  margin: 0 auto;
+  width: 60dvw;
+  position: relative;
+
+  & .highlight {
+    position: absolute;
+    top: -25dvw;
+    right: -25dvw;
+  }
 }
 
+button {
+  margin-top: 6rem;
+  height: 4rem;
+  border-radius: 2rem;
+  font-weight: 700;
+  color: var(--color0);
+  padding: 1rem 2rem;
+  background: var(--accent0);
+  border-color: transparent;
+}
+
+.hero {
+  margin-top: 14.5rem;
+}
 </style>

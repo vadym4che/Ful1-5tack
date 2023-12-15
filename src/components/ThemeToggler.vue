@@ -2,17 +2,30 @@
   <button
     @click="toggleTheme"
     class="theme-toggler"
-    :title="{theme}"
+    :title="`Toggle theme to ${theme === 'light' ? 'dark' : 'light'}`"
   >
-    to
-    <span id="spot">
-      <!-- {{ theme === 'light' ? 'dark' : 'light' }} -->
-    </span>
+    <span id="spot" :style="{background: `radial-gradient(ellipse at ${offsetX}% ${offsetY}%, var(--accent1), var(--color0))`}">{{theme === 'light' ? '🌙' : '🌞'}}</span>
+    <h2 style="display: none;">
+      {{ width }} {{ height }}<br>
+      {{ x }} {{ y }}<br>
+      {{ offsetX }} {{ offsetY }}
+    </h2>
   </button>
 </template>
 
 <script setup>
-import { ref, onMounted, watch } from 'vue'
+import { ref, onMounted, watch, onUpdated } from 'vue'
+import { useMouse, useWindowSize } from '@vueuse/core'
+
+const { x, y } = useMouse()
+const { width, height } = useWindowSize()
+const offsetX = ref(50)
+const offsetY = ref(50)
+
+onUpdated(() => {
+  offsetX.value = (x.value / width.value) * 100 || 50
+  offsetY.value = (y.value / height.value) * 100 || 50
+})
 
 const theme = ref(
   localStorage.getItem('theme')
@@ -36,24 +49,19 @@ onMounted(() => {
 
 <style lang="scss">
 [data-theme="dark"] {
-  --background: hsl(300, 60%, 5%);
-  --color: hsl(120, 57%, 90%);
-  --accent0: #cb43cb;
-  --accent1: #4c4;
-  --accent2: hsl(300, 60%, 80%);
-  
-  transition: color 1s, background 1s, backgroundColor 1s, boxShadow 1s;
-  -webkit-transition: color 1s, background 1s, backgroundColor 1s, boxShadow 1s;
-  -moz-transition: color 1s, background 1s, backgroundColor 1s, boxShadow 1s;
-  -ms-transition: color 1s, background 1s, backgroundColor 1s, boxShadow 1s;
-  -o-transition: color 1s, background 1s, backgroundColor 1s, boxShadow 1s;
-}
+  --bg0: #131313;
+  --bg1: #1a1a1a;
+  --color0: #ffffff;
+  --color1: #f4f7fa;
+  --color2: #a8a8a8;
+  --color3: #949494;
 
-[data-theme="light"] {
-  --background: hsl(120, 57%, 95%);
-  --color: hsl(300, 60%, 10%);
-  --accent0: #4c4;
-  --accent1: #cb43cb;
+  --bborder: rgba(255, 255, 255, 0.30);
+  --bbg: rgba(3, 3, 4, 0.50);
+
+  --accent0: #cb43cb;
+
+  --accent1: #4c4;
   --accent2: hsl(120, 57%, 66%);
 
   transition: color 1s, background 1s, backgroundColor 1s, boxShadow 1s;
@@ -63,149 +71,56 @@ onMounted(() => {
   -o-transition: color 1s, background 1s, backgroundColor 1s, boxShadow 1s;
 }
 
-@keyframes spherify {
-  0% {
-    background: radial-gradient(ellipse at 0% 0%, var(--accent2), var(--accent1));
-  }
-  10% {
-    background: radial-gradient(ellipse at 10% 10%, var(--accent2), var(--accent1));
-  }
-  20% {
-    background: radial-gradient(ellipse at 20% 20%, var(--accent2), var(--accent1));
-  }
-  30% {
-    background: radial-gradient(ellipse at 30% 30%, var(--accent2), var(--accent1));
-  }
-  40% {
-    background: radial-gradient(ellipse at 40% 40%, var(--accent2), var(--accent1));
-  }
-  50% {
-    background: radial-gradient(ellipse at center, var(--accent2), var(--accent1));
-  }
-  60% {
-    background: radial-gradient(ellipse at 60% 60%, var(--accent2), var(--accent1));
-  }
-  70% {
-    background: radial-gradient(ellipse at 70% 70%, var(--accent2), var(--accent1));
-  }
-  80% {
-    background: radial-gradient(ellipse at 80% 80%, var(--accent2), var(--accent1));
-  }
-  90% {
-    background: radial-gradient(ellipse at 90% 90%, var(--accent2), var(--accent1));
-  }
-  100% {
-    background: radial-gradient(ellipse at 100% 100%, var(--accent2), var(--accent1));
-  }
-}
+[data-theme="light"] {
+  --bg0: rgb(236, 236, 236);
+  --bg1: rgb(26, 26, 26);
+  --color0: #000000;
+  --color1: #f4f7fa;
+  --color2: #a8a8a8;
+  --color3: #949494;
 
-@keyframes spherify1 {
-  0% {
-    background: radial-gradient(ellipse at 0% 0%, var(--accent2), var(--accent1));
-  }
-  5% {
-    background: radial-gradient(ellipse at 10% 10%, var(--accent2), var(--accent1));
-  }
-  10% {
-    background: radial-gradient(ellipse at 20% 20%, var(--accent2), var(--accent1));
-  }
-  15% {
-    background: radial-gradient(ellipse at 30% 30%, var(--accent2), var(--accent1));
-  }
-  20% {
-    background: radial-gradient(ellipse at 40% 40%, var(--accent2), var(--accent1));
-  }
-  25% {
-    background: radial-gradient(ellipse at center, var(--accent2), var(--accent1));
-  }
-  30% {
-    background: radial-gradient(ellipse at 60% 60%, var(--accent2), var(--accent1));
-  }
-  35% {
-    background: radial-gradient(ellipse at 70% 70%, var(--accent2), var(--accent1));
-  }
-  40% {
-    background: radial-gradient(ellipse at 80% 80%, var(--accent2), var(--accent1));
-  }
-  45% {
-    background: radial-gradient(ellipse at 90% 90%, var(--accent2), var(--accent1));
-  }
-  50% {
-    background: radial-gradient(ellipse at 100% 100%, var(--accent2), var(--accent1));
-  }
-  55% {
-    background: radial-gradient(ellipse at 90% 90%, var(--accent2), var(--accent1));
-  }
-  60% {
-    background: radial-gradient(ellipse at 80% 80%, var(--accent2), var(--accent1));
-  }
-  65% {
-    background: radial-gradient(ellipse at 70% 70%, var(--accent2), var(--accent1));
-  }
-  70% {
-    background: radial-gradient(ellipse at 60% 60%, var(--accent2), var(--accent1));
-  }
-  75% {
-    background: radial-gradient(ellipse at center, var(--accent2), var(--accent1));
-  }
-  80% {
-    background: radial-gradient(ellipse at 40% 40%, var(--accent2), var(--accent1));
-  }
-  85% {
-    background: radial-gradient(ellipse at 30% 30%, var(--accent2), var(--accent1));
-  }
-  90% {
-    background: radial-gradient(ellipse at 20% 20%, var(--accent2), var(--accent1));
-  }
-  95% {
-    background: radial-gradient(ellipse at 10% 10%, var(--accent2), var(--accent1));
-  }
-  100% {
-    background: radial-gradient(ellipse at 0% 0%, var(--accent2), var(--accent1));
-  }
+  --bborder: rgba(255, 255, 255, 0.30);
+  --bbg: rgba(3, 3, 4, 0.50);
+
+  --accent0: #4c4;
+
+  --accent1: #cb43cb;
+  --accent2: hsl(300, 60%, 80%);
+
+  transition: color 1s, background 1s, backgroundColor 1s, boxShadow 1s;
+  -webkit-transition: color 1s, background 1s, backgroundColor 1s, boxShadow 1s;
+  -moz-transition: color 1s, background 1s, backgroundColor 1s, boxShadow 1s;
+  -ms-transition: color 1s, background 1s, backgroundColor 1s, boxShadow 1s;
+  -o-transition: color 1s, background 1s, backgroundColor 1s, boxShadow 1s;
 }
 
 .theme-toggler {
   background-color: transparent;
   border: none;
-  color: var(--accent0);
-  padding: 1rem;
-  font-size: 4rem;
-  z-index: 0;
+  z-index: 1;
   transition: transform 0.5s;
-  position: relative;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  opacity: 0.75;
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   #spot {
-    color: var(--accent1);
-
-    &:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 6rem;
-      height: 6rem;
-      border-radius: 50%;
-      background: radial-gradient(var(--accent1), var(--background));
-
-      animation: spherify 1s linear forwards;
-    }
-
-  }
-
-  &:hover #spot:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 6rem;
-    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color0);
+    font-size: 1rem;
+    line-height: 1rem;
+    width: 3rem;
+    height: 3rem;
     border-radius: 50%;
-    animation: spherify1 2s linear infinite;
+    background: radial-gradient(ellipse at 0% 0%, var(--accent2), var(--accent1));
   }
-}
-
-.theme-toggler:hover {
-  transform: scale(1.2);
 }
 </style>
