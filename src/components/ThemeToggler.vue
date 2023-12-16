@@ -60,9 +60,9 @@ onMounted(() => {
   --color2: #a8a8a8;
   --color3: #949494;
 
-  --accent0: #cb43cb;
+  --accent1: #cb43cb;
 
-  --accent1: #4c4;
+  --accent0: #4c4;
   --accent2: hsl(120, 57%, 66%);
 
   transition: color 1s, background 1s, backgroundColor 1s, boxShadow 1s;
@@ -85,9 +85,9 @@ onMounted(() => {
   --bborder: rgba(255, 255, 255, 0.30);
   --bbg: rgba(3, 3, 4, 0.50);
 
-  --accent0: #4c4;
+  --accent1: #4c4;
 
-  --accent1: #cb43cb;
+  --accent0: #cb43cb;
   --accent2: hsl(300, 60%, 80%);
 
   transition: color 1s, background 1s, backgroundColor 1s, boxShadow 1s;

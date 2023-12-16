@@ -18,6 +18,12 @@
 </script>
 
 <style lang="scss" scoped>
+.highlight {
+  width: 60vmin;
+  height: 40vmin;
+  transform: rotate(10deg);
+}
+
 .path {
   fill: var(--accent0);
 }
