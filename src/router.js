@@ -3,6 +3,10 @@ import HomeView from '@/views/HomeView.vue'
 
 const routes = [
   {
+    path: '/',
+    redirect: '/home', // Redirect root path to the Home route
+  },
+  {
     path: '/home',
     name: 'Home',
     component: HomeView,
@@ -34,14 +38,14 @@ const router = createRouter({
   routes,
 });
 
-let isFirstLoad = !history.length
-router.beforeEach((to, from, next) => {
-  if (isFirstLoad) {
-    isFirstLoad = false
-    next({ name: 'Home' })
-  } else {
-    next()
-  }
-})
+// let isFirstLoad = !history.length
+// router.beforeEach((to, from, next) => {
+//   if (isFirstLoad) {
+//     isFirstLoad = false
+//     next({ name: 'Home' })
+//   } else {
+//     next()
+//   }
+// })
 
 export default router

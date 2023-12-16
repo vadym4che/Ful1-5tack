@@ -50,14 +50,15 @@ onMounted(() => {
 <style lang="scss">
 [data-theme="dark"] {
   --bg0: #131313;
-  --bg1: #1a1a1a;
+  --bg50: #13131388;
+  --bg2: #1a1a1a;
+
   --color0: #ffffff;
+  --color50: #ffffff88;
+
   --color1: #f4f7fa;
   --color2: #a8a8a8;
   --color3: #949494;
-
-  --bborder: rgba(255, 255, 255, 0.30);
-  --bbg: rgba(3, 3, 4, 0.50);
 
   --accent0: #cb43cb;
 
@@ -72,9 +73,11 @@ onMounted(() => {
 }
 
 [data-theme="light"] {
-  --bg0: rgb(236, 236, 236);
-  --bg1: rgb(26, 26, 26);
+  --bg0: #ececec;
+  --bg50: #ececec88;
+  --bg2: rgb(26, 26, 26);
   --color0: #000000;
+  --color50: #00000088;
   --color1: #f4f7fa;
   --color2: #a8a8a8;
   --color3: #949494;
@@ -99,16 +102,12 @@ onMounted(() => {
   border: none;
   z-index: 1;
   transition: transform 0.5s;
-  position: absolute;
-  top: 0;
-  right: 0;
   cursor: pointer;
   opacity: 0.75;
-  width: 5rem;
   height: 5rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  padding: 0 4rem;
 
   #spot {
     display: flex;

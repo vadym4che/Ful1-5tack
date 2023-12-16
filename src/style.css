@@ -1,6 +1,6 @@
 :root {
-  font-size: 16px;
-  line-height: 100%;
+  font-size: 1.4vmin;
+  line-height: normal;
   font-family: 'Victor Mono', monospace;
 }
 
@@ -8,15 +8,37 @@
   box-sizing: border-box;
 }
 
-.h1, .h2, .h3 {
+.h1, .h2, .h3, .h4 {
   font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.h1 {
+  font-size: 4.5rem;
+  line-height: 110%;
+  letter-spacing: -0.045rem;
+}
+
+.h2 {
+  font-size: 4rem;
+  line-height: 140%;
+  letter-spacing: -0.04rem;
+}
+
+.h3 {
+  font-size: 3.5rem;
+  line-height: 125%;
+  letter-spacing: -0.035rem;
 }
 
 body {
   margin: 0;
   color: var(--color0);
   background: var(--bg0);
-  overflow: hidden;
+  overflow-x: hidden;
+  height: 345.625vmin;
+  height: 200dvh;
 }
 
 h1, h2, h3, h4, h5, h6, p, menu, ul, ol, li {
@@ -24,27 +46,18 @@ h1, h2, h3, h4, h5, h6, p, menu, ul, ol, li {
   padding: 0;
 }
 
+button {
+  cursor: pointer;
+}
+
 a {
   text-decoration: none;
 }
 
-a:link {
-  color: var(--color0);
-}
-a:visited {
-  color: var(--color0);
-}
-a:hover {
-  color: var(--color0);
-}
-a:active {
-  color: var(--color0);
-}
-
 #app {
   width: 100dvw;
-  height: 100dvh;
   margin: 0 auto;
   font-size: 1rem;
   padding: 0 11dvw;
+  overflow: hidden;
 }
