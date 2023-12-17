@@ -1,5 +1,5 @@
 <template>
-  <section class="head content">
+  <section class="head content flex-col-center">
     <h1 class="h1">
       Crafting Digital Solutions<br>from End to End.
       <HighLight />
@@ -13,14 +13,14 @@
   </section>
 
   <section class="hero">
-    <div class="left content">
+    <div class="left content flex-col-center">
       <div class="text">
         <h2 class="h2">
           <HighLight />
           Let’s get know<br>about me closer
         </h2>
   
-        <p class="p">
+        <p class="p3">
           Hello, I'm Vadym Chervoniak, a dedicated full-stack developer based in Ukraine. With a strong emphasis on crafting modern UIs and prioritizing simplicity in the back-end, I specialize in creating seamless and innovative web solutions. My portfolio reflects a diverse array of projects, showcasing my proficiency in utilizing various technologies and my experience in integrating different web APIs.
         </p>
       </div>
@@ -35,16 +35,33 @@
     <div class="right">
     </div>
   </section>
+
+  <section class="projects flex-col-center">
+    <h2 class="h2">
+      My Projects Highlight
+      <HighLight />
+    </h2>
+
+    <button>
+      <router-link to="/myworks">
+        EXPLORE MORE <ArrowRight />
+      </router-link>
+    </button>
+
+    <Three />
+  </section>
 </template>
 
 <script setup>
-import ArrowRight from '@/components/ArrowRight.vue';
-import HighLight from '@/components/HighLight.vue';
+import { defineAsyncComponent } from 'vue'
+import ArrowRight from '@/components/ArrowRight.vue'
+import HighLight from '@/components/HighLight.vue'
+const Three = defineAsyncComponent(() => import('@/components/Three.vue'))
 </script>
 
 <style lang="scss" scoped>
 section {
-  height: 100dvh;
+  height: 50dvh;
   border: 1px solid var(--accent1);
 }
 
@@ -135,26 +152,62 @@ section {
 }
 
 .content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   gap: 6rem;
 }
 
-
-.head button,
-.hero button {
+button {
   border-radius: 2rem;
+  border-width: 0.125rem;
   font-weight: 700;
   padding: 1rem 2rem;
-  background: var(--accent0);
-  border-color: transparent;
   position: relative;
   z-index: 1;
 
   & > * {
     color: var(--color0);
+  }
+}
+
+
+.head button,
+.hero button {
+  background: var(--accent0);
+  border-color: transparent;
+}
+
+.projects {
+  padding: 2rem 0;
+  .h2 {
+    text-align: center;
+    position: relative;
+
+    & .highlight {
+      position: absolute;
+      top: -10rem;
+      right: -12rem;
+    }
+  }
+
+  button {
+    height: 4rem;
+    background: var(--bg50);
+    border-color: var(--accent0);
+
+    margin: 1.5rem 0 2.5rem 0;
+  }
+}
+
+@media (orientation: portrait) {
+  section {
+    height: 50dvh;
+    border: 1px solid var(--accent1);
+  }
+}
+
+@media (orientation: landscape) {
+  section {
+    height: 100dvh;
+    border: 1px solid var(--accent1);
   }
 }
 </style>

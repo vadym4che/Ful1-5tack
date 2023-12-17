@@ -31,8 +31,8 @@ const { y: scrollY } = useWindowScroll()
     display: block;
     top: 50%;
     left: 50%;
-    width: 100vmax;
-    height: 100vmax;
+    width: 100vmin;
+    height: 100vmin;
     border-radius: 50%;
     background: radial-gradient(var(--accent0) 5%, transparent);
     transform: translate3d(-50%, -50%, 0);
