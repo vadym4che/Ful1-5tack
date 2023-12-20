@@ -49,6 +49,7 @@ onMounted(() => {
 
 <style lang="scss">
 [data-theme="dark"] {
+  --is-dark: 1;
   --bg0: #131313;
   --bg50: #13131388;
   --bg2: #1a1a1a;
@@ -64,37 +65,28 @@ onMounted(() => {
 
   --accent0: #4c4;
   --accent2: hsl(120, 57%, 66%);
-
-  transition: color 1s, background 1s, backgroundColor 1s, boxShadow 1s;
-  -webkit-transition: color 1s, background 1s, backgroundColor 1s, boxShadow 1s;
-  -moz-transition: color 1s, background 1s, backgroundColor 1s, boxShadow 1s;
-  -ms-transition: color 1s, background 1s, backgroundColor 1s, boxShadow 1s;
-  -o-transition: color 1s, background 1s, backgroundColor 1s, boxShadow 1s;
 }
 
 [data-theme="light"] {
+  --is-dark: 0;
   --bg0: #ececec;
   --bg50: #ececec88;
-  --bg2: rgb(26, 26, 26);
+  --bg2: #dbdbdb;
+
   --color0: #000000;
   --color50: #00000088;
-  --color1: #f4f7fa;
-  --color2: #a8a8a8;
-  --color3: #949494;
 
-  --bborder: rgba(255, 255, 255, 0.30);
+  --color1: #0b0805;
+  --color2: #575757;
+  --color3: #6b6b6b;
+
+  --bborder: rgba(255, 255, 2507 0.30);
   --bbg: rgba(3, 3, 4, 0.50);
 
   --accent1: #4c4;
 
   --accent0: #cb43cb;
   --accent2: hsl(300, 60%, 80%);
-
-  transition: color 1s, background 1s, backgroundColor 1s, boxShadow 1s;
-  -webkit-transition: color 1s, background 1s, backgroundColor 1s, boxShadow 1s;
-  -moz-transition: color 1s, background 1s, backgroundColor 1s, boxShadow 1s;
-  -ms-transition: color 1s, background 1s, backgroundColor 1s, boxShadow 1s;
-  -o-transition: color 1s, background 1s, backgroundColor 1s, boxShadow 1s;
 }
 
 .theme-toggler {

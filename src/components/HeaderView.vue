@@ -2,7 +2,7 @@
   <header>
     <menu>
       <span class="logo menu-item">
-        VADYM4<img src="@/../public/logo.png" alt="logo" class="logo-image">HE
+        VADYM4<img src="/logo.png" alt="logo" class="logo-image">HE
       </span>
 
       <li class="menu-item">

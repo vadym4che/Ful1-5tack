@@ -5,6 +5,7 @@ export default [
     stack: ['Vue3', 'Vuetify', 'Firebase'],
     tags: ['UI', 'FE', 'BE', 'DB'],
     desc: '',
+    path: 'feedback-app',
   },
   {
     link: 'https://vadym4che.github.io/vue-weather-app/',
@@ -12,6 +13,7 @@ export default [
     stack: ['Vue3', 'axios', 'i18n', 'Gmaps'],
     tags: ['UI', 'FE', 'API'],
     desc: '',
+    path: 'weather-vue3',
   },
   {
     link: 'https://vadym4che.github.io/e-time/',
@@ -19,6 +21,7 @@ export default [
     stack: ['Vite' ,'Vue3', 'SCSS'],
     tags: ['UI', 'FE', 'API'],
     desc: '',
+    path: 'calendar-app',
   },
   {
     link: '',
@@ -26,5 +29,6 @@ export default [
     stack: [''],
     tags: ['FE'],
     desc: '',
+    path: '',
   },
 ]

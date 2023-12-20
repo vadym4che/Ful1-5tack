@@ -1,12 +1,141 @@
 <template>
   <footer>
-    Footer
+    <h4 class="h4 top">
+      Get in Touch With Me
+    </h4>
+    <h2 class="h1 mail">
+      <a href="mailto:vadym4che@gmail.com">vadym4che@gmail.com</a>
+    </h2>
+
+    <div class="grid">
+      <span class="logo scale2">
+        VADYM4<img src="/logo.png" alt="logo" class="logo-image">HE
+      </span>
+
+      <span></span>
+
+      <address>
+        <h4 class="h4">
+          Street Kniazia Ostrozkogo,<br>
+          Boiarka, Kyivs'ka oblast,<br>
+          08150
+        </h4>
+      </address>
+
+      <div class="contacts">
+        <h4 class="h4">
+          <a href="tel:+380505444199">
+              +380-505-444-199
+          </a>
+        </h4>
+
+        <div class="links">
+          <h4 class="h4">
+            <a href="https://github.com/vadym4che">
+              <img src="/github.svg" alt="github logo">&nbsp;
+            </a>
+          </h4>
+          <h4 class="h4">
+            <a href="https://t.me/vadym4che">
+              <img src="/telegram.png" alt="telegram logo">&nbsp;
+            </a>
+          </h4>
+          <h4 class="h4">
+            <a href="mailto:vadym4che@gmail.com">
+              <img src="/mail.png" alt="mail logo">&nbsp;
+            </a>
+          </h4>
+        </div>
+      </div>
+    </div>
+
+    <h4 class="h4 hr-above">
+      © 2023. Vadym4CHe. All rights reserved.
+    </h4>
   </footer>
 </template>
 
 <script setup>
-
 </script>
 
 <style lang="scss" scoped>
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  /* height: 47rem; */
+  background: var(--bg2);
+  padding: 0 11dvw;
+  width: 100dvw;
+  position: relative;
+  left: -11dvw;
+  .h4 {
+    width: 100%;
+  }
+  .h4.hr-above {
+    text-align: center;
+    border-top: 0.125rem solid var(--color2);
+    padding: 2.25rem 0 5rem 0;
+  }
+  .h4.top {
+    text-align: center;
+    padding: 6rem 0 1.5rem 0;
+    color: var(--accent0);
+  }
+
+  .h1 {
+    padding-bottom: 12rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 3fr 3fr 2fr;
+    padding-bottom: 2.5rem;
+    width: 100%;
+    height: 8rem;
+    position: relative;
+  }
+}
+.logo {
+  font-size: 1.3rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  left: 1rem;
+  top: 0;
+
+  img {
+    margin-top: 0.23rem;
+  }
+
+  address,
+  address > h4 {
+    text-align: left !important;
+  }
+}
+.scale2 {
+  transform: scale(2) translate(0, 25%);
+}
+
+.links {
+  .h4 {
+    width: 3rem;
+  }
+  padding-top: 1rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+.links img {
+  width: 2.5rem;
+  height: 2.5rem;
+
+  filter: invert(var(--is-dark));
+}
+
+.mail a {
+  text-decoration: underline;
+}
 </style>

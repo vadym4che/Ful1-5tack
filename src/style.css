@@ -8,6 +8,21 @@
   box-sizing: border-box;
 }
 
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: var(--color0);
+}
+
+body {
+  transition: color 1s, background 1s, backgroundColor 1s, boxShadow 1s;
+  -webkit-transition: color 1s, background 1s, backgroundColor 1s, boxShadow 1s;
+  -moz-transition: color 1s, background 1s, backgroundColor 1s, boxShadow 1s;
+  -ms-transition: color 1s, background 1s, backgroundColor 1s, boxShadow 1s;
+  -o-transition: color 1s, background 1s, backgroundColor 1s, boxShadow 1s;
+}
+
 .h1, .h2, .h3, .h4 {
   font-family: 'Syne', sans-serif;
   font-weight: 700;
@@ -39,6 +54,7 @@
 .h4 {
   font-size: 1.5rem;
   line-height: 2rem;
+  letter-spacing: -0.025rem;
 }
 
 .p1 {
@@ -62,6 +78,38 @@
 
 .dimmed {
   color: var(--color2)
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.t1, .t2 {
+  font-family: 'Inter', sans-serif;
+}
+
+.t1 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.25rem;
+  text-transform: uppercase;
+}
+
+.t2 {
+  font-size: 1.33rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 2.5rem;
+  letter-spacing: -0.04rem;
 }
 
 body {
