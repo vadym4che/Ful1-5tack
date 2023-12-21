@@ -43,16 +43,29 @@ const three = projects.slice(0, 3)
     grid-template-rows: 10fr 1fr 1fr;
 
     .frame {
+      box-sizing: border-box;
+      border: none;
       border-radius: 1rem !important;
-      overflow: hidden;
+      overflow: hidden !important;
+      transform: none;
+      position: relative;
+      width: 100%;
+      aspect-ratio: 9 / 16;
 
       iframe {
+        box-sizing: border-box;
+        border: none;
         width: 100%;
         aspect-ratio: 9 / 16;
+        position: absolute;
       }
     }
     .frame0 {
-      transform: scaleX(1.1);
+      transform: scale(1.07) translate(3%, 2%);
+    }
+
+    .frame1, .frame2 {
+      transform: scale(1.01) translate(0.5%, 0.5%);
     }
 
     .h4 {

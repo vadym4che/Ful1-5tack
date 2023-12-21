@@ -8,6 +8,47 @@
   box-sizing: border-box;
 }
 
+
+body {
+  margin: 0;
+  color: var(--color0);
+  background: var(--bg0);
+  overflow-x: hidden;
+  transition: color 1s, background 1s, backgroundColor 1s, boxShadow 1s;
+  -webkit-transition: color 1s, background 1s, backgroundColor 1s, boxShadow 1s;
+  -moz-transition: color 1s, background 1s, backgroundColor 1s, boxShadow 1s;
+  -ms-transition: color 1s, background 1s, backgroundColor 1s, boxShadow 1s;
+  -o-transition: color 1s, background 1s, backgroundColor 1s, boxShadow 1s;
+}
+
+/* Set the style for the scrollbar */
+body::-webkit-scrollbar {
+  width: 0.5rem; /* width of the scrollbar */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb);
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: var(--scrollbar-track); /* color of the scrollbar track */
+}
+
+/* Set the style for the scrollbar on hover */
+body::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-thumb_hover);
+}
+
+/* Set the style for the scrollbar track on hover */
+body::-webkit-scrollbar-track:hover {
+  background-color: var(--scrollbar-track_hover);
+}
+
 a:link,
 a:visited,
 a:hover,
@@ -15,12 +56,25 @@ a:active {
   color: var(--color0);
 }
 
-body {
-  transition: color 1s, background 1s, backgroundColor 1s, boxShadow 1s;
-  -webkit-transition: color 1s, background 1s, backgroundColor 1s, boxShadow 1s;
-  -moz-transition: color 1s, background 1s, backgroundColor 1s, boxShadow 1s;
-  -ms-transition: color 1s, background 1s, backgroundColor 1s, boxShadow 1s;
-  -o-transition: color 1s, background 1s, backgroundColor 1s, boxShadow 1s;
+h1, h2, h3, h4, h5, h6, p, menu, ul, ol, li {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+#app {
+  width: 100dvw;
+  margin: 0 auto;
+  font-size: 1rem;
+  padding: 0 11dvw;
+  overflow: hidden;
 }
 
 .h1, .h2, .h3, .h4 {
@@ -112,34 +166,6 @@ body {
   letter-spacing: -0.04rem;
 }
 
-body {
-  margin: 0;
-  color: var(--color0);
-  background: var(--bg0);
-  overflow-x: hidden;
-}
-
-h1, h2, h3, h4, h5, h6, p, menu, ul, ol, li {
-  margin: 0;
-  padding: 0;
-}
-
-button {
-  cursor: pointer;
-}
-
-a {
-  text-decoration: none;
-}
-
-#app {
-  width: 100dvw;
-  margin: 0 auto;
-  font-size: 1rem;
-  padding: 0 11dvw;
-  overflow: hidden;
-}
-
 .flex-col-center {
   display: flex;
   flex-direction: column;
@@ -150,4 +176,18 @@ a {
 .flex-col-start {
   display: flex;
   flex-direction: column;
+}
+
+@media (orientation: portrait) {
+  section {
+    height: 50dvh;
+    /* border: 1px solid var(--accent1); */
+  }
+}
+
+@media (orientation: landscape) {
+  section {
+    height: 100dvh;
+    /* border: 1px solid var(--accent1); */
+  }
 }

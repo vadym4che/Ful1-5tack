@@ -1,54 +1,70 @@
 const slidesArray = [
   {
-    title: 'Version Control',
+    title: 'Exploring System & Environments',
     content: [
-      { name: 'Git', path: '/git.webp' },
-      { name: 'GitHub', path: '/github.webp' },
+      { name: 'Windows', path: '/windows.webp' },
+      { name: 'Linux', path: '/linux.webp' },
+      { name: 'WSL', path: '/wsl.webp' },
+    ],
+  },
+  {
+    title: 'Navigating Command Line Interfaces',
+    content: [
+      { name: 'PowerShell', path: '/powershell.webp' },
       { name: 'Bash', path: '/bash.webp' },
+      { name: 'any CLI --help', path: '/cli.webp' },
     ],
   },
   {
-    title: 'Frontend Development',
+    title: 'Crafting Development Software Tools',
     content: [
-      { name: 'Vite', path: '/vite.webp' },
-      { name: 'Node.js', path: '/node.webp' },
-      { name: 'npm', path: '/npm.webp' },
+      { name: 'Figma', path: '/figma.webp' },
+      { name: 'VSCode', path: '/code.webp' },
+      { name: 'Postman', path: '/postman.webp' },
     ],
   },
   {
-    title: 'Web Design',
+    title: 'Mastering Programming Languages',
+    content: [
+      { name: 'PHP', path: '/php.webp' },
+      { name: 'JavaScript ES6', path: '/js6.webp' },
+      { name: 'Python', path: '/python.webp' },
+    ],
+  },
+  {
+    title: 'Following World-Wide-Web Standards',
     content: [
       { name: 'HTML5', path: '/html5.webp' },
       { name: 'CSS3', path: '/css3.webp' },
-      { name: 'Figma', path: '/figma.webp' },
+      { name: 'JavaScript ES6', path: '/js6.webp' },
     ],
   },
   {
-    title: 'CSS Preprocessors',
+    title: 'Embracing the Processing Toolkit',
     content: [
       { name: 'Sass', path: '/sass.webp' },
+      { name: 'Vite', path: '/vite.webp' },
+      { name: 'TypeScript', path: '/ts2020.webp' },
+    ],
+  },
+  {
+    title: 'Designing with CSS and UI Frameworks',
+    content: [
+      { name: 'Material UI', path: '/mui.webp' },
+      { name: 'Vutify', path: '/vuetify.webp' },
+      { name: 'Tailwind CSS', path: '/tailwind.webp' },
+    ],
+  },
+  {
+    title: 'Visualizing Advanced Graphics Concepts',
+    content: [
+      { name: 'SVG, Canvas', path: '/logo.png' },
       { name: 'WebGL', path: '/webgl.webp' },
       { name: 'Three.js', path: '/threejs.webp' },
     ],
   },
   {
-    title: 'JavaScript',
-    content: [
-      { name: 'JavaScript ES6', path: '/js6.webp' },
-      { name: 'ECMAScript 6', path: '/es6.webp' },
-      { name: 'TypeScript 2020', path: '/ts2020.webp' },
-    ],
-  },
-  {
-    title: 'APIs and Networking',
-    content: [
-      { name: 'JSON', path: '/json.webp' },
-      { name: 'REST', path: '/rest.webp' },
-      { name: 'Postman', path: '/postman.webp' },
-    ],
-  },
-  {
-    title: 'JavaScript Frameworks',
+    title: 'Adopting JavaScript Frameworks',
     content: [
       { name: 'Vue.js', path: '/vue.webp' },
       { name: 'Nuxt.js', path: '/nuxt.webp' },
@@ -56,28 +72,60 @@ const slidesArray = [
     ],
   },
   {
-    title: 'Python Web Development',
+    title: 'Advancing in Backend Development',
     content: [
-      { name: 'Python', path: '/python.webp' },
-      { name: 'Flask', path: '/flask.webp' },
       { name: 'Django', path: '/django.webp' },
+      { name: 'Node.js', path: '/node.webp' },
+      { name: 'Laravel', path: '/laravel.webp' },
     ],
   },
   {
-    title: 'PHP Development',
+    title: 'Using Package Managers Effectively',
     content: [
-      { name: 'PHP', path: '/php.webp' },
-      { name: 'Laravel', path: '/laravel.webp' },
-      { name: 'WordPress', path: '/wordpress.webp' },
+      { name: 'PyPI', path: '/pypi.webp' },
+      { name: 'NPM', path: '/npm.webp' },
+      { name: 'Composer', path: '/composer.webp' },
     ],
   },
-]
+  {
+    title: 'Connecting with APIs and Networking',
+    content: [
+      { name: 'JSON', path: '/json.webp' },
+      { name: 'REST', path: '/rest.webp' },
+      { name: 'GraphQL', path: '/graphql.webp' },
+    ],
+  },
+  {
+    title: 'Managing Databases Effectively',
+    content: [
+      { name: 'MongoDB', path: '/mongodb.webp' },
+      { name: 'PostgreSQL', path: '/postgresql.webp' },
+      { name: 'Firebase', path: '/firebase.webp' },
+    ],
+  },
+  {
+    title: 'Extending Platforms Acquaintance',
+    content: [
+      { name: 'AWS', path: '/aws.webp' },
+      { name: 'GCP', path: '/gcp.webp' },
+      { name: 'Azure', path: '/azure.webp' },
+    ],
+  },
+  {
+    title: 'Versioning with Version Control Systems',
+    content: [
+      { name: 'Git', path: '/git.webp' },
+      { name: 'GitHub', path: '/github.webp' },
+      { name: 'GitLab', path: '/gitlab.webp' },
+    ],
+  },
+];
 
 
 const arrayToHTML = (content) => content.map(item => `
-  <div class="content">
-    <div style="background-image: url('${item.path}')" class="image"></div>
-    <p class="p2">${item.name}</p>
+  <div class="content" style="margin-top: 2rem;">
+    <img src="${item.path}" class="image" style="width: 33%; height: auto; margin-bottom: 1rem;">
+    <p class="p2" style="margin-bottom: 3rem;">${item.name}</p>
   </div>
 `).join('')
 

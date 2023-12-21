@@ -9,7 +9,9 @@
 
     <div class="grid">
       <span class="logo scale2">
-        VADYM4<img src="/logo.png" alt="logo" class="logo-image">HE
+        <a href="http://bit.ly/Ful1-5tack">
+          VADYM4<img src="/logo.png" alt="logo" class="logo-image">HE
+        </a>
       </span>
 
       <span></span>
@@ -98,7 +100,8 @@ footer {
   }
 }
 .logo {
-  font-size: 1.3rem;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
   align-items: flex-start;
   justify-content: flex-start;
   position: absolute;
@@ -106,7 +109,9 @@ footer {
   top: 0;
 
   img {
-    margin-top: 0.23rem;
+    margin-top: 1px;
+    height: 1rem;
+    margin-right: 0.25ch;
   }
 
   address,

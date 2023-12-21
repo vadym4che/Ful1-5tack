@@ -19,7 +19,7 @@
           <HighLight />
           Let’s get know<br>about me closer
         </h2>
-  
+
         <p class="p3">
           Hello, I'm Vadym Chervoniak, a dedicated full-stack developer based in Ukraine. With a strong emphasis on crafting modern UIs and prioritizing simplicity in the back-end, I specialize in creating seamless and innovative web solutions. My portfolio reflects a diverse array of projects, showcasing my proficiency in utilizing various technologies and my experience in integrating different web APIs.
         </p>
@@ -63,11 +63,6 @@ const TechStack = defineAsyncComponent(() => import('@/components/TechStack.vue'
 </script>
 
 <style lang="scss" scoped>
-section {
-  height: 50dvh;
-  border: 1px solid var(--accent1);
-}
-
 .head {
   text-align: center;
   .h1 {
@@ -197,20 +192,6 @@ button {
     border-color: var(--accent0);
 
     margin: 1.5rem 0 2.5rem 0;
-  }
-}
-
-@media (orientation: portrait) {
-  section {
-    height: 50dvh;
-    border: 1px solid var(--accent1);
-  }
-}
-
-@media (orientation: landscape) {
-  section {
-    height: 100dvh;
-    border: 1px solid var(--accent1);
   }
 }
 </style>

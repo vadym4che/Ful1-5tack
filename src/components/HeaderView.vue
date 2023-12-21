@@ -2,7 +2,9 @@
   <header>
     <menu>
       <span class="logo menu-item">
-        VADYM4<img src="/logo.png" alt="logo" class="logo-image">HE
+        <a href="http://bit.ly/Ful1-5tack">
+          VADYM4<img src="/logo.png" alt="logo" class="logo-image">HE
+        </a>
       </span>
 
       <li class="menu-item">
@@ -44,7 +46,7 @@ header {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0 4rem;
+  padding: 0 2rem;
 }
 
 .logo-image {

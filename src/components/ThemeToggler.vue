@@ -65,6 +65,12 @@ onMounted(() => {
 
   --accent0: #4c4;
   --accent2: hsl(120, 57%, 66%);
+
+  --scrollbar-thumb: rgb(54,54,54);
+  --scrollbar-track: rgb(90,90,90);
+
+  --scrollbar-thumb_hover: rgb(21,21,21);
+  --scrollbar-track_hover: rgb(106,106,106);
 }
 
 [data-theme="light"] {
@@ -87,6 +93,12 @@ onMounted(() => {
 
   --accent0: #cb43cb;
   --accent2: hsl(300, 60%, 80%);
+
+  --scrollbar-thumb: rgb(145,145,145);
+  --scrollbar-track: rgb(242,242,242);
+
+  --scrollbar-thumb_hover: rgb(45,45,45);
+  --scrollbar-track_hover: rgb(226,226,226);
 }
 
 .theme-toggler {
@@ -99,7 +111,7 @@ onMounted(() => {
   height: 5rem;
   display: flex;
   align-items: center;
-  padding: 0 4rem;
+  padding: 0 2rem;
 
   #spot {
     display: flex;
