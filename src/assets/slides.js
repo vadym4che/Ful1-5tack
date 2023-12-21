@@ -1,7 +1,7 @@
-export default [
+const slidesArray = [
   {
     title: 'Version Control',
-    items: [
+    content: [
       { name: 'Git', path: '/git.webp' },
       { name: 'GitHub', path: '/github.webp' },
       { name: 'Bash', path: '/bash.webp' },
@@ -9,7 +9,7 @@ export default [
   },
   {
     title: 'Frontend Development',
-    items: [
+    content: [
       { name: 'Vite', path: '/vite.webp' },
       { name: 'Node.js', path: '/node.webp' },
       { name: 'npm', path: '/npm.webp' },
@@ -17,7 +17,7 @@ export default [
   },
   {
     title: 'Web Design',
-    items: [
+    content: [
       { name: 'HTML5', path: '/html5.webp' },
       { name: 'CSS3', path: '/css3.webp' },
       { name: 'Figma', path: '/figma.webp' },
@@ -25,7 +25,7 @@ export default [
   },
   {
     title: 'CSS Preprocessors',
-    items: [
+    content: [
       { name: 'Sass', path: '/sass.webp' },
       { name: 'WebGL', path: '/webgl.webp' },
       { name: 'Three.js', path: '/threejs.webp' },
@@ -33,7 +33,7 @@ export default [
   },
   {
     title: 'JavaScript',
-    items: [
+    content: [
       { name: 'JavaScript ES6', path: '/js6.webp' },
       { name: 'ECMAScript 6', path: '/es6.webp' },
       { name: 'TypeScript 2020', path: '/ts2020.webp' },
@@ -41,7 +41,7 @@ export default [
   },
   {
     title: 'APIs and Networking',
-    items: [
+    content: [
       { name: 'JSON', path: '/json.webp' },
       { name: 'REST', path: '/rest.webp' },
       { name: 'Postman', path: '/postman.webp' },
@@ -49,7 +49,7 @@ export default [
   },
   {
     title: 'JavaScript Frameworks',
-    items: [
+    content: [
       { name: 'Vue.js', path: '/vue.webp' },
       { name: 'Nuxt.js', path: '/nuxt.webp' },
       { name: 'React.js', path: '/react.webp' },
@@ -57,7 +57,7 @@ export default [
   },
   {
     title: 'Python Web Development',
-    items: [
+    content: [
       { name: 'Python', path: '/python.webp' },
       { name: 'Flask', path: '/flask.webp' },
       { name: 'Django', path: '/django.webp' },
@@ -65,10 +65,27 @@ export default [
   },
   {
     title: 'PHP Development',
-    items: [
+    content: [
       { name: 'PHP', path: '/php.webp' },
       { name: 'Laravel', path: '/laravel.webp' },
       { name: 'WordPress', path: '/wordpress.webp' },
     ],
   },
 ]
+
+
+const arrayToHTML = (content) => content.map(item => `
+  <div class="content">
+    <div style="background-image: url('${item.path}')" class="image"></div>
+    <p class="p2">${item.name}</p>
+  </div>
+`).join('')
+
+const slides = slidesArray.map(item => {
+  return {
+    title: item.title,
+    content: arrayToHTML(item.content)
+  }
+})
+
+export default slides
