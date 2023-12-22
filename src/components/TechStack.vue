@@ -2,7 +2,7 @@
   <section class="flex-col-center tech-stack">
     <h2 class="h2 text-center">Technologies I like to use and keep diving in deeper</h2>
 
-    <vueper-slides :fixed-height="true" bullets-outside autoplay class="no-shadow" ref="slider">
+    <vueper-slides :fixed-height="true" autoplay class="no-shadow" ref="slider">
       <vueper-slide
         v-for="(slide, i) in slides"
         :key="slide.id"
@@ -50,9 +50,36 @@ onUpdated(() => {
 </script>
 
 <style lang="scss">
-.vueperslides--fixed-height { height: 25rem; }
+.vueperslides--fixed-height {
+  position: relative;
+
+  @media (orientation: landscape) {
+    & {
+      height: 34rem;
+    }
+  }
+
+  @media (orientation: portrait) {
+    & {
+      height: 30rem;
+    }
+  }
+
+}
 .tech-stack {
-  gap: 6rem;
+  padding: 2rem auto 2rem auto;
+
+  @media (orientation: landscape) {
+    & {
+      gap: 2rem;
+    }
+  }
+
+  @media (orientation: portrait) {
+    & {
+
+    }
+  }
 }
 .vueperslides {
   width: 100%;

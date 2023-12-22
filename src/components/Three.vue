@@ -31,16 +31,39 @@ const three = projects.slice(0, 3)
   flex-direction: row;
   gap: 2rem;
 
-  height: 75%;
+  @media (orientation: landscape) {
+    & {
+      height: 75dvh;
+    }
+  }
+
+  @media (orientation: portrait) {
+    & {
+      height: 37.5dvh;
+    }
+  }
+
 
   .card {
-    width: calc(33.33% - 1.333rem);
-    height: auto;
+    @media (orientation: landscape) {
+      & {
+        width: 22rem;
+        height: 51rem;
+        grid-template-rows: 40rem 2rem 1rem;
+      }
+    }
+
+    @media (orientation: portrait) {
+      & {
+        width: 16rem;
+        height: 40rem;
+        grid-template-rows: 29rem 2rem 1rem;
+      }
+    }
     overflow: hidden;
     gap: 2rem;
 
     display: grid;
-    grid-template-rows: 10fr 1fr 1fr;
 
     .frame {
       box-sizing: border-box;
@@ -60,8 +83,17 @@ const three = projects.slice(0, 3)
         position: absolute;
       }
     }
-    .frame0 {
-      transform: scale(1.07) translate(3%, 2%);
+
+    @media (orientation: landscape) {
+      .frame0 {
+        transform: scale(1.04) translate(3%, 2%);
+      }
+    }
+
+    @media (orientation: portrait) {
+      .frame0 {
+        transform: scale(1.07) translate(3%, 2%);
+      }
     }
 
     .frame1, .frame2 {

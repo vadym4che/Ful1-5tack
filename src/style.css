@@ -21,9 +21,8 @@ body {
   -o-transition: color 1s, background 1s, backgroundColor 1s, boxShadow 1s;
 }
 
-/* Set the style for the scrollbar */
 body::-webkit-scrollbar {
-  width: 0.5rem; /* width of the scrollbar */
+  width: 0.5rem;
 }
 
 body::-webkit-scrollbar-thumb {
@@ -36,15 +35,13 @@ body::-webkit-scrollbar-thumb {
 }
 
 body::-webkit-scrollbar-track {
-  background-color: var(--scrollbar-track); /* color of the scrollbar track */
+  background-color: var(--scrollbar-track);
 }
 
-/* Set the style for the scrollbar on hover */
 body::-webkit-scrollbar-thumb:hover {
   background-color: var(--scrollbar-thumb_hover);
 }
 
-/* Set the style for the scrollbar track on hover */
 body::-webkit-scrollbar-track:hover {
   background-color: var(--scrollbar-track_hover);
 }
@@ -178,16 +175,18 @@ a {
   flex-direction: column;
 }
 
+/* border: 1px solid var(--accent1); */
+.section {
+  position: relative;
+}
 @media (orientation: portrait) {
   section {
     height: 50dvh;
-    /* border: 1px solid var(--accent1); */
   }
 }
 
 @media (orientation: landscape) {
   section {
     height: 100dvh;
-    /* border: 1px solid var(--accent1); */
   }
 }

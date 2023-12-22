@@ -105,7 +105,7 @@ footer {
   align-items: flex-start;
   justify-content: flex-start;
   position: absolute;
-  left: 1rem;
+  left: 3rem;
   top: 0;
 
   img {

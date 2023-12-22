@@ -10,7 +10,7 @@ export default [
   {
     link: 'https://vadym4che.github.io/vue-weather-app/',
     name: 'Weather App',
-    stack: ['Vue3', 'axios', 'i18n', 'Gmaps'],
+    stack: ['Vue3', 'axios', 'i18n', 'maps'],
     tags: ['UI', 'FE', 'API'],
     desc: '',
     path: 'weather-vue3',

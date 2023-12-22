@@ -43,7 +43,7 @@
     </h2>
 
     <button>
-      <router-link to="/myworks">
+      <router-link to="/works">
         EXPLORE MORE <ArrowRight />
       </router-link>
     </button>
