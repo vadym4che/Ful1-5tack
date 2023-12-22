@@ -1,0 +1,1 @@
+import{_ as e,o as c,c as o,a as s}from"./index-MhUwmhlJ.js";const t={},n={class:"flex-col-center"},_=s("h2",{class:"h2"}," About Me ",-1),a=[_];function r(l,d){return c(),o("section",n,a)}const i=e(t,[["render",r]]);export{i as default};
