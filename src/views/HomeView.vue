@@ -21,7 +21,7 @@
         </h2>
 
         <p class="p3">
-          Hello, I'm Vadym Chervoniak, a dedicated full-stack developer based in Ukraine. With a strong emphasis on crafting modern UIs and prioritizing simplicity in the back-end, I specialize in creating seamless and innovative web solutions. My portfolio reflects a diverse array of projects, showcasing my proficiency in utilizing various technologies and my experience in integrating different web APIs.
+          Hello, I am Vadym Chervoniak, a Full-stack developer based in Ukraine. My expertise includes HTML, CSS, JavaScript, React, Vue, Node.js, various databases, cloud computing, and integrating with different APIs, helping me to deliver complex web development solutions.
         </p>
       </div>
 

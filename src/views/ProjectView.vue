@@ -2,11 +2,11 @@
   <div class="flex-col-start">
     <div class="flex-col-start page-header padding-13">
       <h2 class="h2">
-        My Works
+        Project Detail
         <HighLight />
       </h2>
       <p class="p3">
-        Showcase About Works
+        Details About The Porject
       </p>
     </div>
   </div>

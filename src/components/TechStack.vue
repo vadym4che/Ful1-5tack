@@ -34,15 +34,18 @@ const setSlideContentGrid = () => {
     // Create a style attribute with the desired styles
     element.setAttribute(
       'style',
-      'display: grid !important; grid-template-columns: repeat(3, 1fr) !important; width: 100% !important; transition: none !important;'
+      `display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  width: 100% !important; transition: none !important;`
     );
   });
 }
 
 onMounted(() => {
   setSlideContentGrid()
-  // Use the $refs property to access the methods of the Vueper Slides component
-  slider.value.goToSlide(4);
+  // Use the $refs property
+  // to access the methods of the Vueper Slides component
+  slider.value.goToSlide(3);
 });
 onUpdated(() => {
   setSlideContentGrid()
@@ -77,7 +80,7 @@ onUpdated(() => {
 
   @media (orientation: portrait) {
     & {
-
+      gap: 2rem;
     }
   }
 }

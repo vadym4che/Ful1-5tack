@@ -28,8 +28,8 @@ onUpdated(() => {
 })
 
 const theme = ref(
-  localStorage.getItem('theme')
-    ? localStorage.getItem('theme')
+  sessionStorage.getItem('theme')
+    ? sessionStorage.getItem('theme')
     : window.matchMedia('(prefers-color-scheme: dark)').matches
       ? 'dark'
       : 'light'
@@ -37,19 +37,20 @@ const theme = ref(
 
 const toggleTheme = () => {
   theme.value = theme.value === 'light' ? 'dark' : 'light'
-  localStorage.setItem('theme', theme.value)
+  sessionStorage.setItem('theme', theme.value)
 }
 
 watch(theme, (newTheme) => document.documentElement.setAttribute('data-theme', newTheme))
 onMounted(() => {
   document.documentElement.setAttribute('data-theme', theme.value)
-  localStorage.setItem('theme', theme.value)
+  sessionStorage.setItem('theme', theme.value)
 })
 </script>
 
 <style lang="scss">
 [data-theme="dark"] {
   --is-dark: 1;
+  --is-white: 0;
   --bg0: #131313;
   --bg50: #13131388;
   --bg2: #1a1a1a;
@@ -75,6 +76,7 @@ onMounted(() => {
 
 [data-theme="light"] {
   --is-dark: 0;
+  --is-white: 1;
   --bg0: #ececec;
   --bg50: #ececec88;
   --bg2: #dbdbdb;
