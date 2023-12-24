@@ -1,0 +1,1 @@
+import{o as e,c as t,a as s,b as a,d as o,H as c}from"./index-KXnbgqFW.js";const r={class:"flex-col-start"},_={class:"flex-col-start page-header padding-13"},d={class:"h2"},l=s("p",{class:"p3"}," Showcase About Works ",-1),f={__name:"MyWorks",setup(n){return(h,i)=>(e(),t("div",r,[s("div",_,[s("h2",d,[a(" My Works "),o(c)]),l])]))}};export{f as default};
