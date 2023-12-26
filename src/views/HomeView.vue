@@ -43,7 +43,7 @@
     </h2>
 
     <button>
-      <router-link to="/works">
+      <router-link to="/projects">
         EXPLORE MORE <ArrowRight />
       </router-link>
     </button>
@@ -187,7 +187,16 @@ button {
   }
 
   button {
-    height: 4rem;
+    height: 3.75rem;
+    width: 15.125rem;
+    color: var(--accent0);
+    border-radius: 1.875rem;
+    font-family: Inter;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.1rem;
     background: var(--bg50);
     border-color: var(--accent0);
 

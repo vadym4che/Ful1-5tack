@@ -6,16 +6,47 @@
         <HighLight />
       </h2>
       <p class="p3">
-        Details About The Porject
+        Details About The Project
       </p>
+    </div>
+
+    <div class="project-details">
+      <h3 class="h3">{{ project.name }}</h3>
+      <div>
+        <p>Description: {{ project.desc }}</p>
+        <p>Stack: {{ project.stack.join(', ') }}</p>
+        <!-- Add more details as needed -->
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import HighLight from '@/components/HighLight.vue'
+import { ref, watchEffect } from 'vue';
+import { useRoute } from 'vue-router';
+import HighLight from '@/components/HighLight.vue';
+import { projects } from '@/assets/projects.js';
+
+const route = useRoute();
+const projectName = ref(route.params.projectName);
+const project = ref(getProjectDetails(projectName.value));
+
+function getProjectDetails(projectName) {
+  return projects.find(project => project.name === projectName) || {};
+}
+
+// Update project details when the route changes
+watchEffect(() => {
+  projectName.value = route.params.projectName;
+  project.value = getProjectDetails(projectName.value);
+});
 </script>
 
 <style lang="scss" scoped>
-
+/* Add your styles as needed */
+.project-details {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
 </style>

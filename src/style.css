@@ -6,6 +6,7 @@
 
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 
@@ -64,6 +65,7 @@ button {
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 #app {
@@ -202,6 +204,7 @@ a {
 
 .page-header .h2 {
   position: relative;
+  z-index: 1;
 }
 
 .page-header .h2 > .highlight {
@@ -213,4 +216,5 @@ a {
   -moz-transform: rotate(-20deg);
   -ms-transform: rotate(-20deg);
   -o-transform: rotate(-20deg);
+  z-index: -1;
 }

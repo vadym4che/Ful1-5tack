@@ -98,4 +98,10 @@ onUpdated(() => {
   .content {}
   .image {}
 }
+
+@media (max-width: 480px) {
+  .vueperslides__bullet {
+    margin: 1.5em 0.3em;
+  }
+}
 </style>

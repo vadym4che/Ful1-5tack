@@ -1,7 +1,9 @@
 <template>
   <footer>
     <h4 class="h4 top">
-      Get in Touch With Me
+      <router-link to="/contact">
+        Get in Touch With Me
+      </router-link>
     </h4>
     <h2 class="h1 mail">
       <a href="mailto:vadym4che@gmail.com">vadym4che@gmail.com</a>
@@ -83,7 +85,10 @@ footer {
   .h4.top {
     text-align: center;
     padding: 6rem 0 1.5rem 0;
-    color: var(--accent0);
+
+    & a {
+      color: var(--accent0);
+    }
   }
 
   .h1 {

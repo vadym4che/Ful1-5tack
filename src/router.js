@@ -13,23 +13,28 @@ const routes = [
   },
   {
     path: '/about',
-    component: () => import('./views/AboutMe.vue'),
+    component: () => import('@/views/AboutMe.vue'),
   },
   {
-    path: '/works',
-    component: () => import('./views/MyWorks.vue'),
+    path: '/projects',
+    component: () => import('@/views/MyProjects.vue'),
+  },
+  {
+    path: '/project/:projectName',
+    name: 'project',
+    component: () => import('@/views/ProjectView.vue'),
   },
   {
     path: '/contact',
-    component: () => import('./views/ContactMe.vue'),
+    component: () => import('@/views/ContactMe.vue'),
   },
   {
     path: '/loader',
-    component: () => import('./components/loader.vue'),
+    component: () => import('@/components/loader.vue'),
   },
   {
     path: '/:catchAll(.*)',
-    component: () => import('./views/404.vue'),
+    component: () => import('@/views/404.vue'),
   },
 ];
 

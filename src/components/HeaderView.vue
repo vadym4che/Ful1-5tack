@@ -14,7 +14,7 @@
         <router-link to="/about">About Me</router-link>
       </li>
       <li class="menu-item">
-        <router-link to="/works">My Works</router-link>
+        <router-link to="/projects">My Works</router-link>
       </li>
       <li class="menu-item">
         <router-link to="/contact">Contact</router-link>
@@ -72,7 +72,7 @@ menu {
     font-size: 1.25rem;
     color: var(--color);
     padding: 1rem 2.25rem;
-    opacity: 0.5;
+    opacity: 0.75;
     font-variant: small-caps;
     text-transform: uppercase;
     text-wrap: nowrap;

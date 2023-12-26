@@ -1,7 +1,7 @@
 <template>
   <div class="flex-col-start">
     <div class="flex-col-start page-header padding-13">
-      <h2 class="h2">
+      <h2 class="h2" style="left: -0.2rem;">
         Contact Me
         <HighLight />
       </h2>
@@ -52,7 +52,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import HighLight from '@/components/HighLight.vue';
 import emailjs from 'emailjs-com';
 
@@ -108,6 +108,8 @@ const submitForm = async () => {
   subject.value = '';
   message.value = '';
 };
+
+onMounted(() => window.scrollTo(0, 0))
 </script>
 
 <style lang="scss" scoped>

@@ -1,8 +1,8 @@
 <template>
   <div class="three">
-    <div class="card" v-for="{ link, name, stack, tags }, i in three" :key="i">
+    <div class="card" v-for="{ link, name, stack, tags, path }, i in three" :key="i">
       <div class="frame">
-        <iframe :src="link" frameborder="0" :class="'frame' + i"></iframe>
+        <iframe :src="'https://vadym4che.github.io/' + path" frameborder="0" :class="'frame' + i"></iframe>
       </div>
 
       <h4 class="h4">{{ name }}</h4>
