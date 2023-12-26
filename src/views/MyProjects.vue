@@ -34,28 +34,31 @@
 </template>
 
 <script setup>
-import { ref, onUpdated } from 'vue';
-import HighLight from '@/components/HighLight.vue';
-import { chunkedProjects } from '@/assets/projects.js';
+import { ref, onMounted, onUpdated } from 'vue'
+import HighLight from '@/components/HighLight.vue'
+import { chunkedProjects } from '@/assets/projects.js'
 
-const itemsToShow = ref(2);
-const projectsToShow = ref(chunkedProjects.slice(0, itemsToShow.value));
-const isLimitReached = ref(projectsToShow.value.length === chunkedProjects.length);
+const itemsToShow = ref(2)
+const projectsToShow = ref(chunkedProjects.slice(0, itemsToShow.value))
+const isLimitReached = ref(projectsToShow.value.length === chunkedProjects.length)
 
 const handleLoadMore = () => {
-  itemsToShow.value += 2;
-  projectsToShow.value = chunkedProjects.slice(0, itemsToShow.value);
-  isLimitReached.value = projectsToShow.value.length === chunkedProjects.length;
-};
+  itemsToShow.value += 2
+  projectsToShow.value = chunkedProjects.slice(0, itemsToShow.value)
+  isLimitReached.value = projectsToShow.value.length === chunkedProjects.length
+}
 
-onUpdated(() => {
-  const lastElementId = `three-${projectsToShow.value.length - 2}`;
-  const lastElement = document.getElementById(lastElementId);
+const handleScroll = () => {
+  const lastElementId = `three-${projectsToShow.value.length - 2}`
+  const lastElement = document.getElementById(lastElementId)
 
   if (lastElement) {
-    lastElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    lastElement.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
-});
+}
+
+onMounted(() => handleScroll())
+onUpdated(() => handleScroll())
 </script>
 
 <style lang="scss" scoped>

@@ -52,14 +52,14 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
-import HighLight from '@/components/HighLight.vue';
-import emailjs from 'emailjs-com';
+import { ref, onMounted } from 'vue'
+import HighLight from '@/components/HighLight.vue'
+import emailjs from 'emailjs-com'
 
-const name = ref('');
-const email = ref('');
-const subject = ref('');
-const message = ref('');
+const name = ref('')
+const email = ref('')
+const subject = ref('')
+const message = ref('')
 
 const submitForm = async () => {
 
@@ -68,7 +68,7 @@ const submitForm = async () => {
         Email: ${email.value}
         Subject: ${subject.value}
         Message: ${message.value}
-      `;
+      `
 
   try {
     const templateParams = {
@@ -76,37 +76,29 @@ const submitForm = async () => {
       email: email.value,
       subject: subject.value,
       message: text.trim(),
-    };
+    }
 
     const response = await emailjs.send(
-      'service_z0c2zx5', // Your service ID
-      'template_email7js', // Your template ID
+      'service_z0c2zx5',
+      'template_email7js',
       templateParams,
-      'DrJDQf3M1hyPj0_40' // Replace with your EmailJS user ID
-    );
-
-    console.log('Email sent successfully!', response);
-
-    // Perform any additional actions upon successful email sending
-
+      'DrJDQf3M1hyPj0_40'
+    )
+    console.log('Email sent successfully!', response)
   } catch (error) {
-    console.error('Error sending email:', error);
-
-    // Handle any error that occurred during email sending
+    console.error('Error sending email:', error)
   }
 
-  // Perform your form submission logic here
-  console.log('Form submitted successfully!');
-  console.log('Name:', name.value);
-  console.log('Email:', email.value);
-  console.log('Subject:', subject.value);
-  console.log('Message:', message.value);
+  console.log('Form submitted successfully!')
+  console.log('Name:', name.value)
+  console.log('Email:', email.value)
+  console.log('Subject:', subject.value)
+  console.log('Message:', message.value)
 
-  // Clear form inputs
-  name.value = '';
-  email.value = '';
-  subject.value = '';
-  message.value = '';
+  name.value = ''
+  email.value = ''
+  subject.value = ''
+  message.value = ''
 };
 
 onMounted(() => window.scrollTo(0, 0))

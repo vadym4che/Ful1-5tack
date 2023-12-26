@@ -22,28 +22,26 @@
 </template>
 
 <script setup>
-import { ref, watchEffect } from 'vue';
-import { useRoute } from 'vue-router';
-import HighLight from '@/components/HighLight.vue';
-import { projects } from '@/assets/projects.js';
+import { ref, watchEffect } from 'vue'
+import { useRoute } from 'vue-router'
+import HighLight from '@/components/HighLight.vue'
+import { projects } from '@/assets/projects.js'
 
-const route = useRoute();
-const projectName = ref(route.params.projectName);
-const project = ref(getProjectDetails(projectName.value));
+const route = useRoute()
+const projectName = ref(route.params.projectName)
+const project = ref(getProjectDetails(projectName.value))
 
 function getProjectDetails(projectName) {
-  return projects.find(project => project.name === projectName) || {};
+  return projects.find(project => project.name === projectName) || {}
 }
 
-// Update project details when the route changes
 watchEffect(() => {
-  projectName.value = route.params.projectName;
-  project.value = getProjectDetails(projectName.value);
-});
+  projectName.value = route.params.projectName
+  project.value = getProjectDetails(projectName.value)
+})
 </script>
 
 <style lang="scss" scoped>
-/* Add your styles as needed */
 .project-details {
   margin-top: 20px;
   padding: 10px;

@@ -17,7 +17,7 @@
 </template>
 
 <script setup>
-import projects from '@/assets/projects.js'
+import { projects } from '@/assets/projects.js'
 const three = projects.slice(0, 3)
 </script>
 
