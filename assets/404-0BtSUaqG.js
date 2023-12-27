@@ -1,0 +1,1 @@
+import{_ as c,o as s,c as o,p as t,f as a,a as _}from"./index-LyFRGzla.js";const n={},d=e=>(t("data-v-b58c9a8e"),e=e(),a(),e),r={class:"flex-col-center"},p=d(()=>_("h2",{class:"h2"}," 404 ",-1)),f=[p];function h(e,i){return s(),o("section",r,f)}const m=c(n,[["render",h],["__scopeId","data-v-b58c9a8e"]]);export{m as default};
