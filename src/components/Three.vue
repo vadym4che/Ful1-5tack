@@ -17,8 +17,8 @@
 </template>
 
 <script setup>
-import { projects } from '@/assets/projects.js'
-const three = projects.slice(0, 3)
+import { vertical } from '@/assets/projects.js'
+const three = vertical.slice(0, 3)
 </script>
 
 <style lang="scss" scoped>

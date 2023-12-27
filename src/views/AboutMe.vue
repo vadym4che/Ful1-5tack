@@ -69,7 +69,15 @@ import HighLight from '@/components/HighLight.vue'
   font-size: 0.9vmax;
   line-height: 1.35rem;
   font-weight: 400;
+
+  @media (orientation: landscape) {
+    & {
+      font-size: 175%;
+      line-height: normal;
+    }
+  }
 }
+
 
 .photos {
   display: grid;

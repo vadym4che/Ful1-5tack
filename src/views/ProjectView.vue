@@ -24,8 +24,8 @@
 <script setup>
 import { ref, watchEffect } from 'vue'
 import { useRoute } from 'vue-router'
-import HighLight from '@/components/HighLight.vue'
 import { projects } from '@/assets/projects.js'
+import HighLight from '@/components/HighLight.vue'
 
 const route = useRoute()
 const projectName = ref(route.params.projectName)

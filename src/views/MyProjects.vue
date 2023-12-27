@@ -43,8 +43,12 @@ const projectsToShow = ref(chunkedProjects.slice(0, itemsToShow.value))
 const isLimitReached = ref(projectsToShow.value.length === chunkedProjects.length)
 
 const handleLoadMore = () => {
-  itemsToShow.value += 2
-  projectsToShow.value = chunkedProjects.slice(0, itemsToShow.value)
+  if (chunkedProjects.length - 1 > itemsToShow.value) {
+    itemsToShow.value += 2
+    projectsToShow.value = chunkedProjects.slice(0, itemsToShow.value)
+  } else if (chunkedProjects.length - 1 === itemsToShow.value) {
+    projectsToShow.value = chunkedProjects.slice()
+  }
   isLimitReached.value = projectsToShow.value.length === chunkedProjects.length
 }
 
@@ -75,6 +79,7 @@ onUpdated(() => handleScroll())
 }
 .three {
   gap: 1.5rem;
+  max-width: 55.5rem;
 }
 
 .project {
@@ -125,6 +130,14 @@ onUpdated(() => handleScroll())
 
 iframe {
   border: none;
+}
+
+@media (orientation: landscape) {
+  .three:last-child {
+    margin: 0 auto;
+    align-self: center;
+    justify-self: center;
+  }
 }
 
 .load-more{
