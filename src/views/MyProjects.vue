@@ -14,7 +14,7 @@
       <div class="three" v-for="(a, index) in projectsToShow" :key="index" :id="'three-' + index">
         <div v-for="(p, i) in a" :key="i" class="project">
           <iframe
-          :src="p.path.includes('https') ? p.path : 'https://vadym4che.github.io/' + p.path"
+          :src="getPath(p.path)"
           frameborder="0"
           :class="{ vertical: p.orientation === '|', horizontal: p.orientation === '-' }"
           ></iframe>
@@ -37,6 +37,7 @@
 import { ref, onMounted, onUpdated } from 'vue'
 import HighLight from '@/components/HighLight.vue'
 import { chunkedProjects } from '@/assets/projects.js'
+import getPath from '@/helpers/getPath.js'
 
 const itemsToShow = ref(2)
 const projectsToShow = ref(chunkedProjects.slice(0, itemsToShow.value))

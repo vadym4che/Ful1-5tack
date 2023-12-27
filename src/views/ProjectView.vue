@@ -12,6 +12,11 @@
 
     <div class="project-details">
       <h3 class="h3">{{ project.name }}</h3>
+      <iframe
+        :src="getPath(project.path)"
+        frameborder="0"
+        :class="{ vertical: project.orientation === '|', horizontal: project.orientation === '-' }"
+        ></iframe>
       <div>
         <p>Description: {{ project.desc }}</p>
         <p>Stack: {{ project.stack.join(', ') }}</p>
@@ -26,6 +31,7 @@ import { ref, watchEffect } from 'vue'
 import { useRoute } from 'vue-router'
 import { projects } from '@/assets/projects.js'
 import HighLight from '@/components/HighLight.vue'
+import getPath from '@/helpers/getPath.js'
 
 const route = useRoute()
 const projectName = ref(route.params.projectName)
@@ -42,6 +48,10 @@ watchEffect(() => {
 </script>
 
 <style lang="scss" scoped>
+iframe {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
 .project-details {
   margin-top: 20px;
   padding: 10px;
