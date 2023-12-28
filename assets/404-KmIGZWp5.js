@@ -1,0 +1,1 @@
+import{_ as c,a as s,c as o,p as t,g as a,b as _}from"./index-17dYAoVn.js";const d={},n=e=>(t("data-v-7e5794d4"),e=e(),a(),e),r={class:"flex-col-center"},p=n(()=>_("h2",{class:"h2"}," 404 ",-1)),h=[p];function i(e,l){return s(),o("section",r,h)}const m=c(d,[["render",i],["__scopeId","data-v-7e5794d4"]]);export{m as default};
