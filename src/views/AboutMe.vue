@@ -39,7 +39,10 @@
 </template>
 
 <script setup>
+import { onMounted } from 'vue'
 import HighLight from '@/components/HighLight.vue'
+
+onMounted(() => window.scrollTo(0, 0))
 </script>
 
 <style lang="scss" scoped>

@@ -75,7 +75,7 @@ const handleScroll = () => {
   }
 }
 
-onMounted(() => handleScroll())
+onMounted(() => window.scrollTo(0, 0))
 onUpdated(() => handleScroll())
 </script>
 

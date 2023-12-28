@@ -55,12 +55,14 @@
 </template>
 
 <script setup>
-import { defineAsyncComponent } from 'vue'
+import { defineAsyncComponent, onMounted } from 'vue'
 import ArrowRight from '@/components/ArrowRight.vue'
 import HighLight from '@/components/HighLight.vue'
 
 const Three = defineAsyncComponent(() => import('@/components/Three.vue'))
 const TechStack = defineAsyncComponent(() => import('@/components/TechStack.vue'))
+
+onMounted(() => window.scrollTo(0, 0))
 </script>
 
 <style lang="scss" scoped>

@@ -1,11 +1,11 @@
 <template>
   <div class="three">
-    <div class="card" v-for="{ name, stack, tags, path, white_bg }, i in three" :key="i">
+    <div class="card" v-for="{ title, stack, tags, path, white_bg }, i in three" :key="i">
       <div class="frame">
         <iframe :src="getPath(path)" frameborder="0" :class="{ white_bg: white_bg }"></iframe>
       </div>
 
-      <h4 class="h4">{{ name }}</h4>
+      <h4 class="h4">{{ title }}</h4>
       <p class="p3">
         <span class="dimmed">tech stack: &nbsp;</span>
         {{ stack.join(' | ') }}<br>
