@@ -1,8 +1,8 @@
 <template>
   <div class="three">
-    <div class="card" v-for="{ link, name, stack, tags, path }, i in three" :key="i">
+    <div class="card" v-for="{ name, stack, tags, path, white_bg }, i in three" :key="i">
       <div class="frame">
-        <iframe :src="'https://vadym4che.github.io/' + path" frameborder="0" :class="'frame' + i"></iframe>
+        <iframe :src="getPath(path)" frameborder="0" :class="{ white_bg: white_bg }"></iframe>
       </div>
 
       <h4 class="h4">{{ name }}</h4>
@@ -17,8 +17,11 @@
 </template>
 
 <script setup>
-import { vertical } from '@/assets/projects.js'
-const three = vertical.slice(0, 3)
+import { projects } from '@/assets/projects.js'
+import getPath from '@/helpers/getPath.js'
+import getThreeRandom from '@/helpers/getThreeRandom'
+
+const three = getThreeRandom(projects)
 </script>
 
 <style lang="scss" scoped>
@@ -81,23 +84,8 @@ const three = vertical.slice(0, 3)
         width: 100%;
         aspect-ratio: 9 / 16;
         position: absolute;
+        transform: scale(1.01) translate(0.5%, 0.5%);
       }
-    }
-
-    @media (orientation: landscape) {
-      .frame0 {
-        transform: scale(1.04) translate(3%, 2%);
-      }
-    }
-
-    @media (orientation: portrait) {
-      .frame0 {
-        transform: scale(1.07) translate(3%, 2%);
-      }
-    }
-
-    .frame1, .frame2 {
-      transform: scale(1.01) translate(0.5%, 0.5%);
     }
 
     .h4 {

@@ -1,10 +1,8 @@
 <template>
   <div id="pointer">
-    <span id="light"
-      :style="{
-        'left': x + 'px',
-        'top': y - scrollY + 'px',
-      }"
+    <span
+      id="light"
+      :style="{ 'left': x + 'px', 'top': y - scrollY + 'px' }"
     ></span>
   </div>
 </template>

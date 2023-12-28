@@ -5,10 +5,6 @@
   </svg>
 </template>
 
-<script setup>
-
-</script>
-
 <style lang="scss" scoped>
 .path {
   stroke: var(--color0);

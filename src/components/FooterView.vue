@@ -59,16 +59,12 @@
   </footer>
 </template>
 
-<script setup>
-</script>
-
 <style lang="scss" scoped>
 footer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  /* height: 47rem; */
   background: var(--bg2);
   padding: 0 11dvw;
   width: 100dvw;

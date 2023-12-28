@@ -11,7 +11,12 @@
     </div>
 
     <div class="projects-container">
-      <div class="three" v-for="(a, index) in projectsToShow" :key="index" :id="'three-' + index">
+      <div
+        class="three"
+        v-for="(a, index) in projectsToShow"
+        :key="index"
+        :id="'three-' + index"
+      >
         <div v-for="(p, i) in a" :key="i" class="project">
           <iframe
           :src="getPath(p.path)"
@@ -27,7 +32,11 @@
             {{ p.tags.join(' | ') }}
           </p>
 
-          <router-link :to="{ name: 'project', params: { projectName: p.name }}" :title="`get '${p.name}' details`">{{p.title}}
+          <router-link
+            :to="{ name: 'project', params: { projectName: p.name }}"
+            :title="`get '${p.name}' details`"
+          >
+            {{p.title}}
           </router-link>
         </div>
       </div>

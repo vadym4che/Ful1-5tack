@@ -4,7 +4,13 @@
     class="theme-toggler"
     :title="`Toggle theme to ${theme === 'light' ? 'dark' : 'light'}`"
   >
-    <span id="spot" :style="{background: `radial-gradient(ellipse at ${offsetX}% ${offsetY}%, var(--accent1), var(--color0))`}">{{theme === 'light' ? '🌙' : '🌞'}}</span>
+    <span
+      id="spot"
+      :style="{background: `radial-gradient(ellipse at ${offsetX}% ${offsetY}%, var(--accent1), var(--color0))`}"
+    >
+      {{theme === 'light' ? '🌙' : '🌞'}}
+    </span>
+
     <h2 style="display: none;">
       {{ width }} {{ height }}<br>
       {{ x }} {{ y }}<br>
@@ -22,11 +28,6 @@ const { width, height } = useWindowSize()
 const offsetX = ref(50)
 const offsetY = ref(50)
 
-onUpdated(() => {
-  offsetX.value = (x.value / width.value) * 100 || 50
-  offsetY.value = (y.value / height.value) * 100 || 50
-})
-
 const theme = ref(
   sessionStorage.getItem('theme')
     ? sessionStorage.getItem('theme')
@@ -40,11 +41,17 @@ const toggleTheme = () => {
   sessionStorage.setItem('theme', theme.value)
 }
 
-watch(theme, (newTheme) => document.documentElement.setAttribute('data-theme', newTheme))
 onMounted(() => {
   document.documentElement.setAttribute('data-theme', theme.value)
   sessionStorage.setItem('theme', theme.value)
 })
+
+onUpdated(() => {
+  offsetX.value = (x.value / width.value) * 100 || 50
+  offsetY.value = (y.value / height.value) * 100 || 50
+})
+
+watch(theme, (newTheme) => document.documentElement.setAttribute('data-theme', newTheme))
 </script>
 
 <style lang="scss">

@@ -89,6 +89,7 @@ import HighLight from '@/components/HighLight.vue'
 import ArrowNavigation from '@/components/ArrowNavigation.vue'
 import getPath from '@/helpers/getPath.js'
 import getSrc from '@/helpers/getSrc.js'
+import getThreeRandom from '@/helpers/getThreeRandom'
 
 const route = useRoute()
 const projectName = ref(route.params.projectName)
@@ -97,7 +98,7 @@ const source = computed(() => getSrc(projectName.value))
 const curIdx = ref(getCurrentProjectIndex())
 const prev = ref(getPreviousProject())
 const next = ref(getNextProject())
-const others = ref(getOtherProjects())
+const others = ref(getThreeRandom(projects, curIdx.value))
 
 function getProjectDetails(projectName) {
   return projects.find(project => project.name === projectName) || {}
@@ -118,32 +119,13 @@ function getPreviousProject() {
   return projects[prevIndex]
 }
 
-function getOtherProjects(currentIndex = curIdx.value) {
-  const result = [];
-
-  const isInvalidIndex = (index) => (
-    index !== currentIndex &&
-    projects[index].orientation !== project.value.orientation
-  );
-
-  while (result.length < 3) {
-    const randomIndex = Math.floor(Math.random() * projects.length);
-
-    if (isInvalidIndex(randomIndex) && !result.includes(randomIndex)) {
-      result.push(randomIndex);
-    }
-  }
-
-  return result.map(index => projects[index]);
-}
-
 watchEffect(() => {
   projectName.value = route.params.projectName
   project.value = getProjectDetails(projectName.value)
   curIdx.value = getCurrentProjectIndex()
   prev.value = getPreviousProject()
   next.value = getNextProject()
-  others.value = getOtherProjects()
+  others.value = getThreeRandom(projects, curIdx.value)
 })
 
 onMounted(() => window.scrollTo(0, 0))

@@ -18,38 +18,34 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUpdated } from 'vue';
-import { VueperSlides, VueperSlide } from 'vueperslides';
-import 'vueperslides/dist/vueperslides.css';
-import slides from '@/assets/slides.js';
+import { ref, onMounted, onUpdated } from 'vue'
+import { VueperSlides, VueperSlide } from 'vueperslides'
+import 'vueperslides/dist/vueperslides.css'
+import slides from '@/assets/slides.js'
 
 const slider = ref()
 
 const setSlideContentGrid = () => {
-  // Get all content elements inside VueperSlides
-  const contentElements = document.querySelectorAll('.vueperslide__content');
+  const contentElements = document.querySelectorAll('.vueperslide__content')
 
-  // Apply inline styles to each content element
   contentElements.forEach((element) => {
-    // Create a style attribute with the desired styles
     element.setAttribute(
       'style',
       `display: grid !important;
-  grid-template-columns: repeat(3, 1fr) !important;
-  width: 100% !important; transition: none !important;`
+        grid-template-columns: repeat(3, 1fr) !important;
+          width: 100% !important; transition: none !important;`
     );
   });
 }
 
 onMounted(() => {
   setSlideContentGrid()
-  // Use the $refs property
-  // to access the methods of the Vueper Slides component
-  slider.value.goToSlide(3);
-});
+  slider.value.goToSlide(3)
+})
+
 onUpdated(() => {
   setSlideContentGrid()
-});
+})
 </script>
 
 <style lang="scss">
