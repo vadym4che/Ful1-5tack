@@ -6,16 +6,26 @@ const vertical = [
     tags: ['UI', 'FE', 'BE', 'DB'],
     desc: '',
     path: 'vue3-feedback-widget',
-    orientation: '|'
+    orientation: '|',
+    deps: [],
   },
   {
     title: 'Weather App',
     name: 'vue-weather-app',
     stack: ['Vue3', 'axios', 'i18n', 'maps'],
     tags: ['UI', 'FE', 'API'],
-    desc: '',
+    desc: 'The Vue Weather App is a feature-rich weather application developed using Vue.js. It provides a user-friendly interface with various functionalities. The project structure follows a clean organization, separating components, helpers, and views.\n\nKey Functionalities:\n1. City Autocomplete Input: Utilizes the vue3-google-autocomplete package for a user-friendly city input field powered by Google Maps API.\n2. API Requests: Utilizes Axios to make API requests to Open-Meteo.com, a free open-source weather API.\n3. Current Weather Card: Displays weather information for the current day in a card format.\n4. Hourly Temperature Graph: Shows an hourly temperature graph for the current day using the Vue-chartjs plugin.\n5. Multiple Weather Blocks: Allows users to create multiple weather blocks for different cities, with a limit of 5 blocks.\n6. Favorites Tab: Features a "Favorites" tab where users can add or remove cities, with weather blocks displayed for added cities.\n7. Responsiveness: The application is responsive, utilizing SCSS and CSS @media for adaptability.\n8. Day/5 Days Toggle: Allows users to toggle between displaying "Day" or "5 Days" weather.\n9. Default User Location: Displays weather for the user\'s location determined by IP address using the Geoapify.com platform.\n10. Preloaders: Implements CSS preloader animations during API requests.\n11. Multilingual Support: Provides multilingual support for the interface and API responses in English and Ukrainian.\n12. Day/Night Mode: Features a toggle between Day and Night theme-view modes.',
     path: 'vue-weather-app',
-    orientation: '|'
+    orientation: '|',
+    deps: [
+      "axios ^1.6.2",
+      "chart.js ^4.4.0",
+      "vue ^3.3.8",
+      "vue-chartjs ^5.2.0",
+      "vue-i18n ^9.8.0",
+      "vue-router ^4.2.5",
+      "vue3-google-autocomplete ^0.0.5"
+    ]
   },
   {
     title: 'Calendar App',
@@ -24,7 +34,8 @@ const vertical = [
     tags: ['UI', 'FE', 'API'],
     desc: '',
     path: 'e-time',
-    orientation: '|'
+    orientation: '|',
+    deps: [],
   },
   {
     title: 'If GPT was a dish - tech recipe',
@@ -33,7 +44,9 @@ const vertical = [
     tags: ['UI', 'FE', 'API'],
     desc: '',
     path: 'gpt-cuisine-symphony',
-    orientation: '|'
+    orientation: '|',
+    deps: [],
+    white_bg: true,
   },
   {
     title: 'React dynamic list of goods',
@@ -42,7 +55,9 @@ const vertical = [
     tags: ['UI', 'FE', 'API'],
     desc: '',
     path: 'react_dynamic-list-of-goods',
-    orientation: '|'
+    orientation: '|',
+    deps: [],
+    white_bg: true,
   },
   {
     title: 'Rainbow divs toggler',
@@ -51,7 +66,8 @@ const vertical = [
     tags: ['UI', 'FE', 'API'],
     desc: '',
     path: 'div-toggle-colorizer',
-    orientation: '|'
+    orientation: '|',
+    deps: [],
   },
   {
     title: 'React Restaurant Landing App',
@@ -60,7 +76,8 @@ const vertical = [
     tags: ['UI', 'FE', 'API'],
     desc: '',
     path: 'restaurant-react',
-    orientation: '|'
+    orientation: '|',
+    deps: [],
   },
   {
     title: 'React BEM responsive landing',
@@ -69,7 +86,8 @@ const vertical = [
     tags: ['UI', 'FE', 'API'],
     desc: '',
     path: 'gpt3-react',
-    orientation: '|'
+    orientation: '|',
+    deps: [],
   },
   {
     title: 'Vue Weather Forecast App',
@@ -78,7 +96,8 @@ const vertical = [
     tags: ['UI', 'FE', 'API'],
     desc: '',
     path: 'weather-app',
-    orientation: '|'
+    orientation: '|',
+    deps: [],
   },
   {
     title: 'Vue Grocery Store with Cart',
@@ -87,7 +106,8 @@ const vertical = [
     tags: ['UI', 'FE', 'API'],
     desc: '',
     path: 'food-cart-vue',
-    orientation: '|'
+    orientation: '|',
+    deps: [],
   },
   {
     title: 'React Live-coding - Cars App',
@@ -96,7 +116,9 @@ const vertical = [
     tags: ['UI', 'FE', 'API'],
     desc: '',
     path: 'react_live_coding_cars_table_task',
-    orientation: '|'
+    orientation: '|',
+    deps: [],
+    white_bg: true,
   },
   {
     title: 'Site with sticky header Example',
@@ -105,7 +127,8 @@ const vertical = [
     tags: ['UI', 'FE'],
     desc: '',
     path: 'react_decompose',
-    orientation: '|'
+    orientation: '|',
+    deps: [],
   },
   {
     title: 'HTML5 Transforming JSON to List',
@@ -114,7 +137,8 @@ const vertical = [
     tags: ['UI', 'FE', 'API'],
     desc: '',
     path: 'json-list',
-    orientation: '|'
+    orientation: '|',
+    deps: [],
   },
   {
     title: 'Bykes Store Landing Page',
@@ -123,7 +147,8 @@ const vertical = [
     tags: ['UI', 'FE', 'API'],
     desc: '',
     path: 'layout_miami',
-    orientation: '|'
+    orientation: '|',
+    deps: [],
   },
   {
     title: 'Multilayout Clock Widget',
@@ -132,16 +157,18 @@ const vertical = [
     tags: ['UI', 'FE', 'API'],
     desc: '',
     path: 'lunar-solar-time',
-    orientation: '|'
+    orientation: '|',
+    deps: [],
   },
   {
     title: 'fireSnow - snowfall background',
     name: 'fireSnow',
-    stack: ['Vite' ,'Vue3', 'SCSS'],
+    stack: ['HTML' ,'CSS', 'SCSS'],
     tags: ['UI', 'FE', 'API'],
-    desc: '',
+    desc: 'FIRESNOW® is a web page designed to create a captivating visual experience. It features falling snowflakes over a dark background, accompanied by animated text. The project aims to showcase creative CSS techniques for animation and styling. The project\'s HTML structure is minimal, with a basic layout consisting of a <div> element for snowflakes and sections for header and footer text. The document\'s metadata, including the title and favicon, is also defined.',
     path: 'fireSnow',
-    orientation: '|'
+    orientation: '|',
+    deps: [],
   },
   {
     title: 'Watch Widget SCSS',
@@ -150,7 +177,9 @@ const vertical = [
     tags: ['UI', 'FE', 'API'],
     desc: '',
     path: 'layout_stop-watch',
-    orientation: '|'
+    orientation: '|',
+    deps: [],
+    white_bg: true,
   },
   {
     title: 'A<3B',
@@ -159,7 +188,8 @@ const vertical = [
     tags: ['FE', 'JS'],
     desc: '',
     path: 'AIB',
-    orientation: '|'
+    orientation: '|',
+    deps: [],
   },
 ]
 
@@ -171,7 +201,8 @@ const horizontal = [
     tags: ['FE', 'JS'],
     desc: '',
     path: 'AIB',
-    orientation: '-'
+    orientation: '-',
+    deps: [],
   },
   {
     title: 'React MUI: Table | Chart | List',
@@ -180,7 +211,8 @@ const horizontal = [
     tags: ['UI', 'FE', 'API'],
     desc: '',
     path: 'backendless-tabs-jsx',
-    orientation: '-'
+    orientation: '-',
+    deps: [],
   },
   {
     title: 'Vue Fetch Random User',
@@ -189,7 +221,9 @@ const horizontal = [
     tags: ['UI', 'FE', 'API'],
     desc: '',
     path: 'random-user-vue',
-    orientation: '-'
+    orientation: '-',
+    deps: [],
+    white_bg: true,
   },
   {
     title: 'The Base: Layout, Git, JS, TS',
@@ -198,7 +232,8 @@ const horizontal = [
     tags: ['UI', 'FE', 'API'],
     desc: '',
     path: 'devit-team',
-    orientation: '-'
+    orientation: '-',
+    deps: [],
   },
   {
     title: 'Web Development Essentials',
@@ -207,7 +242,8 @@ const horizontal = [
     tags: ['UI', 'FE', 'API'],
     desc: '',
     path: 'abz-agency-test-assignment',
-    orientation: '-'
+    orientation: '-',
+    deps: [],
   },
   {
     title: 'Nice Gadgets Store - Full-stack App',
@@ -216,7 +252,9 @@ const horizontal = [
     tags: ['UI', 'FE', 'BE', 'DB', 'API'],
     desc: '',
     path: 'https://fe-jan23-team-six.github.io/product-catalog/',
-    orientation: '-'
+    orientation: '-',
+    deps: [],
+    white_bg: true,
   },
   {
     title: 'React Todos Full-stack App',
@@ -225,7 +263,8 @@ const horizontal = [
     tags: ['UI', 'FE', 'BE', 'API'],
     desc: '',
     path: 'react_todo-app-with-api',
-    orientation: '-'
+    orientation: '-',
+    deps: [],
   },
   {
     title: 'React Task-management Table',
@@ -234,7 +273,8 @@ const horizontal = [
     tags: ['UI', 'FE', 'API'],
     desc: '',
     path: 'react_dynamic-list-of-todos',
-    orientation: '-'
+    orientation: '-',
+    deps: [],
   },
   {
     title: 'React CRM-like people table',
@@ -243,7 +283,8 @@ const horizontal = [
     tags: ['UI', 'FE', 'API'],
     desc: '',
     path: 'react_people-table-basics/#/people',
-    orientation: '-'
+    orientation: '-',
+    deps: [],
   },
   {
     title: 'Vue Travel App with Vue-router',
@@ -252,7 +293,9 @@ const horizontal = [
     tags: ['UI', 'FE', 'API'],
     desc: '',
     path: 'travel-app-vue',
-    orientation: '-'
+    orientation: '-',
+    deps: [],
+    white_bg: true,
   },
   {
     title: 'Nuxt simple Theme Toggler Example',
@@ -261,7 +304,8 @@ const horizontal = [
     tags: ['UI', 'FE', 'SSR', 'API'],
     desc: '',
     path: 'nuxt-demo',
-    orientation: '-'
+    orientation: '-',
+    deps: [],
   },
   {
     title: 'Movies Site - Add Movie Form',
@@ -270,7 +314,8 @@ const horizontal = [
     tags: ['UI', 'FE', 'API'],
     desc: '',
     path: 'react_movies-list-add-form',
-    orientation: '-'
+    orientation: '-',
+    deps: [],
   },
   {
     title: 'Custom Shaped Download Page',
@@ -279,7 +324,8 @@ const horizontal = [
     tags: ['UI', 'FE', 'API'],
     desc: '',
     path: 'my-server-io',
-    orientation: '-'
+    orientation: '-',
+    deps: [],
   },
 
   {
@@ -289,7 +335,8 @@ const horizontal = [
     tags: ['UI', 'FE', 'API'],
     desc: '',
     path: 'graphics-js',
-    orientation: '-'
+    orientation: '-',
+    deps: [],
   },
   {
     title: 'Wordle - Guess UA word app',
@@ -298,7 +345,9 @@ const horizontal = [
     tags: ['UI', 'FE', 'API'],
     desc: '',
     path: 'wordle-js',
-    orientation: '-'
+    orientation: '-',
+    deps: [],
+    white_bg: true,
   },
   {
     title: 'Clicker app - pure JavaScript',
@@ -307,7 +356,8 @@ const horizontal = [
     tags: ['UI', 'FE', 'API'],
     desc: '',
     path: 'clicker-js',
-    orientation: '-'
+    orientation: '-',
+    deps: [],
   },
 ]
 

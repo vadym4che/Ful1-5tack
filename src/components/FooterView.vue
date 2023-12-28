@@ -54,7 +54,7 @@
     </div>
 
     <h4 class="h4 hr-above">
-      © 2023. Vadym4CHe. All rights reserved.
+      © {{new Date().getFullYear()}}. Vadym4CHe. All rights reserved.
     </h4>
   </footer>
 </template>

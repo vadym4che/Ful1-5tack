@@ -12,5 +12,7 @@
 <style lang="scss" scoped>
 .path {
   stroke: var(--color0);
+  height: 0.75rem;
+  width: 1.125rem;
 }
 </style>

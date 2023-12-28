@@ -16,7 +16,11 @@
           <iframe
           :src="getPath(p.path)"
           frameborder="0"
-          :class="{ vertical: p.orientation === '|', horizontal: p.orientation === '-' }"
+          :class="{
+            vertical: p.orientation === '|',
+            horizontal: p.orientation === '-',
+            white_bg: p.white_bg,
+          }"
           ></iframe>
 
           <p class="p3">
