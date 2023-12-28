@@ -182,7 +182,7 @@ const vertical = [
     white_bg: true,
   },
   {
-    title: 'A<3B',
+    title: 'A💞B',
     name: 'AIB',
     stack: ['HTML', 'CSS', 'JS'],
     tags: ['FE', 'JS'],
@@ -195,7 +195,7 @@ const vertical = [
 
 const horizontal = [
   {
-    title: 'A<3B',
+    title: 'A💞B',
     name: 'AIB',
     stack: ['HTML', 'CSS', 'JS'],
     tags: ['FE', 'JS'],
