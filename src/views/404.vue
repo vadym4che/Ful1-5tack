@@ -30,8 +30,9 @@ import { useRoute } from 'vue-router'
 }
 
 h2 {
+  top: -10rem;
   text-align: center;
-  font-size: 20vmin;
+  font-size: 20rem;
   position: relative;
   .highlight {
     position: absolute;

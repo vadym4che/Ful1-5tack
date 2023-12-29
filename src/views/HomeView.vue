@@ -58,7 +58,6 @@
 import { defineAsyncComponent, onMounted } from 'vue'
 import ArrowRight from '@/components/ArrowRight.vue'
 import HighLight from '@/components/HighLight.vue'
-import AsyncFrame from '@/components/AsyncFrame.vue';
 
 const Three = defineAsyncComponent(() => import('@/components/Three.vue'))
 const TechStack = defineAsyncComponent(() => import('@/components/TechStack.vue'))
@@ -81,7 +80,11 @@ onMounted(() => window.scrollTo(0, 0))
   }
 
   button {
-    padding: 1.5rem 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1.5rem 2.5rem;
   }
 }
 
@@ -114,7 +117,12 @@ onMounted(() => window.scrollTo(0, 0))
     }
 
     button {
-      height: 3.5rem;
+      border-radius: 2rem;
+      border-width: 0.125rem;
+      font-weight: 700;
+      padding: 1.5rem 3rem;
+      position: relative;
+      z-index: 1;
     }
   }
 
@@ -158,20 +166,15 @@ onMounted(() => window.scrollTo(0, 0))
 }
 
 button {
+  padding: 1.25rem 3.125rem;
   border-radius: 2rem;
   border-width: 0.125rem;
   font-weight: 700;
-  padding: 1rem 2rem;
-  position: relative;
-  z-index: 1;
-
-  & > * {
-    color: var(--color0);
-  }
+  background: var(--accent0);
+  color: var(--color0);
 }
 
 
-.head button,
 .hero button {
   background: var(--accent0);
   border-color: transparent;
@@ -191,13 +194,16 @@ button {
   }
 
   button {
-    height: 3.75rem;
-    width: 15.125rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-width: 0.125rem;
+    font-weight: 700;
+    padding: 1.5rem 3rem;
     color: var(--accent0);
     border-radius: 1.875rem;
     font-family: Inter;
     text-align: center;
-    font-size: 0.8rem;
     font-weight: 700;
     line-height: normal;
     letter-spacing: 0.1rem;
