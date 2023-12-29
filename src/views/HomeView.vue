@@ -2,7 +2,7 @@
   <section class="head content flex-col-center">
     <h1 class="h1">
       Crafting Digital Solutions<br>from End to End.
-      <HighLight />
+      <high-light />
     </h1>
 
     <button>
@@ -16,7 +16,7 @@
     <div class="left content flex-col-center">
       <div class="text">
         <h2 class="h2">
-          <HighLight />
+          <high-light />
           Let’s get know<br>about me closer
         </h2>
 
@@ -39,25 +39,26 @@
   <section class="projects flex-col-center">
     <h2 class="h2">
       My Projects Highlight
-      <HighLight />
+      <high-light />
     </h2>
 
     <button>
       <router-link to="/projects">
-        EXPLORE MORE <ArrowRight />
+        EXPLORE MORE <arrow-right />
       </router-link>
     </button>
 
-    <Three />
+    <three />
   </section>
 
-  <TechStack />
+  <tech-stack />
 </template>
 
 <script setup>
 import { defineAsyncComponent, onMounted } from 'vue'
 import ArrowRight from '@/components/ArrowRight.vue'
 import HighLight from '@/components/HighLight.vue'
+import AsyncFrame from '@/components/AsyncFrame.vue';
 
 const Three = defineAsyncComponent(() => import('@/components/Three.vue'))
 const TechStack = defineAsyncComponent(() => import('@/components/TechStack.vue'))
@@ -80,7 +81,7 @@ onMounted(() => window.scrollTo(0, 0))
   }
 
   button {
-    height: 4rem;
+    padding: 1.5rem 2rem;
   }
 }
 

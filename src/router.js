@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '@/views/HomeView.vue'
 
 const routes = [
   {
@@ -8,7 +7,7 @@ const routes = [
   },
   {
     path: '/home',
-    component: HomeView,
+    component: () => import('@/views/HomeView.vue'),
   },
   {
     path: '/about',
@@ -29,7 +28,7 @@ const routes = [
   },
   {
     path: '/loader',
-    component: () => import('@/components/loader.vue'),
+    component: () => import('@/components/Loader.vue'),
   },
   {
     path: '/:catchAll(.*)',
@@ -40,16 +39,6 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes,
-});
-
-// let isFirstLoad = !history.length
-// router.beforeEach((to, from, next) => {
-//   if (isFirstLoad) {
-//     isFirstLoad = false
-//     next({ name: 'Home' })
-//   } else {
-//     next()
-//   }
-// })
+})
 
 export default router

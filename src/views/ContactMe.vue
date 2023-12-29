@@ -3,7 +3,7 @@
     <div class="flex-col-start page-header padding-13">
       <h2 class="h2" style="left: -0.2rem;">
         Contact Me
-        <HighLight />
+        <high-light />
       </h2>
       <p class="p3">
         Hire Me For Your Awesome Project
@@ -62,7 +62,6 @@ const subject = ref('')
 const message = ref('')
 
 const submitForm = async () => {
-
   const text = `
         Name: ${name.value}
         Email: ${email.value}
@@ -88,12 +87,6 @@ const submitForm = async () => {
   } catch (error) {
     console.error('Error sending email:', error)
   }
-
-  console.log('Form submitted successfully!')
-  console.log('Name:', name.value)
-  console.log('Email:', email.value)
-  console.log('Subject:', subject.value)
-  console.log('Message:', message.value)
 
   name.value = ''
   email.value = ''
@@ -213,7 +206,6 @@ textarea {
   background-repeat: no-repeat;
   aspect-ratio: 1148 / 636;
   margin-bottom: 6.25rem;
-  /* filter: invert(var(--is-white)); */
 }
 
 .address {

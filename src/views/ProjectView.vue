@@ -1,9 +1,9 @@
 <template>
-  <div class="flex-col-start">
+  <div class="flex-col-start project-page">
     <div class="flex-col-start page-header padding-13">
       <h2 class="h2">
         Project Detail
-        <HighLight />
+        <high-light />
       </h2>
       <p class="p3">
         Details About The Project
@@ -11,16 +11,10 @@
     </div>
 
     <div class="project-details flex-col-start">
-      <iframe
-        :src="getPath(project.path)"
-        frameborder="0"
-        :class="{
-          vertical: project.orientation === '|',
-          horizontal: project.orientation === '-',
-          white_bg: project.white_bg,
-        }"
-        class="preview"
-      ></iframe>
+      <async-frame 
+        :iframeSrc="getPath(project.path)"
+        :iframeClass="{ white_bg: project.white_bg, preview: true }"
+      />
 
       <div class="text flex-col-start">
         <h3 class="h3">{{ project.title }}</h3>
@@ -46,13 +40,13 @@
 
     <div class="navigation">
       <router-link :to="{ name: 'project', params: { projectName: prev.name } }" class="nav-button prev">
-        <ArrowNavigation />
+        <arrow-navigation />
         PREVIOUS WORK
       </router-link>
 
       <router-link :to="{ name: 'project', params: { projectName: next.name } }" class="nav-button next">
         NEXT WORK
-        <ArrowNavigation />
+        <arrow-navigation />
       </router-link>
     </div>
 
@@ -61,14 +55,11 @@
 
       <div class="cards">
         <div class="card" v-for="p, i in others" :key="i">
-          <router-link :to="{ name: 'project', params: { projectName: p.name } }" class="">
-            <iframe
-              :src="getPath(p.path)"
-              frameborder="0"
-              :class="{ white_bg: p.white_bg }" 
-              class="other"
-            >
-            </iframe>
+          <router-link :to="{ name: 'project', params: { projectName: p.name } }">
+            <async-frame 
+              :iframeSrc="getPath(p.path)"
+              :iframeClass="{ white_bg: p.white_bg, other: true }"
+            />
 
             <div class="other-text flex-col-start">
               <h4 class="h4">{{ p.title }}</h4>
@@ -87,6 +78,7 @@ import { useRoute } from 'vue-router'
 import { projects } from '@/assets/projects.js'
 import HighLight from '@/components/HighLight.vue'
 import ArrowNavigation from '@/components/ArrowNavigation.vue'
+import AsyncFrame from '@/components/AsyncFrame.vue'
 import getPath from '@/helpers/getPath.js'
 import getSrc from '@/helpers/getSrc.js'
 import getThreeRandom from '@/helpers/getThreeRandom'
@@ -131,95 +123,107 @@ watchEffect(() => {
 onMounted(() => window.scrollTo(0, 0))
 </script>
 
-<style lang="scss" scoped>
-iframe.preview {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  border-radius: 1rem;
-}
-.project-details {
-  margin-top: 7.5rem;
-  align-items: center;
-}
+<style lang="scss">
+.project-page{
 
-.text {
-  width: 65%;
-  gap: 1.875rem;
-}
-.h3 {
-  margin-top: 4rem;
-  font-size: 2rem;
-}
+  .preview {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 1rem;
 
-pre {
-  line-break: normal;
-  text-wrap: wrap;
-  font-family: inherit;
-}
+    &:not(.white_bg) {
+      background-color: var(--bg50);
+    }
+  }
 
-.navigation {
-  margin-top: 9rem;
-  display: flex;
-  justify-content: space-between;
-}
+  .project-details {
+    margin-top: 7.5rem;
+    align-items: center;
+  }
 
-.nav-button {
-  display: flex;
-  height: 1.5625rem;
-  font-family: 'Rubik', sans-serif;
-  font-size: 0.875rem;
-  font-weight: 600;
-  line-height: 170%;
-  justify-content: center;
+  .text {
+    width: 65%;
+    gap: 1.875rem;
+  }
 
-  gap: 1.25rem;
-}
-.prev svg {
-  align-self: flex-end;
-}
-.next svg {
-  transform: rotate(180deg);
-  align-self: flex-start;
-}
+  .h3 {
+    margin-top: 4rem;
+    font-size: 2rem;
+  }
 
-.others {
-  margin-top: 12rem;
-  align-items: center;
-}
+  pre {
+    line-break: normal;
+    text-wrap: wrap;
+    font-family: inherit;
+  }
 
-.cards {
-  margin-top: 5rem;
+  .navigation {
+    margin-top: 9rem;
+    display: flex;
+    justify-content: space-between;
+  }
 
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  .nav-button {
+    display: flex;
+    height: 1.5625rem;
+    font-family: 'Rubik', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 170%;
+    justify-content: center;
+    gap: 1.25rem;
+  }
 
-  margin-bottom: 3.125rem;
-}
+  .prev svg {
+    align-self: flex-end;
+  }
 
-.card {
-  position: relative;
-  z-index: 1;
-}
+  .next svg {
+    transform: rotate(180deg);
+    align-self: flex-start;
+  }
 
-.card a {
-  aspect-ratio: 3 / 5;
-  display: inline-flex;
-  flex-direction: column;
-}
-.other {
-  position: relative;
-  z-index: -1;
-}
+  .others {
+    margin-top: 12rem;
+    align-items: center;
+  }
 
-.other-text {
-  padding-top: 1.6875rem;
-  padding-left: 1.25rem;
-  gap: 0.625rem;
-}
-iframe.other {
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  border-radius: 1rem;
+  .cards {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3.125rem;
+  }
+
+  .card {
+    position: relative;
+    z-index: 1;
+  }
+
+  .card a {
+    aspect-ratio: 3 / 5;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .other {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    border-radius: 1rem;
+    position: relative;
+    z-index: -1;
+
+    &:not(.white_bg) {
+      background-color: var(--bg50);
+    }
+  }
+
+  .other-text {
+    padding-top: 1.6875rem;
+    padding-left: 1.25rem;
+    gap: 0.625rem;
+  }
 }
 </style>

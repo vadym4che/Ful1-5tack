@@ -3,7 +3,7 @@
     <div class="flex-col-start page-header padding-13">
       <h2 class="h2">
         About Me
-        <HighLight />
+        <high-light />
       </h2>
       <p class="p3">
         Little Brief About Myself

@@ -1,9 +1,9 @@
 <template>
-  <div class="flex-col-start">
+  <div class="flex-col-start projects-page">
     <div class="flex-col-start page-header padding-13">
       <h2 class="h2" style="left: -0.2rem;">
         My Works
-        <HighLight />
+        <high-light />
       </h2>
       <p class="p3">
         Showcase About Works
@@ -18,15 +18,15 @@
         :id="'three-' + index"
       >
         <div v-for="(p, i) in a" :key="i" class="project">
-          <iframe
-          :src="getPath(p.path)"
-          frameborder="0"
-          :class="{
-            vertical: p.orientation === '|',
-            horizontal: p.orientation === '-',
-            white_bg: p.white_bg,
-          }"
-          ></iframe>
+          <async-frame 
+            :iframeSrc="getPath(p.path)"
+            :iframeClass="{
+              vertical: p.orientation === '|',
+              horizontal: p.orientation === '-',
+              white_bg: p.white_bg,
+              iframe: true
+            }"
+          />
 
           <p class="p3">
             {{ p.tags.join(' | ') }}
@@ -49,6 +49,7 @@
 <script setup>
 import { ref, onMounted, onUpdated } from 'vue'
 import HighLight from '@/components/HighLight.vue'
+import AsyncFrame from '@/components/AsyncFrame.vue'
 import { chunkedProjects } from '@/assets/projects.js'
 import getPath from '@/helpers/getPath.js'
 
@@ -79,95 +80,97 @@ onMounted(() => window.scrollTo(0, 0))
 onUpdated(() => handleScroll())
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+.projects-page {
 
-.projects-container {
-  padding: 6.25rem 0 11rem;
-  gap: 3rem;
-}
-.projects-container, .three {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  position: relative;
-}
-.three {
-  gap: 1.5rem;
-  max-width: 55.5rem;
-}
-
-.project {
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding-bottom: 0.5rem;
-
-  &:has(.vertical){
-    height: calc(1.2 * 36.144rem);
+  .projects-container {
+    padding: 6.25rem 0 11rem;
+    gap: 3rem;
+  }
+  .projects-container, .three {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+  }
+  .three {
+    gap: 1.5rem;
+    max-width: 55.5rem;
   }
 
-  &:has(.horizontal){
-    height: calc(1.2 * 17.572rem);
-  }
-  .horizontal {
-    aspect-ratio: 2 / 1;
-    width: 36.144rem;
-  }
-  .vertical {
-    aspect-ratio: 1 / 2;
-    width: 17.572rem;
-  }
-  flex-shrink: 1;
-  flex-grow: 0;
-  height: auto;
-  overflow: hidden;
+  .project {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 0.5rem;
 
-  background: var(--bg50);
-  border-radius: 1rem;
-  text-align: center;
+    &:has(.vertical){
+      height: calc(1.2 * 36.144rem);
+    }
 
-  iframe {
+    &:has(.horizontal){
+      height: calc(1.2 * 17.572rem);
+    }
+    .horizontal {
+      aspect-ratio: 2 / 1;
+      width: 36.144rem;
+    }
+    .vertical {
+      aspect-ratio: 1 / 2;
+      width: 17.572rem;
+    }
+    flex-shrink: 1;
+    flex-grow: 0;
+    height: auto;
+    overflow: hidden;
+
+    background: var(--bg50);
     border-radius: 1rem;
+    text-align: center;
+
+    .iframe {
+      border-radius: 1rem;
+    }
   }
-}
 
-.project:nth-child(3n):has(.vertical) {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-.project:nth-child(3n):has(.horizontal) {
-  position: absolute;
-  top: calc(50% + 0.5rem);
-  right: 0.5rem;
-}
-
-iframe {
-  border: none;
-}
-
-@media (orientation: landscape) {
-  .three:last-child {
-    margin: 0 auto;
-    align-self: center;
-    justify-self: center;
+  .project:nth-child(3n):has(.vertical) {
+    position: absolute;
+    top: 0;
+    right: 0;
   }
-}
+  .project:nth-child(3n):has(.horizontal) {
+    position: absolute;
+    top: calc(50% + 0.5rem);
+    right: 0.5rem;
+  }
 
-.load-more{
-  height: 3.75rem;
-  width: 15.125rem;
-  color: var(--accent0);
-  background-color: transparent;
-  border-radius: 1.875rem;
-  font-family: Inter;
-  text-align: center;
-  font-size: 0.8rem;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: 0.1rem;
-  background: var(--bg50);
-  border-color: var(--accent0);
-  margin: 3.75rem auto 0;
+  .iframe {
+    border: none;
+  }
+
+  @media (orientation: landscape) {
+    .three:last-child {
+      margin: 0 auto;
+      align-self: center;
+      justify-self: center;
+    }
+  }
+
+  .load-more{
+    height: 3.75rem;
+    width: 15.125rem;
+    color: var(--accent0);
+    background-color: transparent;
+    border-radius: 1.875rem;
+    font-family: Inter;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.1rem;
+    background: var(--bg50);
+    border-color: var(--accent0);
+    margin: 3.75rem auto 0;
+  }
 }
 </style>

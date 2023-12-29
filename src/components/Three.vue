@@ -1,11 +1,15 @@
 <template>
-  <div class="three">
-    <div class="card" v-for="{ title, stack, tags, path, white_bg }, i in three" :key="i">
+  <div class="three three-projects">
+    <div class="card" v-for="{ title, name, stack, tags, path, white_bg }, i in three" :key="i">
       <div class="frame">
-        <iframe :src="getPath(path)" frameborder="0" :class="{ white_bg: white_bg }"></iframe>
+        <AsyncFrame :iframeSrc="getPath(path)" :iframeClass="{ white_bg: white_bg, iframe: true }"/>
       </div>
 
-      <h4 class="h4">{{ title }}</h4>
+      <h4 class="h4">
+        <router-link :to="{ name: 'project', params: { projectName: name } }">
+          {{ title }}
+        </router-link>
+      </h4>
       <p class="p3">
         <span class="dimmed">tech stack: &nbsp;</span>
         {{ stack.join(' | ') }}<br>
@@ -18,14 +22,16 @@
 
 <script setup>
 import { projects } from '@/assets/projects.js'
+import AsyncFrame from '@/components/AsyncFrame.vue'
 import getPath from '@/helpers/getPath.js'
 import getThreeRandom from '@/helpers/getThreeRandom'
 
 const three = getThreeRandom(projects)
 </script>
 
-<style lang="scss" scoped>
-.three {
+<style lang="scss">
+
+.three-projects {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -46,8 +52,11 @@ const three = getThreeRandom(projects)
     }
   }
 
-
   .card {
+    overflow: hidden;
+    gap: 2rem;
+    display: grid;
+
     @media (orientation: landscape) {
       & {
         width: 22rem;
@@ -63,10 +72,6 @@ const three = getThreeRandom(projects)
         grid-template-rows: 29rem 2rem 1rem;
       }
     }
-    overflow: hidden;
-    gap: 2rem;
-
-    display: grid;
 
     .frame {
       box-sizing: border-box;
@@ -78,13 +83,17 @@ const three = getThreeRandom(projects)
       width: 100%;
       aspect-ratio: 9 / 16;
 
-      iframe {
+      .iframe {
         box-sizing: border-box;
         border: none;
         width: 100%;
         aspect-ratio: 9 / 16;
         position: absolute;
         transform: scale(1.01) translate(0.5%, 0.5%);
+
+        &:not(.white_bg) {
+          background-color: var(--bg50);
+        }
       }
     }
 
@@ -106,5 +115,4 @@ const three = getThreeRandom(projects)
 
   }
 }
-
 </style>

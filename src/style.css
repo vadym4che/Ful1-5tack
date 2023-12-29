@@ -47,6 +47,19 @@ body::-webkit-scrollbar-track:hover {
   background-color: var(--scrollbar-track_hover);
 }
 
+*::selection {
+  background: var(--accent0);
+  color: var(--color0);
+}
+*::-moz-selection {
+  background: var(--accent0);
+  color: var(--color0);
+}
+*::-webkit-selection {
+  background: var(--accent0);
+  color: var(--color0);
+}
+
 a:link,
 a:visited,
 a:hover,

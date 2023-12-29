@@ -79,6 +79,8 @@ watch(theme, (newTheme) => document.documentElement.setAttribute('data-theme', n
 
   --scrollbar-thumb_hover: rgb(21,21,21);
   --scrollbar-track_hover: rgb(106,106,106);
+
+  --loader-bg-blend-mode: multiply;
 }
 
 [data-theme="light"] {
@@ -108,6 +110,8 @@ watch(theme, (newTheme) => document.documentElement.setAttribute('data-theme', n
 
   --scrollbar-thumb_hover: rgb(45,45,45);
   --scrollbar-track_hover: rgb(226,226,226);
+
+  --loader-bg-blend-mode: screen;
 }
 
 .theme-toggler {
