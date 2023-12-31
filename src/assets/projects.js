@@ -4,10 +4,19 @@ const vertical = [
     name: 'vue3-feedback-widget',
     stack: ['Vue3', 'Vuetify', 'Firebase'],
     tags: ['UI', 'FE', 'BE', 'DB'],
-    desc: '',
+    desc: 'This app showcases the power of Vue3 and Google modern and convenient cloud storage as Firebase Store. It also utilizes Vuetify - an easy and light Vue component library. It consists of 2 pages. One main allows you to post feedback with ratings and so on? and disallow votes more than once with the same email box address or phone number. The second page shows statistics of voting for users to understand their own role - that their actions impact the world - to say globally :)',
     path: 'vue3-feedback-widget',
     orientation: '|',
-    deps: [],
+    deps: [
+      "@vuelidate/core ^2.0.3",
+      "@vuelidate/validators ^2.0.4",
+      "dotenv ^16.3.1",
+      "firebase ^10.5.2",
+      "vee-validate ^4.11.8",
+      "vite-plugin-vuetify ^1.0.2",
+      "vue ^3.3.4",
+      "vuetify ^3.3.23"
+    ],
   },
   {
     title: 'Weather App',
@@ -32,10 +41,16 @@ const vertical = [
     name: 'e-time',
     stack: ['Vite' ,'Vue3', 'SCSS'],
     tags: ['UI', 'FE', 'API'],
-    desc: '',
+    desc: 'Didn\'t I mention before that I am a developer and love astro topics? So I desired to create an app within which I could see all calendar data in one place - i.e. lunar phases, date, and time to put it on an additional screen to track time-spending. And I also implement styling with great respect and love to Time whom I am worshiping and on whom I rely in all my dos. So I like to watch out for Time and spend it as effectively and positively as I can.',
     path: 'e-time',
     orientation: '|',
-    deps: [],
+    deps: [
+      "vue ^3.3.8",
+      "@vitejs/plugin-vue ^4.5.0",
+      "gh-pages ^6.1.0",
+      "sass ^1.69.5",
+      "vite ^5.0.0"
+    ],
   },
   {
     title: 'If GPT was a dish - tech recipe',
@@ -62,7 +77,6 @@ const vertical = [
       "postcss ^8.4.12",
       "react ^17.0.2",
       "react-dom ^17.0.2",
-      "react-scripts ^4.0.3"
     ],
     white_bg: true,
   },
@@ -71,7 +85,7 @@ const vertical = [
     name: 'div-toggle-colorizer',
     stack: ['HTML' , 'CSS', 'JS'],
     tags: ['UI', 'FE', 'API'],
-    desc: '',
+    desc: 'This particular demo illustrates the power of JavaScript which creates all content and manages it interactively and smoothly via a few lines of code. When you click some specific div - it moves to the top. When you click on it a second time it moves to its initial place, and as result we have elements behavior if it has a memory state even if it has not.',
     path: 'div-toggle-colorizer',
     orientation: '|',
     deps: [],
@@ -85,14 +99,9 @@ const vertical = [
     path: 'restaurant-react',
     orientation: '|',
     deps: [
-      "@testing-library/jest-dom ^5.16.5",
-      "@testing-library/react ^13.4.0",
-      "@testing-library/user-event ^13.5.0",
       "react ^18.2.0",
       "react-dom ^18.2.0",
       "react-icons ^4.6.0",
-      "react-scripts 5.0.1",
-      "web-vitals ^2.1.4"
     ],
   },
   {
@@ -100,10 +109,15 @@ const vertical = [
     name: 'gpt3-react',
     stack: ['React' , 'HTML', 'CSS'],
     tags: ['UI', 'FE', 'API'],
-    desc: '',
+    desc: 'This lightweight react SPA demonstrates the modern BEM approach in writing stylesheet blocks and has a responsive instead of a gummy interface. Also, it is a very cool thing in React - it is very easy to manage content when it is divided into small easily maintainable blocks. React changed many lives of developers having different backgrounds and working areas.',
     path: 'gpt3-react',
     orientation: '|',
-    deps: [],
+    deps: [
+      "react ^18.2.0",
+      "react-dom ^18.2.0",
+      "react-icons ^4.6.0",
+      "gh-pages ^4.0.0"
+    ],
   },
   {
     title: 'Vue Weather Forecast App',
@@ -123,10 +137,19 @@ const vertical = [
     name: 'food-cart-vue',
     stack: ['HTML' ,'CSS', 'JS', 'Vue'],
     tags: ['UI', 'FE', 'API'],
-    desc: '',
+    desc: 'This is a Vue.js application for an online food ordering system. It allows users to browse products, add them to the cart, and place orders. The app provides a user-friendly interface for selecting and ordering food items.\nFeatures:\n+ Browse a list of available food products.\n+ Add products to the shopping cart.\n+ View the shopping cart and manage the items.\n+ Place an order for the selected items.\n+ Responsive design for a seamless experience on different devices.',
     path: 'food-cart-vue',
     orientation: '|',
-    deps: [],
+    deps: [
+      "core-js ^3.8.3",
+      "vue ^3.2.13",
+      "vue-router ^4.0.3",
+      "@babel/core ^7.12.16",
+      "@vue/cli-service ~5.0.0",
+      "eslint ^7.32.0",
+      "gh-pages ^4.0.0",
+      "sass ^1.55.0",
+    ],
   },
   {
     title: 'React Live-coding - Cars App',
@@ -136,7 +159,12 @@ const vertical = [
     desc: 'Here is just hour live-coding result displayed.\nThe task was to display table of cars with working lazy search and filtering by color. It\'s really simple!..',
     path: 'react_live_coding_cars_table_task',
     orientation: '|',
-    deps: [],
+    deps: [
+      "bulma ^0.9.3",
+      "react ^17.0.2",
+      "react-dom ^17.0.2",
+      "react-scripts ^4.0.3"
+    ],
     white_bg: true,
   },
   {

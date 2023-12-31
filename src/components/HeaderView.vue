@@ -52,7 +52,7 @@ header {
 .logo-image {
   width: 1.2rem;
   height: 1.2rem;
-  margin-right: 0.3rem;
+  margin-right: 0.25rem;
 }
 
 menu {
@@ -98,7 +98,7 @@ menu {
       }
     }
 
-    &:active {
+    &:active:not(.logo-link) {
       letter-spacing: -0.025ch;
     }
 
