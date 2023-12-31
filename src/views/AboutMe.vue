@@ -57,7 +57,7 @@ onMounted(() => window.scrollTo(0, 0))
   span {
     display: inline-block;
     font-style: italic;
-    width: min(40rem, 70%);
+    width: min(42rem, 75%);
     font-size: 1.5rem;
     line-height: 3rem;
     font-weight: 700;

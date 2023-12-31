@@ -2,11 +2,11 @@
   <div class="three three-projects">
     <div class="card" v-for="{ title, name, stack, tags, path, white_bg }, i in three" :key="i">
       <div class="frame">
-        <AsyncFrame :iframeSrc="getPath(path)" :iframeClass="{ white_bg: white_bg, iframe: true }"/>
+        <async-frame :iframeSrc="getPath(path)" :iframeClass="{ white_bg: white_bg, iframe: true }"/>
       </div>
 
       <h4 class="h4">
-        <router-link :to="{ name: 'project', params: { projectName: name } }">
+        <router-link :to="{ name: 'project', params: { projectName: name } }" class="text-wrap">
           {{ title }}
         </router-link>
       </h4>
@@ -30,6 +30,12 @@ const three = getThreeRandom(projects)
 </script>
 
 <style lang="scss">
+
+.text-wrap {
+  max-width: 100%;
+  overflow: hidden;
+  text-wrap: wrap;
+}
 
 .three-projects {
   display: flex;

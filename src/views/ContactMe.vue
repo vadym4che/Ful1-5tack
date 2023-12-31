@@ -18,19 +18,28 @@
 
         <form @submit.prevent="submitForm" class="flex-col-start form">
           <label data-text="NAME">
-            <input type="text" v-model="name">
+            <input type="text" v-model="name" required>
           </label>
           <label data-text="EMAIL">
-            <input type="email" v-model="email">
+            <input type="email" v-model="email" required>
           </label>
           <label data-text="SUBJECT">
-            <input type="text" v-model="subject">
+            <input type="text" v-model="subject" required>
           </label>
           <label data-text="MESSAGE">
             <textarea v-model="message"></textarea>
           </label>
 
-          <input type="submit" value="SEND"/>
+          <active-element
+            :padding="'0rem 0rem'"
+            :fontSize="'2.1rem'"
+            :borderRadius="'6.5rem'"
+            :bg="'var(--accent0)'"
+            class="font-variant"
+            :action="submitForm"
+          >
+            send
+          </active-element>
         </form>
       </div>
     </div>
@@ -39,13 +48,13 @@
 
     <div class="address">
       <h4 class="h4">
-        <a href="https://t.me/vadym4che">@vadym4che</a>
+        <a href="https://t.me/vadym4che" class="link" style="padding: 0.5rem; margin: -0.5rem">@vadym4che</a>
       </h4>
       <h4 class="h4">
-        <a href="tel:+380505444199">+380-505-444-199</a>
+        <a href="tel:+380505444199" class="link" style="padding: 0.5rem; margin: -0.5rem">+380-505-444-199</a>
       </h4>
       <h4 class="h4">
-        <a href="mailto:vadym4che@gmail.com">vadym4che@gmail.com</a>
+        <a href="mailto:vadym4che@gmail.com" class="link" style="padding: 0.5rem; margin: -0.5rem">vadym4che@gmail.com</a>
       </h4>
     </div>
   </div>
@@ -54,6 +63,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import HighLight from '@/components/HighLight.vue'
+import ActiveElement from '@/components/ActiveElement.vue'
 import emailjs from 'emailjs-com'
 
 const name = ref('')
@@ -163,11 +173,10 @@ onMounted(() => window.scrollTo(0, 0))
   }
 }
 
-input[type="submit"] {
-  height: 3.5rem;
+input[type="submit"], button {
   width: 11rem;
-  font-size: 1.5rem;
-  line-height: 3.5rem;
+  height: 3.5rem;
+
   background: var(--accent0);
   border-color: transparent;
   border-radius: 2rem;
@@ -178,6 +187,7 @@ input[type="submit"] {
   color: var(--color0);
   box-sizing: content-box;
   cursor: pointer;
+  font-weight: 400;
 }
 
 input:-webkit-autofill,
@@ -211,9 +221,9 @@ textarea {
 .address {
   display: grid;
   align-items: center;
-  justify-items: center;
   gap: 3rem;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  justify-content: space-around;
   margin-bottom: 10rem;
 }
 </style>

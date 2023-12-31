@@ -35,6 +35,7 @@
   }
 }
 .loader, .circle2 {
+  width: 100%;
   aspect-ratio: 1 / 1;
   position: relative;
   overflow: hidden;
@@ -49,10 +50,11 @@
     text-align: left;
     padding-left: 0.5rem;
     font-weight: bold;
+    transform-origin: center;
     top: 50%;
     left: 50%;
     line-height: 125%;
-    transform: translate(-50%, -50%) scale(2);
+    transform: translate(-50%, -50%) scale(3.7);
     animation: loading 4s infinite, twist-scale2 4s 2s infinite;
 
     background-clip: text;

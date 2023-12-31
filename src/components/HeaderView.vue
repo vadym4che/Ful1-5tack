@@ -2,22 +2,22 @@
   <header>
     <menu>
       <span class="logo menu-item">
-        <a href="http://bit.ly/Ful1-5tack">
+        <a href="http://bit.ly/Ful1-5tack" class="link">
           VADYM4<img src="/logo.png" alt="logo" class="logo-image">HE
         </a>
       </span>
 
       <li class="menu-item">
-        <router-link to="/home">Home</router-link>
+        <router-link to="/home" class="link">Home</router-link>
       </li>
       <li class="menu-item">
-        <router-link to="/about">About Me</router-link>
+        <router-link to="/about" class="link">About Me</router-link>
       </li>
       <li class="menu-item">
-        <router-link to="/projects">My Works</router-link>
+        <router-link to="/projects" class="link">My Works</router-link>
       </li>
       <li class="menu-item">
-        <router-link to="/contact">Contact</router-link>
+        <router-link to="/contact" class="link">Contact</router-link>
       </li>
 
       <theme-toggler />
@@ -46,13 +46,13 @@ header {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0 2rem;
+  padding: 0 0.5rem;
 }
 
 .logo-image {
-  width: 1rem;
-  height: 1rem;
-  margin-right: 0.25rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: 0.3rem;
 }
 
 menu {
@@ -65,11 +65,11 @@ menu {
   align-items: center;
   font-weight: 500;
   height: 5rem;
+  gap: 0.5rem;
 
   a {
     box-sizing: border-box;
-    font-size: 1rem;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     color: var(--color);
     padding: 1rem 2.25rem;
     opacity: 0.75;

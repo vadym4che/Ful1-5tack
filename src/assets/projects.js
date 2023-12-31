@@ -67,7 +67,7 @@ const vertical = [
     white_bg: true,
   },
   {
-    title: 'Rainbow divs toggler',
+    title: 'Rainbow divs toggler demo app',
     name: 'div-toggle-colorizer',
     stack: ['HTML' , 'CSS', 'JS'],
     tags: ['UI', 'FE', 'API'],
@@ -96,7 +96,7 @@ const vertical = [
     ],
   },
   {
-    title: 'React BEM responsive landing',
+    title: 'React BEM Landing Responsive',
     name: 'gpt3-react',
     stack: ['React' , 'HTML', 'CSS'],
     tags: ['UI', 'FE', 'API'],
@@ -140,7 +140,7 @@ const vertical = [
     white_bg: true,
   },
   {
-    title: 'Site with sticky header Example',
+    title: 'Site with sticky header',
     name: 'react_decompose',
     stack: ['HTML' ,'CSS', 'JS'],
     tags: ['UI', 'FE'],
@@ -195,7 +195,7 @@ const vertical = [
     deps: [],
   },
   {
-    title: 'Watch Widget SCSS',
+    title: 'Watch Widget SCSS Demo',
     name: 'layout_stop-watch',
     stack: ['SCSS' ,'SASS', 'HTML', 'CSS'],
     tags: ['UI', 'FE', 'API'],
@@ -231,7 +231,7 @@ const horizontal = [
   {
     title: 'React MUI: Table | Chart | List',
     name: 'backendless-tabs-jsx',
-    stack: ['HTML' ,'CSS', 'JS', 'React', 'React-router'],
+    stack: ['JS', 'React', 'React-router'],
     tags: ['UI', 'FE', 'API'],
     desc: 'This project serves as a template for a React-based application that implements tabs without backend integration. It showcases various components, including charts, lists, and tables, along with a navigation layout and a router component. The project utilizes modern web development tools and libraries such as React, React Router, Material-UI, and more.\n\n I\'d say - the most interesting for me during implementing this stuff was to force hash-router to act as common brouser-router without hash prepender #',
     path: 'backendless-tabs-jsx',
@@ -276,7 +276,7 @@ const horizontal = [
   {
     title: 'Web Development Essentials',
     name: 'abz-agency-test-assignment',
-    stack: ['HTML' ,'CSS', 'JS', 'React', 'MUI'],
+    stack: ['CSS', 'JS', 'React', 'MUI'],
     tags: ['UI', 'FE', 'API'],
     desc: '',
     path: 'abz-agency-test-assignment',
@@ -286,7 +286,7 @@ const horizontal = [
   {
     title: 'Nice Gadgets Store - Full-stack App',
     name: 'product-catalog',
-    stack: ['HTML' ,'CSS', 'JS', 'React', 'NodeJS'],
+    stack: ['CSS', 'JS', 'React', 'NodeJS'],
     tags: ['UI', 'FE', 'BE', 'DB', 'API'],
     desc: '',
     path: 'https://fe-jan23-team-six.github.io/product-catalog/',
@@ -305,7 +305,7 @@ const horizontal = [
     deps: [],
   },
   {
-    title: 'React Task-management Table',
+    title: 'React Task-Manager App',
     name: 'react_dynamic-list-of-todos',
     stack: ['HTML' ,'CSS', 'JS', 'React'],
     tags: ['UI', 'FE', 'API'],
@@ -317,7 +317,7 @@ const horizontal = [
   {
     title: 'React CRM-like people table',
     name: 'react_people-table-basics',
-    stack: ['HTML' ,'CSS', 'JS', 'React', 'React-router'],
+    stack: ['CSS', 'JS', 'React', 'React-router'],
     tags: ['UI', 'FE', 'API'],
     desc: 'This is a React.js application that displays a table of people and allows users to browse details of each person. It uses React Router for navigation and displays information in a user-friendly manner.\n\n There are real peaple table displayed with interesting heritage relationships, which are highlighted interactively.',
     path: 'react_people-table-basics/#/people',
@@ -335,7 +335,7 @@ const horizontal = [
   {
     title: 'Vue Travel App with Vue-router',
     name: 'travel-app-vue',
-    stack: ['HTML' ,'CSS', 'JS', 'Vue', 'Vue-router'],
+    stack: ['CSS', 'JS', 'Vue', 'Vue-router'],
     tags: ['UI', 'FE', 'API'],
     desc: '',
     path: 'travel-app-vue',
@@ -344,9 +344,9 @@ const horizontal = [
     white_bg: true,
   },
   {
-    title: 'Nuxt simple Theme Toggler Example',
+    title: 'Nuxt Theme Toggler Example',
     name: 'nuxt-demo',
-    stack: ['HTML' ,'CSS', 'JS', 'Vue', 'Nuxt'],
+    stack: ['CSS', 'JS', 'Vue', 'Nuxt'],
     tags: ['UI', 'FE', 'SSR', 'API'],
     desc: 'It is a demo of simplicity and power of Vue-Nuxt ecosystem toolkit, their intuitively clearness and DX wich stands for Developer eXperience. It ain\'t obvious and common practicized to deploy (publish) such a project ot gh-pages, but I\'ve done instanceof, and am proud of myself due to this fact. :)',
     path: 'nuxt-demo',
@@ -395,7 +395,7 @@ const horizontal = [
   },
 
   {
-    title: 'Three.js 3D Cube',
+    title: 'Three.js 3D Cube Demo',
     name: 'graphics-js',
     stack: ['HTML' ,'CSS', 'JS', '3D'],
     tags: ['UI', 'FE', 'API'],

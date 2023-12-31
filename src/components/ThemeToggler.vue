@@ -73,6 +73,7 @@ watch(theme, (newTheme) => document.documentElement.setAttribute('data-theme', n
 
   --accent0: #4c4;
   --accent2: hsl(120, 57%, 66%);
+  --accent50: #4c48;
 
   --scrollbar-thumb: rgb(54,54,54);
   --scrollbar-track: rgb(90,90,90);
@@ -104,6 +105,7 @@ watch(theme, (newTheme) => document.documentElement.setAttribute('data-theme', n
 
   --accent0: #cb43cb;
   --accent2: hsl(300, 60%, 80%);
+  --accent50: #cb43cb88;
 
   --scrollbar-thumb: rgb(145,145,145);
   --scrollbar-track: rgb(242,242,242);
@@ -124,7 +126,7 @@ watch(theme, (newTheme) => document.documentElement.setAttribute('data-theme', n
   height: 5rem;
   display: flex;
   align-items: center;
-  padding: 0 2rem;
+  padding: 0 0.5rem;
 
   #spot {
     display: flex;

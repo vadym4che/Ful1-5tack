@@ -41,7 +41,17 @@
         </div>
       </div>
 
-      <button v-if="!isLimitReached" @click="handleLoadMore" class="load-more">LOAD MORE WORKS</button>
+      <active-element
+        v-if="!isLimitReached"
+        :padding="'1.5rem 2.5rem'"
+        :fontSize="'1.33rem'"
+        :borderRadius="'6.5rem'"
+        :bg="'var(--bg50)'"
+        class="font-variant load-more"
+        :action="handleLoadMore"
+      >
+        load more works
+      </active-element>
     </div>
   </div>
 </template>
@@ -50,6 +60,7 @@
 import { ref, onMounted, onUpdated } from 'vue'
 import HighLight from '@/components/HighLight.vue'
 import AsyncFrame from '@/components/AsyncFrame.vue'
+import ActiveElement from '@/components/ActiveElement.vue'
 import { chunkedProjects } from '@/assets/projects.js'
 import getPath from '@/helpers/getPath.js'
 
@@ -157,19 +168,15 @@ onUpdated(() => handleScroll())
   }
 
   .load-more{
-    height: 3.75rem;
-    width: 15.125rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     color: var(--accent0);
-    background-color: transparent;
-    border-radius: 1.875rem;
     font-family: Inter;
     text-align: center;
     font-size: 0.8rem;
     font-weight: 700;
-    line-height: normal;
     letter-spacing: 0.1rem;
-    background: var(--bg50);
-    border-color: var(--accent0);
     margin: 3.75rem auto 0;
   }
 }

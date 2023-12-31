@@ -5,11 +5,16 @@
       <high-light />
     </h1>
 
-    <button>
-      <router-link to="/works">
-        EXPLORE WORKS <ArrowRight />
-      </router-link>
-    </button>
+    <active-element
+      path="projects"
+      :padding="'1.5rem 2.5rem'"
+      :fontSize="'1.625rem'"
+      :borderRadius="'6.5rem'"
+      :bg="'var(--accent0)'"
+      class="font-variant"
+    >
+      explore works <b style="display: inline-block; transform: scale(1.5, 2.5) translate(25%, 0%); position: relative; top: -10%;" content="→">→</b>
+    </active-element>
   </section>
 
   <section class="hero">
@@ -25,11 +30,16 @@
         </p>
       </div>
 
-      <button>
-        <router-link to="/about">
-          Discover More About Me
-        </router-link>
-      </button>
+      <active-element
+        path="about"
+        :padding="'1.5rem 3rem'"
+        :fontSize="'1.25rem'"
+        :borderRadius="'2rem'"
+        :bg="'var(--accent0)'"
+        class="font-variant"
+      >
+        Discover More About Me
+      </active-element>
     </div>
 
     <div class="right">
@@ -42,11 +52,16 @@
       <high-light />
     </h2>
 
-    <button>
-      <router-link to="/projects">
-        EXPLORE MORE <arrow-right />
-      </router-link>
-    </button>
+    <active-element
+      path="projects"
+      :padding="'1.5rem 2.5rem 1.75rem'"
+      :fontSize="'1.33rem'"
+      :borderRadius="'6.5rem'"
+      :bg="'var(--bg50)'"
+      class="font-variant"
+    >
+      explore more <b style="display: inline-block; transform: scale(1.5, 2.5) translate(25%, 0%); position: relative; top: -0.2rem;" content="→">→</b>
+    </active-element>
 
     <three />
   </section>
@@ -58,6 +73,7 @@
 import { defineAsyncComponent, onMounted } from 'vue'
 import ArrowRight from '@/components/ArrowRight.vue'
 import HighLight from '@/components/HighLight.vue'
+import ActiveElement from '@/components/ActiveElement.vue'
 
 const Three = defineAsyncComponent(() => import('@/components/Three.vue'))
 const TechStack = defineAsyncComponent(() => import('@/components/TechStack.vue'))
@@ -77,14 +93,6 @@ onMounted(() => window.scrollTo(0, 0))
     position: absolute;
     top: -7.5rem;
     right: -5rem;
-  }
-
-  button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    padding: 1.5rem 2.5rem;
   }
 }
 
