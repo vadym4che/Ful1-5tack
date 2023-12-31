@@ -13,7 +13,7 @@
       :bg="'var(--accent0)'"
       class="font-variant"
     >
-      explore works <b style="display: inline-block; transform: scale(1.5, 2.5) translate(25%, 0%); position: relative; top: -10%;" content="→">→</b>
+      explore works <b style="display: inline-block; transform: scale(1.5, 2.5) translate(25%, 0%); position: relative; top: -12%;" content="→">→</b>
     </active-element>
   </section>
 

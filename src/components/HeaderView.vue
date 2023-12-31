@@ -2,7 +2,7 @@
   <header>
     <menu>
       <span class="logo menu-item">
-        <a href="http://bit.ly/Ful1-5tack" class="link">
+        <a href="http://bit.ly/Ful1-5tack" class="link logo-link">
           VADYM4<img src="/logo.png" alt="logo" class="logo-image">HE
         </a>
       </span>
@@ -70,7 +70,6 @@ menu {
   a {
     box-sizing: border-box;
     font-size: 1.5rem;
-    color: var(--color);
     padding: 1rem 2.25rem;
     opacity: 0.75;
     font-variant: small-caps;
@@ -78,12 +77,33 @@ menu {
     text-wrap: nowrap;
     border: 0.125rem solid transparent;
     width: fit-content;
+    color: var(--color50);
 
     &.router-link-active {
       background: var(--bg50);
       border: 0.125rem solid var(--color50);
       border-radius: 2rem;
       opacity: 0.8;
+      color: var(--color0);
+      font-weight: bold;
+      letter-spacing: -0.022ch;
+
+      &:hover {
+        color: var(--color0);
+        box-shadow: none;
+
+        &::after {
+          box-shadow: none;
+        }
+      }
+    }
+
+    &:active {
+      letter-spacing: -0.025ch;
+    }
+
+    &:not(.router-link-active, .logo-link) {
+      color: var(--color50);
     }
   }
 }
@@ -92,8 +112,5 @@ menu {
   display: inline-flex;
   text-shadow: 0 0 2rem var(--bg0) !important;
   background: radial-gradient( var(--bg50), transparent, transparent);
-}
-
-.menu-item:hover {
 }
 </style>

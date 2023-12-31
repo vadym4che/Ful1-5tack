@@ -69,9 +69,9 @@ const handleClick = () => {
   }
 
   &:hover {
-    box-shadow: inset -1rem -1rem 1rem #0004;
+    box-shadow: inset 1rem 1rem 1rem #0004;
     &::after {
-      box-shadow: inset 1rem 1rem 1rem #fff4;
+      box-shadow: inset -1rem -1rem 1rem #fff4;
     }
   }
 
