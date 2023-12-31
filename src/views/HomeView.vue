@@ -54,7 +54,7 @@
 
     <active-element
       path="projects"
-      :padding="'1.5rem 2.5rem 1.75rem'"
+      :padding="'1.5rem 2.5rem'"
       :fontSize="'1.33rem'"
       :borderRadius="'6.5rem'"
       :bg="'var(--bg50)'"
