@@ -51,7 +51,6 @@ const handleClick = () => {
   position: relative;
   overflow: hidden;
   font-weight: bold;
-
   box-shadow: inset -1rem -1rem 1rem #0004;
   &::after {
     box-shadow: inset 1rem 1rem 1rem #fff4;
@@ -70,6 +69,7 @@ const handleClick = () => {
 
   &:hover {
     box-shadow: inset 1rem 1rem 1rem #0004;
+    text-shadow: 0 0 1rem var(--bg0);
     &::after {
       box-shadow: inset -1rem -1rem 1rem #fff4;
     }
