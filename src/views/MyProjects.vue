@@ -105,8 +105,9 @@ onUpdated(() => handleScroll())
     position: relative;
   }
   .three {
+    margin: 0 auto;
     gap: 1.5rem;
-    max-width: 55.5rem;
+    width: 55.5rem;
   }
 
   .project {

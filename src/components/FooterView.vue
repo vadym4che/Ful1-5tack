@@ -108,6 +108,7 @@ footer {
   position: absolute;
   left: 3rem;
   top: 0;
+  color: var(--color0);
 
   img {
     margin-top: 1px;

@@ -71,7 +71,6 @@
 
 <script setup>
 import { defineAsyncComponent, onMounted } from 'vue'
-import ArrowRight from '@/components/ArrowRight.vue'
 import HighLight from '@/components/HighLight.vue'
 import ActiveElement from '@/components/ActiveElement.vue'
 

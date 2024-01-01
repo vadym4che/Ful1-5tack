@@ -31,9 +31,12 @@
         </p>
         <p class="p4">Description:
           <br>
-          <pre>
+          <pre v-if="project.desc">
 {{ project.desc }}
           </pre>
+          <p class="p4" v-else>
+            Seems to be there is no description attached - so let's suppose that this project is self-descriptive and need no explicit descriptional words.
+          </p>
         </p>
       </div>
     </div>
