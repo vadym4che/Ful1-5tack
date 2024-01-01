@@ -110,7 +110,7 @@ onUpdated(() => handleScroll())
 
     @media (orientation: landscape) {
       & {
-        width: calc(40dvw - 1.5rem);
+        width: calc(50% - 1.5rem);
       }
     }
 
