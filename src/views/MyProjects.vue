@@ -107,7 +107,18 @@ onUpdated(() => handleScroll())
   .three {
     margin: 0 auto;
     gap: 1.5rem;
-    width: 55.5rem;
+
+    @media (orientation: landscape) {
+      & {
+        width: calc(40dvw - 1.5rem);
+      }
+    }
+
+    @media (orientation: portrait) {
+      & {
+        width: 100%;
+      }
+    }
   }
 
   .project {
