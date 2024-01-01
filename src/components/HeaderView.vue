@@ -47,6 +47,7 @@ header {
   align-items: center;
   justify-content: center;
   padding: 0 0.5rem;
+  position: relative;
 }
 
 .logo-image {

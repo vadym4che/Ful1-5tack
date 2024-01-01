@@ -95,7 +95,7 @@ onUpdated(() => handleScroll())
 .projects-page {
 
   .projects-container {
-    padding: 6.25rem 0 11rem;
+    padding: 6.25rem 0 10rem;
     gap: 3rem;
   }
   .projects-container, .three {

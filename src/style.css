@@ -218,7 +218,7 @@ a.link:active::after {
   width: 100dvw;
   margin: 0 auto;
   font-size: 1rem;
-  padding: 0 11dvw;
+  padding: 0 10dvw;
   overflow: hidden;
 }
 

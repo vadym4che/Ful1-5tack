@@ -66,10 +66,10 @@ footer {
   align-items: center;
   justify-content: flex-end;
   background: var(--bg2);
-  padding: 0 11dvw;
+  padding: 0 10dvw;
   width: 100dvw;
   position: relative;
-  left: -11dvw;
+  left: -10dvw;
   .h4 {
     width: 100%;
   }
@@ -93,11 +93,12 @@ footer {
 
   .grid {
     display: grid;
-    grid-template-columns: 3fr 3fr 2fr;
+    grid-template-columns: 2.5fr 3fr 2.66fr;
     padding-bottom: 2.5rem;
     width: 100%;
     height: 8rem;
     position: relative;
+    left: 8.5ch;
   }
 }
 .logo {
@@ -106,7 +107,7 @@ footer {
   align-items: flex-start;
   justify-content: flex-start;
   position: absolute;
-  left: 3rem;
+  left: 0;
   top: 0;
   color: var(--color0);
 
@@ -116,10 +117,17 @@ footer {
     margin-right: 0.25ch;
   }
 
-  address,
-  address > h4 {
-    text-align: left !important;
-  }
+}
+
+address {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+address > h4 {
+  text-align: left !important;
 }
 .scale2 {
   transform: scale(2) translate(0, 25%);
