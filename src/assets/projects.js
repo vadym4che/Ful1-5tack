@@ -182,7 +182,7 @@ const vertical = [
     name: 'json-list',
     stack: ['HTML' ,'CSS', 'JS'],
     tags: ['UI', 'FE', 'API'],
-    desc: 'JSON List is a simple web application that fetches JSON data from the https://jsonplaceholder.typicode.com/ API and displays it in a structured list format. This project demonstrates how to fetch and display JSON data using HTML, CSS, and JavaScript.',
+    desc: 'JSON List is a simple web application that fetches JSON data from the https://jsonplaceholder.typicode.com/ API and displays it in a structured list format. This project demonstrates how to fetch and display JSON data using HTML, CSS, and JavaScript.\nHere HTML5 the one of the most powerful features used in way as it used in every JavaScript framework - innerHTML() HTMLelement method.',
     path: 'json-list',
     orientation: '|',
     deps: [],
@@ -227,10 +227,19 @@ const vertical = [
     name: 'layout_stop-watch',
     stack: ['SCSS' ,'SASS', 'HTML', 'CSS'],
     tags: ['UI', 'FE', 'API'],
-    desc: '',
+    desc: 'It is very simple - thanks to the SASS preprocessor - watch widget, that is programmed to get synchronized with worldwide time with JavaScript and passing this time as data-attribute through layout to CSS.\nThe animation time function applied to the second hand is very alike an old mechanical clock in its behavior.',
     path: 'layout_stop-watch',
     orientation: '|',
-    deps: [],
+    deps: [
+      "@linthtml/linthtml ^0.8.3",
+      "colors ^1.3.3",
+      "eslint ^5.16.0",
+      "gh-pages 2.0.0",
+      "node-sass ^4.14.1",
+      "parcel ^1.12.4",
+      "stylelint ^13.5.0",
+      "stylelint-scss ^3.17.2"
+    ],
     white_bg: true,
   },
   {
@@ -306,20 +315,57 @@ const horizontal = [
     name: 'abz-agency-test-assignment',
     stack: ['CSS', 'JS', 'React', 'MUI'],
     tags: ['UI', 'FE', 'API'],
-    desc: '',
+    desc: 'The task involves implementing the following steps:\n+ Working with mockups (HTML/CSS): Figma Project.\nImplement a single page with a minimized set of styles and components.\n+ Working with REST API (GET):\nImplement the "Working with a GET request" block according to the mockup and API documentation.\nDisplay 6 users on the API request result page, sorted by registration date (newest first).\nAPI Documentation: OpenAPI Documentation.\n+ Working with REST API (POST) - registration form:\nImplement front-end validation and business logic according to the mockups and API documentation.\nAfter successful registration, update the list of users in the "Working with a GET request" block.\n+ Website optimization (bonus task):\nMinimize and optimize CSS, JS, images, etc.\n\nIn addition could be said that there have been developed custom title tips as nice as with MUI or other UI libraries.',
     path: 'abz-agency-test-assignment',
     orientation: '-',
-    deps: [],
+    deps: [
+      "classnames ^2.3.2",
+      "react ^18.2.0",
+      "react-dom ^18.2.0",
+      "react-scripts 5.0.1",
+      "gh-pages ^5.0.0"
+    ],
   },
   {
     title: 'Nice Gadgets Store - Full-stack App',
     name: 'product-catalog',
     stack: ['CSS', 'JS', 'React', 'NodeJS'],
     tags: ['UI', 'FE', 'BE', 'DB', 'API'],
-    desc: '',
+    desc: 'Product Catalog is a web application that allows users to browse for various products. It provides a user-friendly interface for viewing product details, managing product categories, and adding products to the cart.\n\nFeatures:\n+ Product details: Each product has a dedicated page with detailed information, including images, descriptions, pricing.\n+ Every page has adaptive design.\n+ Add products in favourites or cart.\n+ Data from API.\n\nTechnologies Used:\n+ Node.js: JavaScript runtime environment for running server-side code.\n+ Express.js: Web application framework for Node.js.\n+ PostgreSQL: Relational database for storing product and user data.\n+ Sequelize: ORM (Object-Relational Mapping) library for interacting with the database.\n+ HTML/CSS: Markup and styling for the web pages.\n\nAPI:\nGet all products::\nGET::: products/phones/?page=number&limit=number&sort=string\nGET::: product/tablets/?page=number&limit=number&sort=string\nGET::: product/accessories/?page=number&limit=number&sort=string\nWhere: page=1 by default, limit=16 by default, sort=name by default, - avaliable: (newest, oldest, price-lowest)\nGet product by Id::\nGET::: /products/:productId\nGet newest products::\nGET::: /products/new/?limit=number\nWhere: limit=10 by default.\nGet products with the biggest discount::\nGET::: /products/discount/?limit=number\nWhere: limit=10 by default.\nGet recomended products::\nGET::: /products/:productId/recomended\nGet products amount::\nGET::: /products/amount',
     path: 'https://fe-jan23-team-six.github.io/product-catalog/',
     orientation: '-',
-    deps: [],
+    deps: [
+      "@tanstack/react-query ^4.29.7",
+      "@types/classnames ^2.3.1",
+      "@types/jest ^27.5.2",
+      "@types/node ^16.18.30",
+      "@types/node-sass ^4.11.3",
+      "@types/react ^18.2.6",
+      "@types/react-dom ^18.2.4",
+      "classnames ^2.3.2",
+      "gh-pages ^5.0.0",
+      "node-fetch ^3.3.1",
+      "node-sass ^8.0.0",
+      "react ^18.2.0",
+      "react-dom ^18.2.0",
+      "react-loader-spinner ^5.3.4",
+      "react-loading-skeleton ^3.3.1",
+      "react-router-dom ^6.11.1",
+      "react-scripts 5.0.1",
+      "react-slick ^0.29.0",
+      "slick-carousel ^1.8.1",
+      "stylelint-scss ^5.0.0",
+      "swiper ^9.3.2",
+      "typescript ^4.9.5",
+      "cors ^2.8.5",
+      "dotenv ^16.0.3",
+      "express ^4.18.2",
+      "pg ^8.10.0",
+      "reflect-metadata ^0.1.13",
+      "sequelize ^6.31.1",
+      "sequelize-typescript ^2.1.5",
+      "ts-node ^10.9.1"
+    ],
     white_bg: true,
   },
   {
@@ -327,10 +373,34 @@ const horizontal = [
     name: 'react_todo-app-with-api',
     stack: ['HTML' ,'CSS', 'JS', 'React'],
     tags: ['UI', 'FE', 'BE', 'API'],
-    desc: '',
+    desc: 'This is a simple React-based Todo App that allows you to manage your tasks efficiently. You can add, update, and delete tasks, filter them by status (All, Active, Completed), and perform bulk operations like marking all as completed or clearing completed tasks.\n\nFeatures:\n+ Todo List Management::\nAdd new todos with titles.\nDelete individual todos.\nToggle the completion status of todos.\n+ Filtering and Sorting::\nFilter todos by status (All, Active, Completed).\nSort todos based on completion status.\n+ User Interface::\nToggle all todos between completed and active states.\nClear all completed todos.\nReal-time updates and transitions for todos.\n+ Error Handling::\nDisplay error messages when adding, updating, or deleting todos.\n+ User Feedback::\nProvide feedback on processing with loaders and notifications.\n+ API Integration::\nFetch todos from an API endpoint.\nSend requests to add, update, and delete todos.\n+ Routing::\nUse hash-based routing to filter todos by status (All, Active, Completed).\n+ Default Values::\nUtilize default values for new todos.\n+ Responsive Design::\nThe application has a responsive design and styles for various screen sizes.',
     path: 'react_todo-app-with-api',
     orientation: '-',
-    deps: [],
+    deps: [
+      "@fortawesome/fontawesome-free ^6.1.2",
+      "bulma ^0.9.4",
+      "classnames ^2.3.1",
+      "react ^18.2.0",
+      "react-dom ^18.2.0",
+      "react-scripts 5.0.1",
+      "react-transition-group ^4.4.5",
+      "@cypress/react ^5.12.4",
+      "@cypress/webpack-dev-server ^1.8.4",
+      "@types/node ^17.0.45",
+      "@types/react ^18.0.15",
+      "@types/react-dom ^18.0.6",
+      "@types/react-transition-group ^4.4.5",
+      "cypress ^9.5.3",
+      "eslint ^7.32.0",
+      "eslint-plugin-cypress ^2.11.2",
+      "gh-pages ^3.2.3",
+      "mochawesome ^7.1.3",
+      "mochawesome-merge ^4.2.0",
+      "mochawesome-report-generator ^6.2.0",
+      "node-sass ^7.0.1",
+      "stylelint ^13.13.1",
+      "typescript ^4.6.3"
+    ],
   },
   {
     title: 'React Task-Manager App',
@@ -437,7 +507,7 @@ const horizontal = [
     name: 'wordle-js',
     stack: ['React' ,'TypeScript', 'HTML', 'CSS'],
     tags: ['UI', 'FE', 'API'],
-    desc: '',
+    desc: 'The WORDLE Game Project is a web-based word-guessing game where players try to guess a hidden word. In this version Uktrainian dictionary containing over 7500+ 5-lettered words used.\n\nUsage:\n1. Run app to play the WORDLE game in a web browser.\n2. Enter your letter guesses in the input fields of each row.\n3. Click the "CHECK" button to check your guess against the hidden word.\n4. Correct letters will be highlighted in green, letters in the word but in the wrong position will be highlighted in yellow, and incorrect letters will be in grey.\n5. Continue guessing until you either correctly guess the word or run out of attempts.\n6. If you guess the word correctly, you win the game, and a message will be displayed. If you run out of attempts, the game ends.\n7. You can reset the game at any time by clicking the "RESET" button.\n8. The game also provides hints about the first letter of the hidden word in the browser console.\n9. Have fun playing and improving your word-guessing skills!',
     path: 'wordle-js',
     orientation: '-',
     deps: [],
@@ -448,7 +518,7 @@ const horizontal = [
     name: 'clicker-js',
     stack: ['HTML', 'CSS', 'JS'],
     tags: ['UI', 'FE', 'API'],
-    desc: '',
+    desc: 'The clicker.js project is a web application that lets users play a clicking game and track their scores.\n\nUsage:\n1. To use the clicker.js open the app in a web browser.\n2. Enter your nickname in the input field and click the "start" button to begin the clicking game.\n3. Click the "click me!" button as many times as you can within the time limit.\n4. After the game ends, you\'ll receive your score and have the option to view your best result for all time or clear your best result.\n5. You can also view the best result for all users.\n6. Enjoy the clicking game and try to beat your own high score!\n\nTIP: Do not stick for a long with this game to keep your mouse alive! :)\n\nHappy playing!',
     path: 'clicker-js',
     orientation: '-',
     deps: [],
@@ -456,8 +526,8 @@ const horizontal = [
 ]
 
 Array.prototype.shuffle = function () {
-  return this.sort(() => Math.random() - 0.5);
-};
+  return this.sort(() => Math.random() - 0.5)
+}
 
 vertical.shuffle()
 horizontal.shuffle()
@@ -509,14 +579,16 @@ const projects = [
 ]
 
 const chunkArray = (arr, chunkSize) => {
-  const chunkedArray = [];
+  const chunkedArray = []
+
   for (let i = 0; i < arr.length; i += chunkSize) {
-    const chunk = arr.slice(i, i + chunkSize);
-    chunkedArray.push(chunk);
+    const chunk = arr.slice(i, i + chunkSize)
+    chunkedArray.push(chunk)
   }
-  return chunkedArray;
+
+  return chunkedArray
 }
 
-const chunkedProjects = chunkArray(projects, 3);
+const chunkedProjects = chunkArray(projects, 3)
 
 export { projects, chunkedProjects, vertical }

@@ -62,7 +62,7 @@ a:active {
 }
 
 a:not(.link):link,
-a:not(.link):visited,
+a:visited,
 a:not(.link):hover,
 a:not(.link):active {
   color: var(--color0);

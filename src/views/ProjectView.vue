@@ -21,19 +21,19 @@
 
         <p class="p4">
           <b>
-            Category:
+            Category:&nbsp;
           </b>
           {{ project.tags.join(' | ') }}
         </p>
         <p class="p4">
           <b>
-            Stack:
+            Stack:&nbsp;
           </b>
           {{ project.stack.join(', ') }}
         </p>
         <p class="p4">
           <b>
-            Source:
+            Source:&nbsp;
           </b>
           <a :href="source" target="_blank">{{ source }}</a></p>
         <p class="p4" v-if="project.deps.length">
@@ -45,7 +45,10 @@
         <p class="p4" v-else>
           The project does not utilize any external libraries and relies solely on the standard built-in HTML, CSS, and JavaScript processing capabilities of modern browsers.
         </p>
-        <p class="p4">Description:
+        <p class="p4">
+          <b>
+            Description:
+          </b>
           <br>
           <pre v-if="project.desc">
 {{ project.desc }}

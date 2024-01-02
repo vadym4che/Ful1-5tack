@@ -1,7 +1,31 @@
-# Vue 3 + Vite
+<a name="top"></a>
+# Auto-biography-(č)oding  
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+I am Vadym Chervoniak, a Full-stack developer based in Ukraine. My expertise includes HTML, CSS, JavaScript, React, Vue, Node.js, various databases, cloud computing, and integrating with different APIs, helping me to deliver complex web development solutions.
+  
+As individuals, we are all born developers, constantly shaping our neural networks as we journey through life. Some of us, including myself, have chosen to transform this passion for development into a fulfilling career in web development. For me, it's not just a job but a calling that allows me to express my creativity and make a meaningful impact through technology.
+  
+We each have our own unique story to tell, and through the language of technology, we code our autobiographies, breathing life into our ideas on the digital canvas. I am deeply dedicated to creating user-friendly web applications and continually enhancing my skills to stay ahead in this ever-evolving industry.
 
-## Recommended IDE Setup
+<p align="center">
+  <a href="https://vadym4che.github.io/Ful1-5tack/"><img src="https://github.com/vadym4che/Ful1-5tack/blob/main/public/logo.png" alt="abc-logo" /></a><br>
+  <br>
+  <i>I've earned my own very first PC</i><br>  
+  <i>By working summer holidays in 2003</i><br>  
+  <i>I'm a `web dev loco` (if you will) code-addict</i><br>  
+  <i>Devoted to development with JavaScript</i><br>  
+  <i>I'm experienced enough to exactly know</i><br>  
+  <i>Using DOCs, AI, Google and Stackoverflow</i><br>  
+</p>
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Contacts
+
+[![Email](https://img.shields.io/badge/Email-vadym4che%40gmail.com-green)](mailto:vadym4che@gmail.com)
+[![Telegram](https://img.shields.io/badge/Telegram-vadym4che-green)](https://t.me/vadym4che)
+[![Phone](https://img.shields.io/badge/Phone-%2B380505444199-green)](tel:+380505444199)
+
+Feel free to contact me through any channel! Thank you for visiting!  
+
+<p align="center">
+  <a href="#top"><img src="https://github.com/vadym4che/Ful1-5tack/blob/main/public/logo.png" alt="abc-logo" /></a>
+</p>
