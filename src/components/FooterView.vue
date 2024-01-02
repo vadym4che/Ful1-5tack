@@ -1,47 +1,53 @@
 <template>
   <footer class="footer">
     <h4 class="h4 top">
-      <router-link to="/contact" class="link" style="padding: 1rem; margin: -1rem; border-radius: 4rem;">
+      <router-link
+        to="/contact"
+        class="link"
+        style="padding: 1rem; margin: -1rem; border-radius: 4rem"
+      >
         Get in Touch With Me
       </router-link>
     </h4>
     <h2 class="h1 mail">
-      <a href="mailto:vadym4che@gmail.com" class="link" style="padding: 1rem; margin: -1rem; border-radius: 4rem;">vadym4che@gmail.com</a>
+      <a
+        href="mailto:vadym4che@gmail.com"
+        class="link"
+        style="padding: 1rem; margin: -1rem; border-radius: 4rem"
+        >vadym4che@gmail.com</a
+      >
     </h2>
 
     <div class="grid info">
-
-      <logo-view size="3rem"/>
+      <logo-view size="3rem" />
 
       <address>
         <h4 class="h4">
-          Street Kniazia Ostrozkogo,<br>
-          Boiarka, Kyivs'ka oblast,<br>
+          Street Kniazia Ostrozkogo,<br />
+          Boiarka, Kyivs'ka oblast,<br />
           08150
         </h4>
       </address>
 
       <div class="contacts">
         <h4 class="h4">
-          <a href="tel:+380505444199">
-              +380-505-444-199
-          </a>
+          <a href="tel:+380505444199"> +380-505-444-199 </a>
         </h4>
 
         <div class="links">
           <h4 class="h4">
             <a href="https://github.com/vadym4che">
-              <img src="/github.svg" alt="github logo">&nbsp;
+              <img src="/github.svg" alt="github logo" />&nbsp;
             </a>
           </h4>
           <h4 class="h4">
             <a href="https://t.me/vadym4che">
-              <img src="/telegram.png" alt="telegram logo">&nbsp;
+              <img src="/telegram.png" alt="telegram logo" />&nbsp;
             </a>
           </h4>
           <h4 class="h4">
             <a href="mailto:vadym4che@gmail.com">
-              <img src="/mail.png" alt="mail logo">&nbsp;
+              <img src="/mail.png" alt="mail logo" />&nbsp;
             </a>
           </h4>
         </div>
@@ -49,13 +55,13 @@
     </div>
 
     <h4 class="h4 hr-above">
-      © {{new Date().getFullYear()}}. Vadym4CHe. All rights reserved.
+      © {{ new Date().getFullYear() }}. Vadym4CHe. All rights reserved.
     </h4>
   </footer>
 </template>
 
 <script setup>
-import LogoView from '@/components/LogoView.vue'
+import LogoView from "@/components/LogoView.vue"
 </script>
 
 <style lang="scss" scoped>

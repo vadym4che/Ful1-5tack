@@ -28,7 +28,7 @@ const routes = [
   },
   {
     path: '/loader',
-    component: () => import('@/components/Loader.vue'),
+    component: () => import('@/components/LoaderView.vue'),
   },
   {
     path: '/:catchAll(.*)',

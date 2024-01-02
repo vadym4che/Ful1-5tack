@@ -4,10 +4,14 @@
     ref="target"
     :to="path"
     class="active-element"
-    :style="{background: !isOutside ? `radial-gradient(circle at ${elementX}px ${elementY}px, #fff, ${bg}, ${bg} 75%)` : bg,
-    fontSize,
-    padding,
-    borderRadius}"
+    :style="{
+      background: !isOutside
+        ? `radial-gradient(circle at ${elementX}px ${elementY}px, #fff, ${bg}, ${bg} 75%)`
+        : bg,
+      fontSize,
+      padding,
+      borderRadius,
+    }"
   >
     <slot></slot>
   </router-link>
@@ -17,24 +21,37 @@
     type="submit"
     class="active-element"
     @click="handleClick"
-    :style="{ background: !isOutside ? `radial-gradient(circle at ${elementX}px ${elementY}px, #fff, ${bg}, ${bg} 75%)` : bg,
+    :style="{
+      background: !isOutside
+        ? `radial-gradient(circle at ${elementX}px ${elementY}px, #fff, ${bg}, ${bg} 75%)`
+        : bg,
       fontSize,
       padding,
-      borderRadius }"
+      borderRadius,
+    }"
   >
     <slot></slot>
   </button>
 </template>
 
 <script setup>
-import { ref, defineProps } from 'vue'
-import { useMouseInElement } from '@vueuse/core'
+import { ref, defineProps } from "vue"
+import { useMouseInElement } from "@vueuse/core"
 
-const { path, type, action, fontSize, padding, borderRadius, classes, bg } = defineProps(['path', 'type', 'action', 'fontSize', 'padding', 'borderRadius', 'classes', 'bg'])
+const { path, type, action, fontSize, padding, borderRadius, classes, bg } =
+  defineProps([
+    "path",
+    "type",
+    "action",
+    "fontSize",
+    "padding",
+    "borderRadius",
+    "classes",
+    "bg",
+  ])
+
 const target = ref(null)
-
 const isRouterLink = !!path
-
 const { elementX, elementY, isOutside } = useMouseInElement(target)
 
 const handleClick = () => {
@@ -57,7 +74,7 @@ const handleClick = () => {
     box-shadow: inset 1rem 1rem 1rem #fff4;
     top: 0;
     right: 0;
-    content: '';
+    content: "";
     position: absolute;
     width: 100%;
     height: 100%;
@@ -68,6 +85,7 @@ const handleClick = () => {
   &:hover {
     box-shadow: inset 1rem 1rem 1rem #0004;
     text-shadow: 0 0 1rem var(--bg0);
+
     &::after {
       box-shadow: inset -1rem -1rem 1rem #fff4;
     }

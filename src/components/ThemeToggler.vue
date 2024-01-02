@@ -2,13 +2,13 @@
   <button
     @click="toggleTheme"
     class="theme-toggler"
-    :title="`Toggle theme to ${theme === 'light' ? 'dark' : 'light'}`"
+    :title="`Toggle theme to ${ theme === 'light' ? 'dark' : 'light' }`"
   >
     <span
       id="spot"
-      :style="{background: `radial-gradient(ellipse at ${offsetX}% ${offsetY}%, var(--accent1), var(--color0))`}"
+      :style="{ background: `radial-gradient(ellipse at ${offsetX}% ${offsetY}%, var(--accent1), var(--color0))` }"
     >
-      {{theme === 'light' ? '🌙' : '🌞'}}
+      {{ theme === 'light' ? '🌙' : '🌞' }}
     </span>
 
     <h2 style="display: none;">

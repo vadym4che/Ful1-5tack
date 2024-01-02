@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <logo-view size="2rem" logoClass="logo-view"/>
+    <logo-view size="2rem" logoClass="logo-view" />
 
     <menu>
       <li class="menu-item">
@@ -22,8 +22,8 @@
 </template>
 
 <script setup>
-import LogoView from '@/components/LogoView.vue'
-import ThemeToggler from '@/components/ThemeToggler.vue'
+import LogoView from "@/components/LogoView.vue"
+import ThemeToggler from "@/components/ThemeToggler.vue"
 </script>
 
 <style lang="scss">
@@ -100,7 +100,7 @@ menu {
 .menu-item {
   display: inline-flex;
   text-shadow: 0 0 2rem var(--bg0) !important;
-  background: radial-gradient( var(--bg50), transparent, transparent);
+  background: radial-gradient(var(--bg50), transparent, transparent);
 }
 
 .logo-image {

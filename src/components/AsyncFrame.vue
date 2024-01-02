@@ -8,7 +8,7 @@
     ref="frame"
     @load="setLoaded"
   ></iframe>
-  <Loader
+  <loader-view
     v-show="!isLoaded"
     :class="iframeClass"
     :style="iframeStyle"
@@ -17,12 +17,16 @@
 </template>
 
 <script setup>
-import { ref, defineProps } from 'vue'
-import Loader from '@/components/Loader.vue'
+import { ref, defineProps } from "vue"
+import LoaderView from "@/components/LoaderView.vue"
 
-const { iframeSrc, iframeStyle, iframeClass } = defineProps(['iframeSrc', 'iframeStyle', 'iframeClass'])
+const { iframeSrc, iframeStyle, iframeClass } = defineProps([
+  "iframeSrc",
+  "iframeStyle",
+  "iframeClass",
+])
 const isLoaded = ref(false)
-const setLoaded = () => setTimeout(() => isLoaded.value = true, 0)
+const setLoaded = () => setTimeout(() => (isLoaded.value = true), 0)
 </script>
 
 <style lang="scss" scoped>

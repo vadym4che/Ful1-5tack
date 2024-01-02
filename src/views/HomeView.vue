@@ -63,7 +63,7 @@
       explore more <b style="display: inline-block; transform: scale(1.5, 2.5) translate(25%, 0%); position: relative; top: -0.2rem;" content="→">→</b>
     </active-element>
 
-    <three />
+    <three-view />
   </section>
 
   <tech-stack />
@@ -74,7 +74,7 @@ import { defineAsyncComponent, onMounted } from 'vue'
 import HighLight from '@/components/HighLight.vue'
 import ActiveElement from '@/components/ActiveElement.vue'
 
-const Three = defineAsyncComponent(() => import('@/components/Three.vue'))
+const ThreeView = defineAsyncComponent(() => import('@/components/ThreeView.vue'))
 const TechStack = defineAsyncComponent(() => import('@/components/TechStack.vue'))
 
 onMounted(() => window.scrollTo(0, 0))
