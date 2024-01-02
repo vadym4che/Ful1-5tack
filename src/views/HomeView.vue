@@ -22,7 +22,7 @@
       <div class="text">
         <h2 class="h2">
           <high-light />
-          Let’s get know<br>about me closer
+          Let’s get to<br>know me<br>closer
         </h2>
 
         <p class="p3">

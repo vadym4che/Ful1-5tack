@@ -37,7 +37,7 @@ const vertical = [
     ]
   },
   {
-    title: 'Calendar App',
+    title: 'Multi-calendar App',
     name: 'e-time',
     stack: ['Vite' ,'Vue3', 'SCSS'],
     tags: ['UI', 'FE', 'API'],
@@ -120,7 +120,7 @@ const vertical = [
     ],
   },
   {
-    title: 'Vue Weather Forecast App',
+    title: 'Vue Weather Forecast',
     name: 'weather-app',
     stack: ['HTML' ,'CSS', 'JS', 'Vue'],
     tags: ['UI', 'FE', 'API'],
@@ -152,7 +152,7 @@ const vertical = [
     ],
   },
   {
-    title: 'React Live-coding - Cars App',
+    title: 'React livecoding - Cars',
     name: 'react_live_coding_cars_table_task',
     stack: ['HTML' ,'CSS', 'JS', 'React'],
     tags: ['UI', 'FE', 'API'],
@@ -188,7 +188,7 @@ const vertical = [
     deps: [],
   },
   {
-    title: 'Bykes Store Landing Page',
+    title: 'Bykes Store Landing',
     name: 'layout_miami',
     stack: ['HTML' ,'CSS', 'SCSS', 'JS'],
     tags: ['UI', 'FE', 'API'],
@@ -213,7 +213,7 @@ const vertical = [
     ],
   },
   {
-    title: 'fireSnow - snowfall background',
+    title: 'FIRE\'S\'NOW - snowfall background',
     name: 'fireSnow',
     stack: ['HTML' ,'CSS', 'SCSS'],
     tags: ['UI', 'FE', 'API'],
@@ -223,7 +223,7 @@ const vertical = [
     deps: [],
   },
   {
-    title: 'Watch Widget SCSS Demo',
+    title: 'Watch Widget SCSS',
     name: 'layout_stop-watch',
     stack: ['SCSS' ,'SASS', 'HTML', 'CSS'],
     tags: ['UI', 'FE', 'API'],
@@ -257,7 +257,7 @@ const horizontal = [
     deps: [],
   },
   {
-    title: 'React MUI: Table | Chart | List',
+    title: 'React-React-router-MUI: Table | Chart | List',
     name: 'backendless-tabs-jsx',
     stack: ['JS', 'React', 'React-router'],
     tags: ['UI', 'FE', 'API'],
@@ -292,7 +292,7 @@ const horizontal = [
     white_bg: true,
   },
   {
-    title: 'The Base: Layout, Git, JS, TS',
+    title: 'The Web-dev base: Layout, Git, JS, TS',
     name: 'devit-team',
     stack: ['HTML' ,'CSS', 'JS', 'TS'],
     tags: ['UI', 'FE', 'API'],
@@ -302,7 +302,7 @@ const horizontal = [
     deps: [],
   },
   {
-    title: 'Web Development Essentials',
+    title: 'Web Dev Essentials',
     name: 'abz-agency-test-assignment',
     stack: ['CSS', 'JS', 'React', 'MUI'],
     tags: ['UI', 'FE', 'API'],
@@ -323,7 +323,7 @@ const horizontal = [
     white_bg: true,
   },
   {
-    title: 'React Todos Full-stack App',
+    title: 'React-NodeJS Todos Full-stack App',
     name: 'react_todo-app-with-api',
     stack: ['HTML' ,'CSS', 'JS', 'React'],
     tags: ['UI', 'FE', 'BE', 'API'],
@@ -343,7 +343,7 @@ const horizontal = [
     deps: [],
   },
   {
-    title: 'React CRM-like people table',
+    title: 'React people CRM-table',
     name: 'react_people-table-basics',
     stack: ['CSS', 'JS', 'React', 'React-router'],
     tags: ['UI', 'FE', 'API'],
@@ -433,7 +433,7 @@ const horizontal = [
     deps: [],
   },
   {
-    title: 'Wordle - Guess UA word app',
+    title: 'Wordle - Guess UA word',
     name: 'wordle-js',
     stack: ['React' ,'TypeScript', 'HTML', 'CSS'],
     tags: ['UI', 'FE', 'API'],
@@ -444,7 +444,7 @@ const horizontal = [
     white_bg: true,
   },
   {
-    title: 'Clicker app - pure JavaScript',
+    title: 'Clicker - JavaScript app',
     name: 'clicker-js',
     stack: ['HTML', 'CSS', 'JS'],
     tags: ['UI', 'FE', 'API'],

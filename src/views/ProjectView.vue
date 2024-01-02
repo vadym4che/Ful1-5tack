@@ -19,12 +19,28 @@
       <div class="text flex-col-start">
         <h3 class="h3">{{ project.title }}</h3>
 
-        <p class="p4">Category: {{ project.tags.join(' | ') }}</p>
-        <p class="p4">Stack: {{ project.stack.join(', ') }}</p>
-        <p class="p4">Source: <a :href="source" target="_blank">{{ source }}</a></p>
+        <p class="p4">
+          <b>
+            Category:
+          </b>
+          {{ project.tags.join(' | ') }}
+        </p>
+        <p class="p4">
+          <b>
+            Stack:
+          </b>
+          {{ project.stack.join(', ') }}
+        </p>
+        <p class="p4">
+          <b>
+            Source:
+          </b>
+          <a :href="source" target="_blank">{{ source }}</a></p>
         <p class="p4" v-if="project.deps.length">
-          Libraries usage:<br>
-          {{ project.deps.join(', ') }}
+          <b>Libraries usage:</b><br>
+          <ul>
+            <li v-for="d, i in project.deps" :key="i">{{ d }}</li>
+          </ul>
         </p>
         <p class="p4" v-else>
           The project does not utilize any external libraries and relies solely on the standard built-in HTML, CSS, and JavaScript processing capabilities of modern browsers.
@@ -35,7 +51,7 @@
 {{ project.desc }}
           </pre>
           <p class="p4" v-else>
-            Seems to be there is no description attached - so let's suppose that this project is self-descriptive and need no explicit descriptional words.
+            It seems that there is no description attached, so let's suppose that this project is self-descriptive and needs no explicit descriptional words.
           </p>
         </p>
       </div>

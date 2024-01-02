@@ -29,11 +29,12 @@
           />
 
           <div class="title-box">
-            <p class="p3">
+            <p class="t3">
               {{ p.tags.join(' | ') }}
             </p>
 
             <router-link
+              class="t2"
               :to="{ name: 'project', params: { projectName: p.name }}"
               :title="`get '${p.name}' details`"
             >

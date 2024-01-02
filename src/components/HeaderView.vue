@@ -43,6 +43,7 @@ import ThemeToggler from "@/components/ThemeToggler.vue"
   margin: 1.25rem 0.5rem 0;
   padding: 0 0.5rem;
   opacity: 0.75;
+  z-index: 1;
 }
 
 menu {
@@ -55,6 +56,12 @@ menu {
   font-weight: 500;
   height: 5rem;
   gap: 0.5rem;
+
+  @media (orientation: landscape) and (min-width: 1000px) {
+    & {
+      left: -3.75rem;
+    }
+  }
 
   a {
     box-sizing: border-box;

@@ -48,13 +48,13 @@
 
     <div class="address">
       <h4 class="h4">
-        <a href="https://t.me/vadym4che" class="link" style="padding: 0.5rem; margin: -0.5rem">@vadym4che</a>
+        <a href="https://t.me/vadym4che" class="link" style="padding: 0.5rem; margin: -0.5rem" title="contact me via telegram or other social media">@vadym4che</a>
       </h4>
       <h4 class="h4">
-        <a href="tel:+380505444199" class="link" style="padding: 0.5rem; margin: -0.5rem">+380-505-444-199</a>
+        <a href="tel:+380505444199" class="link" style="padding: 0.5rem; margin: -0.5rem" title="contact me via phone">+380-505-444-199</a>
       </h4>
       <h4 class="h4">
-        <a href="mailto:vadym4che@gmail.com" class="link" style="padding: 0.5rem; margin: -0.5rem">vadym4che@gmail.com</a>
+        <a href="mailto:vadym4che@gmail.com" class="link" style="padding: 0.5rem; margin: -0.5rem" title="contact me via email">vadym4che@gmail.com</a>
       </h4>
     </div>
   </div>

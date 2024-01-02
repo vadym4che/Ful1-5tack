@@ -47,15 +47,9 @@ body::-webkit-scrollbar-track:hover {
   background-color: var(--scrollbar-track_hover);
 }
 
-*:not(.logo-link)::selection {
-  background: var(--accent0);
-  color: var(--bg0);
-}
-*:not(.logo-link)::-moz-selection {
-  background: var(--accent0);
-  color: var(--bg0);
-}
-*:not(.logo-link)::-webkit-selection {
+*::selection,
+*::-moz-selection,
+*::-webkit-selection {
   background: var(--accent0);
   color: var(--bg0);
 }
@@ -77,6 +71,10 @@ a:not(.link):active {
 h1, h2, h3, h4, h5, h6, p, menu, ul, ol, li {
   margin: 0;
   padding: 0;
+}
+
+menu, ul ,ol {
+  list-style: none;
 }
 
 button {
@@ -298,7 +296,7 @@ a.link:active::after {
   text-align: right;
 }
 
-.t1, .t2 {
+.t1, .t2, .t3 {
   font-family: 'Inter', sans-serif;
 }
 
@@ -312,10 +310,16 @@ a.link:active::after {
 
 .t2 {
   font-size: 1.33rem;
-  font-style: normal;
   font-weight: 600;
   line-height: 2.5rem;
   letter-spacing: -0.04rem;
+}
+
+.t3 {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.1rem;
 }
 
 .flex-col-center {
