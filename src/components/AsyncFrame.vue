@@ -10,23 +10,25 @@
   ></iframe>
   <loader-view
     v-show="!isLoaded"
-    :class="iframeClass"
-    :style="iframeStyle"
+    :classes="iframeClass"
     class="placeholder"
+    :three="three"
   />
 </template>
 
 <script setup>
-import { ref, defineProps } from "vue"
+import { ref, defineProps, onMounted } from "vue"
 import LoaderView from "@/components/LoaderView.vue"
 
-const { iframeSrc, iframeStyle, iframeClass } = defineProps([
+const { iframeSrc, iframeStyle, iframeClass, three } = defineProps([
   "iframeSrc",
   "iframeStyle",
   "iframeClass",
+  "three",
 ])
 const isLoaded = ref(false)
 const setLoaded = () => setTimeout(() => (isLoaded.value = true), 0)
+onMounted(() => console.log(iframeClass))
 </script>
 
 <style lang="scss" scoped>

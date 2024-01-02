@@ -1,8 +1,15 @@
 <template>
   <div class="three three-projects">
-    <div class="card" v-for="{ title, name, stack, tags, path, white_bg }, i in three" :key="i">
+    <div class="card" v-for="{ title, name, stack, tags, path, white_bg, orientation }, i in three" :key="i">
       <div class="frame">
-        <async-frame :iframeSrc="getPath(path)" :iframeClass="{ white_bg: white_bg, iframe: true }"/>
+        <async-frame
+          :iframeSrc="getPath(path)"
+          :iframeClass="{
+            white_bg: white_bg,
+            iframe: true
+          }"
+          :three="true"
+        />
       </div>
 
       <h4 class="h4">
@@ -64,16 +71,16 @@ const three = getThreeRandom(projects)
 
     @media (orientation: landscape) {
       & {
-        width: 22rem;
-        height: 51rem;
-        grid-template-rows: 40rem 2rem 1rem;
+        width: 18dvw;
+        height: calc(32dvw + 9.125rem);
+        grid-template-rows: 32dvw 2rem 3.125rem;
       }
     }
 
     @media (orientation: portrait) {
       & {
-        width: 16rem;
-        height: 40rem;
+        width: 18dvw;
+        height: 32dvw;
         grid-template-rows: 29rem 2rem 1rem;
       }
     }
@@ -94,7 +101,6 @@ const three = getThreeRandom(projects)
         width: 100%;
         aspect-ratio: 9 / 16;
         position: absolute;
-        transform: scale(1.01) translate(0.5%, 0.5%);
 
         &:not(.white_bg) {
           background-color: var(--bg50);

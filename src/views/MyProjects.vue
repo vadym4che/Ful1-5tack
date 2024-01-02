@@ -13,11 +13,11 @@
     <div class="projects-container">
       <div
         class="three"
-        v-for="(a, index) in projectsToShow"
+        v-for="a, index in projectsToShow"
         :key="index"
         :id="'three-' + index"
       >
-        <div v-for="(p, i) in a" :key="i" class="project">
+        <div v-for="p, i in a" :key="i" class="project">
           <async-frame 
             :iframeSrc="getPath(p.path)"
             :iframeClass="{
