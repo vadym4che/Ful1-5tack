@@ -18,14 +18,17 @@ We each have our own unique story to tell, and through the language of technolog
   <i>Using DOCs, AI, Google and Stackoverflow</i><br>  
 </p>
 
-## Contacts
-
-[![Email](https://img.shields.io/badge/Email-vadym4che%40gmail.com-green)](mailto:vadym4che@gmail.com)
-[![Telegram](https://img.shields.io/badge/Telegram-vadym4che-green)](https://t.me/vadym4che)
-[![Phone](https://img.shields.io/badge/Phone-%2B380505444199-green)](tel:+380505444199)
-
-Feel free to contact me through any channel! Thank you for visiting!  
-
+<hr>
 <p align="center">
-  <a href="#top"><img src="https://github.com/vadym4che/Ful1-5tack/blob/main/public/logo.png" alt="abc-logo" /></a>
+  <a href="mailto:vadym4che@gmail.com">
+    <img src="https://img.shields.io/badge/Email-vadym4che%40gmail.com-green" alt="Email">
+  </a>
+  <a href="https://t.me/vadym4che">
+    <img src="https://img.shields.io/badge/Telegram-vadym4che-green" alt="Telegram">
+  </a>
+  <a href="tel:+380505444199">
+    <img src="https://img.shields.io/badge/Phone-%2B380505444199-green" alt="Phone">
+  </a>
+  <br>
+  Feel free to contact me through any channel! Thank you for visiting!  
 </p>
