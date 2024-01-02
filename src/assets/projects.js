@@ -415,7 +415,7 @@ const horizontal = [
   {
     title: 'React people CRM-table',
     name: 'react_people-table-basics',
-    stack: ['CSS', 'JS', 'React', 'React-router'],
+    stack: ['CSS', 'JS', 'React', 'Router'],
     tags: ['UI', 'FE', 'API'],
     desc: 'This is a React.js application that displays a table of people and allows users to browse details of each person. It uses React Router for navigation and displays information in a user-friendly manner.\n\n There are real peaple table displayed with interesting heritage relationships, which are highlighted interactively.',
     path: 'react_people-table-basics/#/people',

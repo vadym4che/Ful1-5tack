@@ -97,4 +97,22 @@ onUpdated(() =>  setSlideContentGrid())
     margin: 1.5em 0.3em;
   }
 }
+
+@media (max-width: 360px) {
+  .vueperslides__bullet {
+    margin: 1.5em 0.2em;
+  }
+}
+
+@media (max-width: 320px) {
+  .vueperslides__bullet {
+    margin: 1em 0.15em;
+  }
+}
+
+@media (max-width: 300px) {
+  .vueperslides__bullet {
+    margin: 0.5em 0.1em;
+  }
+}
 </style>

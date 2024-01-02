@@ -122,15 +122,6 @@ onMounted(() => window.scrollTo(0, 0))
       flex-direction: column;
       gap: 1.5rem;
     }
-
-    button {
-      border-radius: 2rem;
-      border-width: 0.125rem;
-      font-weight: 700;
-      padding: 1.5rem 3rem;
-      position: relative;
-      z-index: 1;
-    }
   }
 
   .right {
@@ -172,22 +163,15 @@ onMounted(() => window.scrollTo(0, 0))
   gap: 6rem;
 }
 
-button {
-  padding: 1.25rem 3.125rem;
-  border-radius: 2rem;
-  border-width: 0.125rem;
-  font-weight: 700;
-  background: var(--accent0);
-  color: var(--color0);
-}
-
-.hero button {
-  background: var(--accent0);
-  border-color: transparent;
-}
-
 .projects {
-  padding: 2rem 0;
+  gap: 1rem;
+
+  @media (orientation: landscape) {
+    padding: 4.5rem 0;
+  }
+  @media (orientation: portrait) {
+    padding: 0;
+  }
   .h2 {
     text-align: center;
     position: relative;
@@ -197,25 +181,6 @@ button {
       top: -10rem;
       right: -12rem;
     }
-  }
-
-  button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-width: 0.125rem;
-    font-weight: 700;
-    padding: 1.5rem 3rem;
-    color: var(--accent0);
-    border-radius: 1.875rem;
-    font-family: Inter;
-    text-align: center;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 0.1rem;
-    background: var(--bg50);
-    border-color: var(--accent0);
-    margin: 1.5rem 0 2.5rem 0;
   }
 }
 </style>

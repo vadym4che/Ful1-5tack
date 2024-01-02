@@ -329,6 +329,13 @@ a.link:active::after {
   justify-content: center;
 }
 
+.flex-col-between {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .flex-col-start {
   display: flex;
   flex-direction: column;
@@ -337,6 +344,11 @@ a.link:active::after {
 .section {
   position: relative;
 }
+
+section {
+  border: 1px solid var(--accent0);
+}
+
 @media (orientation: portrait) {
   section {
     height: 50dvh;

@@ -50,39 +50,30 @@ const three = getThreeRandom(projects)
   justify-content: center;
   width: 100%;
   flex-direction: row;
-  gap: 2rem;
+  gap: 1rem;
 
   @media (orientation: landscape) {
     & {
-      height: 75dvh;
     }
   }
 
   @media (orientation: portrait) {
     & {
-      height: 37.5dvh;
     }
   }
 
   .card {
     overflow: hidden;
-    gap: 2rem;
     display: grid;
+    width: 20dvw;
+    height: calc(35.55dvw + 9rem);
+    grid-template-rows: 35.55dvw 4rem 3rem;
+    gap: 1rem;
+    flex-grow: 0;
+    flex-shrink: 1;
 
-    @media (orientation: landscape) {
-      & {
-        width: 18dvw;
-        height: calc(32dvw + 9.125rem);
-        grid-template-rows: 32dvw 2rem 3.125rem;
-      }
-    }
-
-    @media (orientation: portrait) {
-      & {
-        width: 18dvw;
-        height: 32dvw;
-        grid-template-rows: 29rem 2rem 1rem;
-      }
+    & .h4 {
+      justify-self: start;
     }
 
     .frame {
