@@ -1,6 +1,6 @@
 <template>
   <div class="three three-projects">
-    <div class="card" v-for="{ title, name, stack, tags, path, white_bg, orientation }, i in three" :key="i">
+    <div class="card" v-for="{ title, name, stack, tags, path, white_bg }, i in three" :key="i">
       <div class="frame">
         <async-frame
           :iframeSrc="getPath(path)"
@@ -66,8 +66,8 @@ const three = getThreeRandom(projects)
     overflow: hidden;
     display: grid;
     width: 20dvw;
-    height: calc(35.55dvw + 9rem);
-    grid-template-rows: 35.55dvw 4rem 3rem;
+    height: calc(35.55dvw + 10rem);
+    grid-template-rows: 35.55dvw 5rem 3rem;
     gap: 1rem;
     flex-grow: 0;
     flex-shrink: 1;
