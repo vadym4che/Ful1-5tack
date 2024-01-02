@@ -36,7 +36,6 @@
             :borderRadius="'6.5rem'"
             :bg="'var(--accent0)'"
             class="font-variant"
-            :action="submitForm"
           >
             send
           </active-element>
@@ -71,6 +70,10 @@ const email = ref('')
 const subject = ref('')
 const message = ref('')
 
+const SERVICE_ID = import.meta.env.VITE_EMAILER_SERVICE_ID
+const TEMPLATE_ID = import.meta.env.VITE_EMAILER_TEMPLATE_ID
+const USER_KEY = import.meta.env.VITE_EMAILER_USER_KEY
+
 const submitForm = async () => {
   const text = `
         Name: ${name.value}
@@ -88,10 +91,10 @@ const submitForm = async () => {
     }
 
     const response = await emailjs.send(
-      'service_z0c2zx5',
-      'template_email7js',
+      SERVICE_ID,
+      TEMPLATE_ID,
       templateParams,
-      'DrJDQf3M1hyPj0_40'
+      USER_KEY
     )
     console.log('Email sent successfully!', response)
   } catch (error) {
