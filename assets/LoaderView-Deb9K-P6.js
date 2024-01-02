@@ -1,0 +1,1 @@
+import{_ as c,a as o,c as s,p as t,f as a,b as d}from"./index-JdpZRhYj.js";const _={},r=e=>(t("data-v-185d3141"),e=e(),a(),e),n={class:"loader flex-col-center"},l=r(()=>d("div",{class:"circle2"},null,-1)),p=[l];function i(e,f){return o(),s("div",n,p)}const u=c(_,[["render",i],["__scopeId","data-v-185d3141"]]);export{u as default};
