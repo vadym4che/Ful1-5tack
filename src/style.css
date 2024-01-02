@@ -47,15 +47,15 @@ body::-webkit-scrollbar-track:hover {
   background-color: var(--scrollbar-track_hover);
 }
 
-*::selection {
+*:not(.logo-link)::selection {
   background: var(--accent0);
   color: var(--bg0);
 }
-*::-moz-selection {
+*:not(.logo-link)::-moz-selection {
   background: var(--accent0);
   color: var(--bg0);
 }
-*::-webkit-selection {
+*:not(.logo-link)::-webkit-selection {
   background: var(--accent0);
   color: var(--bg0);
 }
@@ -330,7 +330,6 @@ a.link:active::after {
   flex-direction: column;
 }
 
-/* border: 1px solid var(--accent1); */
 .section {
   position: relative;
 }

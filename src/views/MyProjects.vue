@@ -28,16 +28,18 @@
             }"
           />
 
-          <p class="p3">
-            {{ p.tags.join(' | ') }}
-          </p>
+          <div class="title-box">
+            <p class="p3">
+              {{ p.tags.join(' | ') }}
+            </p>
 
-          <router-link
-            :to="{ name: 'project', params: { projectName: p.name }}"
-            :title="`get '${p.name}' details`"
-          >
-            {{p.title}}
-          </router-link>
+            <router-link
+              :to="{ name: 'project', params: { projectName: p.name }}"
+              :title="`get '${p.name}' details`"
+            >
+              {{p.title}}
+            </router-link>
+          </div>
         </div>
       </div>
 
@@ -93,17 +95,18 @@ onUpdated(() => handleScroll())
 
 <style lang="scss">
 .projects-page {
-
   .projects-container {
     padding: 6.25rem 0 10rem;
     gap: 3rem;
   }
+
   .projects-container, .three {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     position: relative;
   }
+
   .three {
     margin: 0 auto;
     gap: 1.5rem;
@@ -128,25 +131,66 @@ onUpdated(() => handleScroll())
     padding-bottom: 0.5rem;
 
     &:has(.vertical){
-      height: calc(1.2 * 36.144rem);
+      @media (orientation: landscape) {
+        & {
+          height: calc(1.2 * (40dvw * 0.666 - 1.5rem));
+          width: calc(40dvw * 0.333 - 1.5rem);
+        }
+      }
+      @media (orientation: portrait) {
+        & {
+          height: calc(1.2 * (80dvw * 0.666 - 1rem));
+          width: calc(80dvw * 0.333 - 1rem);
+        }
+      }
     }
 
     &:has(.horizontal){
-      height: calc(1.2 * 17.572rem);
+      @media (orientation: landscape) {
+        & {
+          height: calc(1.24 * (40dvw * 0.333 - 1.6rem));
+          width: calc(40dvw * 0.666 - 1.6rem);
+        }
+      }
+      @media (orientation: portrait) {
+        & {
+          height: calc(1.2 * (80dvw * 0.333333 - 1rem));
+          width: calc(80dvw * 0.666666 - 0.5rem);
+        }
+      }
     }
+    .horizontal,
+    .vertical {
+      width: 100%;
+    }
+
     .horizontal {
       aspect-ratio: 2 / 1;
-      width: 36.144rem;
     }
+
+    &:has(.vertical) .title-box {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      justify-content: space-between;
+    }
+
+    @media (max-width: 1000px) {
+      &:has(.horizontal) .title-box {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+      }
+    }
+
     .vertical {
       aspect-ratio: 1 / 2;
-      width: 17.572rem;
     }
+
     flex-shrink: 1;
     flex-grow: 0;
     height: auto;
     overflow: hidden;
-
     background: var(--bg50);
     border-radius: 1rem;
     text-align: center;
@@ -161,10 +205,11 @@ onUpdated(() => handleScroll())
     top: 0;
     right: 0;
   }
+
   .project:nth-child(3n):has(.horizontal) {
     position: absolute;
     top: calc(50% + 0.5rem);
-    right: 0.5rem;
+    right: 0;
   }
 
   .iframe {

@@ -52,11 +52,9 @@ const handleClick = () => {
   overflow: hidden;
   font-weight: bold;
   box-shadow: inset -1rem -1rem 1rem #0004;
-  &::after {
-    box-shadow: inset 1rem 1rem 1rem #fff4;
-  }
 
   &::after {
+    box-shadow: inset 1rem 1rem 1rem #fff4;
     top: 0;
     right: 0;
     content: '';
@@ -78,8 +76,6 @@ const handleClick = () => {
   &:active {
     color: var(--bg0);
     text-shadow: 0 0 1rem var(--color0);
-    &::after {
-    }
   }
 }
 </style>

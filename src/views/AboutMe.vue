@@ -54,6 +54,8 @@ onMounted(() => window.scrollTo(0, 0))
 
 .rhymes {
   text-align: center;
+  padding-bottom: 10rem;
+
   span {
     display: inline-block;
     font-style: italic;
@@ -63,8 +65,6 @@ onMounted(() => window.scrollTo(0, 0))
     font-weight: 700;
     text-align-last: justify;
   }
-
-  padding-bottom: 10rem;
 }
 
 .mission-text {
@@ -80,7 +80,6 @@ onMounted(() => window.scrollTo(0, 0))
     }
   }
 }
-
 
 .photos {
   display: grid;
@@ -103,7 +102,6 @@ onMounted(() => window.scrollTo(0, 0))
       content: '';
       border: 0.125rem solid var(--accent0);
     }
-
   }
 
   .photo1{
@@ -131,5 +129,4 @@ onMounted(() => window.scrollTo(0, 0))
     }
   }
 }
-
 </style>

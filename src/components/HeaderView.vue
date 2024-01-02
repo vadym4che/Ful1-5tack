@@ -1,12 +1,8 @@
 <template>
-  <header>
-    <menu>
-      <span class="logo menu-item">
-        <a href="http://bit.ly/Ful1-5tack" class="link logo-link">
-          VADYM4<img src="/logo.png" alt="logo" class="logo-image">HE
-        </a>
-      </span>
+  <header class="header">
+    <logo-view size="2rem" logoClass="logo-view"/>
 
+    <menu>
       <li class="menu-item">
         <router-link to="/home" class="link">Home</router-link>
       </li>
@@ -19,18 +15,19 @@
       <li class="menu-item">
         <router-link to="/contact" class="link">Contact</router-link>
       </li>
-
-      <theme-toggler />
     </menu>
+
+    <theme-toggler />
   </header>
 </template>
 
 <script setup>
+import LogoView from '@/components/LogoView.vue'
 import ThemeToggler from '@/components/ThemeToggler.vue'
 </script>
 
 <style lang="scss">
-header {
+.header {
   top: 0;
   left: 0;
   position: fixed;
@@ -38,31 +35,22 @@ header {
   height: 5rem;
   width: 100dvw;
   background: linear-gradient(180deg, var(--bg0), var(--bg50), transparent);
+  display: flex;
+  padding: 0 2rem;
 }
 
-.logo {
-  letter-spacing: 0.25rem;
-  font-size: 1.25rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+.logo-view {
+  margin: 1.25rem 0.5rem 0;
   padding: 0 0.5rem;
-  position: relative;
-}
-
-.logo-image {
-  width: 1.2rem;
-  height: 1.2rem;
-  margin-right: 0.25rem;
+  opacity: 0.75;
 }
 
 menu {
   width: 100%;
   position: relative;
   list-style: none;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  justify-items: center;
+  display: flex;
+  justify-content: center;
   align-items: center;
   font-weight: 500;
   height: 5rem;
@@ -71,7 +59,7 @@ menu {
   a {
     box-sizing: border-box;
     font-size: 1.5rem;
-    padding: 1rem 2.25rem;
+    padding: 1rem 2rem;
     opacity: 0.75;
     font-variant: small-caps;
     text-transform: uppercase;
@@ -99,7 +87,7 @@ menu {
       }
     }
 
-    &:active:not(.logo-link) {
+    &:active {
       letter-spacing: -0.025ch;
     }
 
@@ -113,5 +101,11 @@ menu {
   display: inline-flex;
   text-shadow: 0 0 2rem var(--bg0) !important;
   background: radial-gradient( var(--bg50), transparent, transparent);
+}
+
+.logo-image {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.125rem;
 }
 </style>

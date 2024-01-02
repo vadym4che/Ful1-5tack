@@ -128,7 +128,6 @@ onMounted(() => window.scrollTo(0, 0))
 
 <style lang="scss">
 .project-page{
-
   .preview {
     width: 100%;
     aspect-ratio: 1 / 1;

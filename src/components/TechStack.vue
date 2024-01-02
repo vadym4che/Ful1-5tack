@@ -27,7 +27,6 @@ const slider = ref()
 
 const setSlideContentGrid = () => {
   const contentElements = document.querySelectorAll('.vueperslide__content')
-
   contentElements.forEach((element) => {
     element.setAttribute(
       'style',
@@ -43,9 +42,7 @@ onMounted(() => {
   slider.value.goToSlide(3)
 })
 
-onUpdated(() => {
-  setSlideContentGrid()
-})
+onUpdated(() =>  setSlideContentGrid())
 </script>
 
 <style lang="scss">

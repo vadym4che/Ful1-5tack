@@ -14,7 +14,7 @@ const { x, y } = useMouse()
 const { y: scrollY } = useWindowScroll()
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 #pointer {
   position: fixed;
   z-index: -1;

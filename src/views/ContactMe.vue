@@ -18,13 +18,13 @@
 
         <form @submit.prevent="submitForm" class="flex-col-start form">
           <label data-text="NAME">
-            <input type="text" v-model="name" required>
+            <input type="text" v-model="name" required aria-label="name-input">
           </label>
           <label data-text="EMAIL">
-            <input type="email" v-model="email" required>
+            <input type="email" v-model="email" required aria-label="email-input">
           </label>
           <label data-text="SUBJECT">
-            <input type="text" v-model="subject" required>
+            <input type="text" v-model="subject" required aria-label="subject-input">
           </label>
           <label data-text="MESSAGE">
             <textarea v-model="message"></textarea>
@@ -112,7 +112,6 @@ onMounted(() => window.scrollTo(0, 0))
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 7rem;
-
   padding: 9.5rem 0 7.25rem 0;
 }
 
@@ -176,7 +175,6 @@ onMounted(() => window.scrollTo(0, 0))
 input[type="submit"], button {
   width: 11rem;
   height: 3.5rem;
-
   background: var(--accent0);
   border-color: transparent;
   border-radius: 2rem;

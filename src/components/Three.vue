@@ -30,7 +30,6 @@ const three = getThreeRandom(projects)
 </script>
 
 <style lang="scss">
-
 .text-wrap {
   max-width: 100%;
   overflow: hidden;
@@ -118,7 +117,6 @@ const three = getThreeRandom(projects)
         margin-left: 2rem;
       }
     }
-
   }
 }
 </style>

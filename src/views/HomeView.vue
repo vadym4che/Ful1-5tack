@@ -181,7 +181,6 @@ button {
   color: var(--color0);
 }
 
-
 .hero button {
   background: var(--accent0);
   border-color: transparent;
@@ -216,7 +215,6 @@ button {
     letter-spacing: 0.1rem;
     background: var(--bg50);
     border-color: var(--accent0);
-
     margin: 1.5rem 0 2.5rem 0;
   }
 }

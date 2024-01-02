@@ -133,10 +133,10 @@ watch(theme, (newTheme) => document.documentElement.setAttribute('data-theme', n
     align-items: center;
     justify-content: center;
     color: var(--color0);
-    font-size: 1rem;
-    line-height: 1rem;
-    width: 3rem;
-    height: 3rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    width: 3.75rem;
+    height: 3.75rem;
     border-radius: 50%;
     background: radial-gradient(ellipse at 0% 0%, var(--accent2), var(--accent1));
   }

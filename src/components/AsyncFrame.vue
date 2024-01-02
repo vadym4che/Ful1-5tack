@@ -21,9 +21,7 @@ import { ref, defineProps } from 'vue'
 import Loader from '@/components/Loader.vue'
 
 const { iframeSrc, iframeStyle, iframeClass } = defineProps(['iframeSrc', 'iframeStyle', 'iframeClass'])
-
 const isLoaded = ref(false)
-
 const setLoaded = () => setTimeout(() => isLoaded.value = true, 0)
 </script>
 
