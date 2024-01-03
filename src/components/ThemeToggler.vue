@@ -8,6 +8,7 @@
       id="spot"
       :style="{
         background: `radial-gradient(ellipse at ${offsetX}% ${offsetY}%, var(--accent1), var(--color0))`,
+        fontSize: theme === 'light' ? '1.5rem' : '1.75rem'
       }"
     >
       {{ theme === "light" ? "🌙" : "🌞" }}
@@ -136,8 +137,7 @@ watch(theme, (newTheme) =>
     align-items: center;
     justify-content: center;
     color: var(--color0);
-    font-size: 1.5rem;
-    line-height: 1.5rem;
+    line-height: 100%;
     width: 3.75rem;
     height: 3.75rem;
     border-radius: 50%;
