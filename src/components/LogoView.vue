@@ -41,6 +41,7 @@ const { size, logoClass } = defineProps(['size', 'logoClass'])
   .logo-image {
     width: auto;
     margin-right: -0.0666ch;
+    filter: invert(var(--is-white));
   }
 
   &:hover {
