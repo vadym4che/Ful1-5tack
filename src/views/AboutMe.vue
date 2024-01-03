@@ -5,7 +5,7 @@
         About Me
         <high-light />
       </h2>
-      <p class="p3">Little Brief About Myself</p>
+      <p class="t2">Little Brief About Myself</p>
     </div>
 
     <div class="mission flex-col-start">
@@ -46,8 +46,8 @@
 </template>
 
 <script setup>
-import { onMounted } from "vue"
-import HighLight from "@/components/HighLight.vue"
+import { onMounted } from 'vue'
+import HighLight from '@/components/HighLight.vue'
 
 onMounted(() => window.scrollTo(0, 0))
 </script>
@@ -106,13 +106,13 @@ onMounted(() => window.scrollTo(0, 0))
 
     &::before {
       position: absolute;
-      content: "";
+      content: '';
       border: 0.125rem solid var(--accent0);
     }
   }
 
   .photo1 {
-    background-image: url("@/assets/photo-main.jpg");
+    background-image: url('@/assets/photo-main.jpg');
     background-position: center;
 
     &::before {
@@ -124,7 +124,7 @@ onMounted(() => window.scrollTo(0, 0))
     }
   }
   .photo2 {
-    background-image: url("@/assets/photo-additional.jpg");
+    background-image: url('@/assets/photo-additional.jpg');
     background-position: 0 25%;
 
     &::before {

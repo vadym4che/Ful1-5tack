@@ -5,7 +5,7 @@
         Project Detail
         <high-light />
       </h2>
-      <p class="p3">
+      <p class="t2">
         Details About The Project
       </p>
     </div>
@@ -119,7 +119,9 @@ import getPath from '@/helpers/getPath.js'
 import getSrc from '@/helpers/getSrc.js'
 import getThreeRandom from '@/helpers/getThreeRandom'
 
-const AsyncFrame = defineAsyncComponent(() => import("@/components/AsyncFrame.vue"))
+const AsyncFrame = defineAsyncComponent(() =>
+  import('@/components/AsyncFrame.vue')
+)
 const route = useRoute()
 const projectName = ref(route.params.projectName)
 const project = ref(getProjectDetails(projectName.value))

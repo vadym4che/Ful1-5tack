@@ -5,7 +5,7 @@
         My Works
         <high-light />
       </h2>
-      <p class="p3">Showcase About Works</p>
+      <p class="t2">Showcase About Works</p>
     </div>
 
     <div class="projects-container">
@@ -28,7 +28,7 @@
 
           <div class="title-box">
             <p class="t3">
-              {{ p.tags.join(" | ") }}
+              {{ p.tags.join(' | ') }}
             </p>
 
             <router-link
@@ -58,13 +58,15 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUpdated, defineAsyncComponent } from "vue"
-import HighLight from "@/components/HighLight.vue"
-import ActiveElement from "@/components/ActiveElement.vue"
-import { chunkedProjects } from "@/assets/projects.js"
-import getPath from "@/helpers/getPath.js"
+import { ref, onMounted, onUpdated, defineAsyncComponent } from 'vue'
+import HighLight from '@/components/HighLight.vue'
+import ActiveElement from '@/components/ActiveElement.vue'
+import { chunkedProjects } from '@/assets/projects.js'
+import getPath from '@/helpers/getPath.js'
 
-const AsyncFrame = defineAsyncComponent(() => import("@/components/AsyncFrame.vue"))
+const AsyncFrame = defineAsyncComponent(() =>
+  import('@/components/AsyncFrame.vue')
+)
 const itemsToShow = ref(2)
 const projectsToShow = ref(chunkedProjects.slice(0, itemsToShow.value))
 const isLimitReached = ref(
@@ -86,7 +88,7 @@ const handleScroll = () => {
   const lastElement = document.getElementById(lastElementId)
 
   if (lastElement) {
-    lastElement.scrollIntoView({ behavior: "smooth", block: "start" })
+    lastElement.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
 }
 

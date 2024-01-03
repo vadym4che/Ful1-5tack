@@ -1,7 +1,7 @@
 <template>
   <section class="head content flex-col-center">
     <h1 class="h1">
-      Crafting Digital Solutions<br />from End to End.
+      Crafting Digital Solutions<br />End-to-End.
       <high-light />
     </h1>
 
@@ -35,7 +35,7 @@
           Let’s get to<br />know me<br />closer
         </h2>
 
-        <p class="p3">
+        <p class="t2">
           Hello, I am Vadym Chervoniak, a Full-stack developer based in Ukraine.
           My expertise includes HTML, CSS, JavaScript, React, Vue, Node.js,
           various databases, cloud computing, and integrating with different
@@ -92,15 +92,15 @@
 </template>
 
 <script setup>
-import { defineAsyncComponent, onMounted } from "vue"
-import HighLight from "@/components/HighLight.vue"
-import ActiveElement from "@/components/ActiveElement.vue"
+import { defineAsyncComponent, onMounted } from 'vue'
+import HighLight from '@/components/HighLight.vue'
+import ActiveElement from '@/components/ActiveElement.vue'
 
 const ThreeView = defineAsyncComponent(() =>
-  import("@/components/ThreeView.vue")
+  import('@/components/ThreeView.vue')
 )
 const TechStack = defineAsyncComponent(() =>
-  import("@/components/TechStack.vue")
+  import('@/components/TechStack.vue')
 )
 
 onMounted(() => window.scrollTo(0, 0))
@@ -153,7 +153,7 @@ onMounted(() => window.scrollTo(0, 0))
   .right {
     width: 100%;
     aspect-ratio: 9 / 10;
-    background: url("@/assets/photo-main.jpg");
+    background: url('@/assets/photo-main.jpg');
     background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -163,7 +163,7 @@ onMounted(() => window.scrollTo(0, 0))
     &::before,
     &::after {
       position: absolute;
-      content: "";
+      content: '';
       border: 0.125rem solid var(--accent0);
     }
 
@@ -190,14 +190,8 @@ onMounted(() => window.scrollTo(0, 0))
 }
 
 .projects {
-  gap: 1rem;
-
-  @media (orientation: landscape) {
-    padding: 4.5rem 0;
-  }
-  @media (orientation: portrait) {
-    padding: 0;
-  }
+  padding: 3rem 0;
+  gap: 2rem;
   .h2 {
     text-align: center;
     position: relative;

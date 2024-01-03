@@ -1,7 +1,7 @@
 export default function (projects, excludeIndex = undefined) {
   const result = []
 
-  const isInvalidIndex = (index) =>
+  const isInvalidIndex = index =>
     index !== excludeIndex &&
     projects[index].orientation !== projects[excludeIndex].orientation
 
@@ -19,5 +19,5 @@ export default function (projects, excludeIndex = undefined) {
     }
   }
 
-  return result.map((index) => projects[index])
+  return result.map(index => projects[index])
 }

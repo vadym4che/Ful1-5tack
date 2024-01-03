@@ -5,7 +5,7 @@
         Contact Me
         <high-light />
       </h2>
-      <p class="p3">Hire Me For Your Awesome Project</p>
+      <p class="t2">Hire Me For Your Awesome Project</p>
     </div>
 
     <div class="flex-col-start">
@@ -92,15 +92,15 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue"
-import HighLight from "@/components/HighLight.vue"
-import ActiveElement from "@/components/ActiveElement.vue"
-import emailjs from "emailjs-com"
+import { ref, onMounted } from 'vue'
+import HighLight from '@/components/HighLight.vue'
+import ActiveElement from '@/components/ActiveElement.vue'
+import emailjs from 'emailjs-com'
 
-const name = ref("")
-const email = ref("")
-const subject = ref("")
-const message = ref("")
+const name = ref('')
+const email = ref('')
+const subject = ref('')
+const message = ref('')
 
 const SERVICE_ID = import.meta.env.VITE_EMAILER_SERVICE_ID
 const TEMPLATE_ID = import.meta.env.VITE_EMAILER_TEMPLATE_ID
@@ -128,16 +128,16 @@ const submitForm = async () => {
       templateParams,
       USER_KEY
     )
-    console.log("Email sent successfully!", response)
+    console.log('Email sent successfully!', response)
   } catch (error) {
-    console.error("Error sending email:", error)
+    console.error('Error sending email:', error)
   }
 
-  name.value = ""
-  email.value = ""
-  subject.value = ""
-  message.value = ""
-};
+  name.value = ''
+  email.value = ''
+  subject.value = ''
+  message.value = ''
+}
 
 onMounted(() => window.scrollTo(0, 0))
 </script>
@@ -151,7 +151,7 @@ onMounted(() => window.scrollTo(0, 0))
 }
 
 .form {
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
   gap: 3.5rem;
   font-size: 1.5rem;
   font-weight: 400;
@@ -177,7 +177,7 @@ onMounted(() => window.scrollTo(0, 0))
   outline: none;
   font-size: 1.5rem;
 }
-.form *:not([type="submit"]) {
+.form *:not([type='submit']) {
   width: 100%;
   height: 5rem;
   background: transparent !important;
@@ -208,7 +208,7 @@ onMounted(() => window.scrollTo(0, 0))
   }
 }
 
-input[type="submit"],
+input[type='submit'],
 button {
   width: 11rem;
   height: 3.5rem;
@@ -243,7 +243,7 @@ textarea {
 
 .laptop {
   border-radius: 1rem;
-  background-image: url("@/assets/laptop.jpeg");
+  background-image: url('@/assets/laptop.jpeg');
   width: 100%;
   height: 55.5%;
   background-size: cover;

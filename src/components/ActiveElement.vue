@@ -35,19 +35,19 @@
 </template>
 
 <script setup>
-import { ref, defineProps } from "vue"
-import { useMouseInElement } from "@vueuse/core"
+import { ref, defineProps } from 'vue'
+import { useMouseInElement } from '@vueuse/core'
 
 const { path, type, action, fontSize, padding, borderRadius, classes, bg } =
   defineProps([
-    "path",
-    "type",
-    "action",
-    "fontSize",
-    "padding",
-    "borderRadius",
-    "classes",
-    "bg",
+    'path',
+    'type',
+    'action',
+    'fontSize',
+    'padding',
+    'borderRadius',
+    'classes',
+    'bg',
   ])
 
 const target = ref(null)
@@ -74,7 +74,7 @@ const handleClick = () => {
     box-shadow: inset 1rem 1rem 1rem #fff4;
     top: 0;
     right: 0;
-    content: "";
+    content: '';
     position: absolute;
     width: 100%;
     height: 100%;

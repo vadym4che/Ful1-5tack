@@ -22,7 +22,10 @@
       <logo-view size="3rem" />
 
       <address>
-        <h4 class="h4" title="Location of my integrated home-office web development studio">
+        <h4
+          class="h4"
+          title="Location of my integrated home-office web development studio"
+        >
           Street Kniazia Ostrozkogo,<br />
           Boiarka, Kyivs'ka oblast,<br />
           08150
@@ -31,18 +34,20 @@
 
       <div class="contacts">
         <h4 class="h4">
-          <a href="tel:+380505444199" title="My cellphone number"> +380-505-444-199 </a>
+          <a href="tel:+380505444199" title="My cellphone number">
+            +380-505-444-199
+          </a>
         </h4>
 
         <div class="links">
           <h4 class="h4">
             <a href="https://github.com/vadym4che" title="My Git-hub account">
-              <img src="/github.svg" alt="github logo"/>&nbsp;
+              <img src="/github.svg" alt="github logo" />&nbsp;
             </a>
           </h4>
           <h4 class="h4">
-            <a href="https://t.me/vadym4che"  title="My Telegram direct link">
-              <img src="/telegram.png" alt="telegram logo"/>&nbsp;
+            <a href="https://t.me/vadym4che" title="My Telegram direct link">
+              <img src="/telegram.png" alt="telegram logo" />&nbsp;
             </a>
           </h4>
           <h4 class="h4">
@@ -61,7 +66,7 @@
 </template>
 
 <script setup>
-import LogoView from "@/components/LogoView.vue"
+import LogoView from '@/components/LogoView.vue'
 </script>
 
 <style lang="scss" scoped>

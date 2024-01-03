@@ -3,33 +3,32 @@
     <h2 class="h2">
       404
       <high-light />
-      <br />
       <p class="p1">
         In the vast realm of possibilities,<br />
-        the route <b>`{{ useRoute().path }}`</b> exists<br />
+        the route <b class="">{{ useRoute().path }}</b> exists<br />
         in the twilight between creation and nonexistence.<br />
-        <br />
+        <hr />
         <i> It is a path not yet traveled or, perhaps, already forgotten... </i>
       </p>
-    </h2>
 
-    <active-element
-      :action="goBack"
-      :padding="'3rem 5rem'"
-      :fontSize="'2.5rem'"
-      :borderRadius="'6.25rem'"
-      :bg="'var(--bg50)'"
-      class="font-variant"
-    >
-      go back
-    </active-element>
+      <active-element
+        :action="goBack"
+        :padding="'3rem 5rem'"
+        :fontSize="'2.5rem'"
+        :borderRadius="'6.25rem'"
+        :bg="'var(--bg50)'"
+        class="font-variant go-back"
+      >
+        go back
+      </active-element>
+    </h2>
   </div>
 </template>
 
 <script setup>
-import HighLight from "@/components/HighLight.vue"
-import ActiveElement from "@/components/ActiveElement.vue"
-import { useRoute, useRouter } from "vue-router"
+import HighLight from '@/components/HighLight.vue'
+import ActiveElement from '@/components/ActiveElement.vue'
+import { useRoute, useRouter } from 'vue-router'
 
 const router = useRouter()
 const goBack = () => {
@@ -47,25 +46,34 @@ const goBack = () => {
 }
 
 h2 {
-  top: -10rem;
+  top: -7.5vh;
   text-align: center;
   font-size: 20rem;
   position: relative;
-  margin-bottom: -5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
   .highlight {
     position: absolute;
-    top: -2rem;
-    left: -5rem;
+    top: 2rem;
   }
 
   .p1 {
     font-size: 3rem;
     line-height: 3.5rem;
+    font-family: monospace;
 
     b {
       color: var(--bg0);
       background: var(--color0);
     }
+  }
+
+  .go-back {
+    margin-top: 5rem;
   }
 }
 </style>

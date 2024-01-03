@@ -20,12 +20,6 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      # - name: Create dist directory
-      #   run: mkdir dist
-
-      # - name: Copy googled75a5f9cf8482aca.html to build directory
-      #   run: cp public/googled75a5f9cf8482aca.html dist/
-
       - name: Build Vue.js App
         run: npm run build
 

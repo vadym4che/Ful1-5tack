@@ -17,18 +17,19 @@
 </template>
 
 <script setup>
-import { ref, defineProps, onMounted, defineAsyncComponent } from "vue"
-const LoaderView = defineAsyncComponent(() => import("@/components/LoaderView.vue"))
+import { ref, defineProps, defineAsyncComponent } from 'vue'
 
+const LoaderView = defineAsyncComponent(() =>
+  import('@/components/LoaderView.vue')
+)
 const { iframeSrc, iframeStyle, iframeClass, three } = defineProps([
-  "iframeSrc",
-  "iframeStyle",
-  "iframeClass",
-  "three",
+  'iframeSrc',
+  'iframeStyle',
+  'iframeClass',
+  'three',
 ])
 const isLoaded = ref(false)
 const setLoaded = () => setTimeout(() => (isLoaded.value = true), 0)
-onMounted(() => console.log(iframeClass))
 </script>
 
 <style lang="scss" scoped>

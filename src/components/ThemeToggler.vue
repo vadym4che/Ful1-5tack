@@ -8,10 +8,10 @@
       id="spot"
       :style="{
         background: `radial-gradient(ellipse at ${offsetX}% ${offsetY}%, var(--accent1), var(--color0))`,
-        fontSize: theme === 'light' ? '1.5rem' : '1.75rem'
+        fontSize: theme === 'light' ? '1.5rem' : '1.75rem',
       }"
     >
-      {{ theme === "light" ? "🌙" : "🌞" }}
+      {{ theme === 'light' ? '🌙' : '🌞' }}
     </span>
 
     <h2 style="display: none">
@@ -23,8 +23,8 @@
 </template>
 
 <script setup>
-import { ref, onMounted, watch, onUpdated } from "vue"
-import { useMouse, useWindowSize } from "@vueuse/core"
+import { ref, onMounted, watch, onUpdated } from 'vue'
+import { useMouse, useWindowSize } from '@vueuse/core'
 
 const { x, y } = useMouse()
 const { width, height } = useWindowSize()
@@ -32,21 +32,21 @@ const offsetX = ref(50)
 const offsetY = ref(50)
 
 const theme = ref(
-  sessionStorage.getItem("theme")
-    ? sessionStorage.getItem("theme")
-    : window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? "dark"
-      : "light"
+  sessionStorage.getItem('theme')
+    ? sessionStorage.getItem('theme')
+    : window.matchMedia('(prefers-color-scheme: dark)').matches
+    ? 'dark'
+    : 'light'
 )
 
 const toggleTheme = () => {
-  theme.value = theme.value === "light" ? "dark" : "light"
-  sessionStorage.setItem("theme", theme.value)
+  theme.value = theme.value === 'light' ? 'dark' : 'light'
+  sessionStorage.setItem('theme', theme.value)
 }
 
 onMounted(() => {
-  document.documentElement.setAttribute("data-theme", theme.value)
-  sessionStorage.setItem("theme", theme.value)
+  document.documentElement.setAttribute('data-theme', theme.value)
+  sessionStorage.setItem('theme', theme.value)
 })
 
 onUpdated(() => {
@@ -54,13 +54,13 @@ onUpdated(() => {
   offsetY.value = (y.value / height.value) * 100 || 50
 })
 
-watch(theme, (newTheme) =>
-  document.documentElement.setAttribute("data-theme", newTheme)
+watch(theme, newTheme =>
+  document.documentElement.setAttribute('data-theme', newTheme)
 )
 </script>
 
 <style lang="scss">
-[data-theme="dark"] {
+[data-theme='dark'] {
   --is-dark: 1;
   --is-white: 0;
   --bg0: #131313;
@@ -79,7 +79,6 @@ watch(theme, (newTheme) =>
   --accent1: #cb43cb;
   --accent2: hsl(120, 57%, 71%);
 
-
   --scrollbar-thumb: rgb(54, 54, 54);
   --scrollbar-track: rgb(90, 90, 90);
 
@@ -89,7 +88,7 @@ watch(theme, (newTheme) =>
   --loader-bg-blend-mode: multiply;
 }
 
-[data-theme="light"] {
+[data-theme='light'] {
   --is-dark: 0;
   --is-white: 1;
   --bg0: #ececec;

@@ -345,9 +345,9 @@ a.link:active::after {
   position: relative;
 }
 
-/* section {
+section {
   border: 1px solid var(--accent0);
-} */
+}
 
 @media (orientation: portrait) {
   section {

@@ -22,8 +22,8 @@
 </template>
 
 <script setup>
-import LogoView from "@/components/LogoView.vue"
-import ThemeToggler from "@/components/ThemeToggler.vue"
+import LogoView from '@/components/LogoView.vue'
+import ThemeToggler from '@/components/ThemeToggler.vue'
 </script>
 
 <style lang="scss">
