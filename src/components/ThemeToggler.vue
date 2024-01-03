@@ -76,7 +76,7 @@ watch(theme, (newTheme) =>
   --accent0: #4c4;
   --accent50: #4c48;
   --accent1: #cb43cb;
-  --accent2: hsl(120, 57%, 69%);
+  --accent2: hsl(120, 57%, 71%);
 
 
   --scrollbar-thumb: rgb(54, 54, 54);
@@ -108,7 +108,7 @@ watch(theme, (newTheme) =>
   --accent0: #cb43cb;
   --accent50: #cb43cb88;
   --accent1: #4c4;
-  --accent2: hsl(300, 57%, 69%);
+  --accent2: hsl(300, 57%, 71%);
 
   --scrollbar-thumb: rgb(145, 145, 145);
   --scrollbar-track: rgb(242, 242, 242);

@@ -7,7 +7,7 @@
     :style="{ fontSize: size, lineHeight: size }"
   >
     <span class="logo-span vadym font-variant">
-      vadym4
+      Vadym4
     </span>
       <img
         src="/logo.png"
@@ -29,7 +29,7 @@ const { size, logoClass } = defineProps(['size', 'logoClass'])
 
 <style lang="scss">
 .logo-link {
-  letter-spacing: -0.1ch;
+  letter-spacing: -0.0333ch;
   background: var(--bg0);
   justify-self: start;
   align-self: start;
@@ -40,7 +40,7 @@ const { size, logoClass } = defineProps(['size', 'logoClass'])
 
   .logo-image {
     width: auto;
-    margin-right: -0.1ch;
+    margin-right: -0.0666ch;
   }
 
   &:hover {

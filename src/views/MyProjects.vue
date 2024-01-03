@@ -135,14 +135,14 @@ onUpdated(() => handleScroll())
     &:has(.vertical) {
       @media (orientation: landscape) {
         & {
-          height: calc(1.2 * (40dvw * 0.666 - 1.5rem));
-          width: calc(40dvw * 0.333 - 1.5rem);
+          width: calc((40dvw - 1.5rem) * 0.333 - 1rem);
+          height: calc(40dvw * 0.666 * 1.2);
         }
       }
       @media (orientation: portrait) {
         & {
-          height: calc(1.2 * (80dvw * 0.666 - 1rem));
           width: calc(80dvw * 0.333 - 1rem);
+          height: calc(80dvw * 0.666 * 1.2);
         }
       }
     }
@@ -150,24 +150,21 @@ onUpdated(() => handleScroll())
     &:has(.horizontal) {
       @media (orientation: landscape) {
         & {
-          height: calc(1.24 * (40dvw * 0.333 - 1.6rem));
-          width: calc(40dvw * 0.666 - 1.6rem);
+          width: calc((((40dvw - 1.5rem) * 0.333 - 1rem) * 2) + 1.5rem);
+          height: calc((40dvw * 0.666 * 1.2 - 1.5rem) / 2);
         }
       }
       @media (orientation: portrait) {
         & {
-          height: calc(1.2 * (80dvw * 0.333333 - 1rem));
-          width: calc(80dvw * 0.666666 - 0.5rem);
+          width: calc(80dvw - (80dvw * 0.333 - 1rem) - 1.5rem);
+          height: calc(((80dvw * 0.666 * 1.2) - 1.5rem) / 2);
         }
       }
     }
+
     .horizontal,
     .vertical {
       width: 100%;
-    }
-
-    .horizontal {
-      aspect-ratio: 2 / 1;
     }
 
     &:has(.vertical) .title-box {
@@ -183,6 +180,10 @@ onUpdated(() => handleScroll())
         flex-direction: row-reverse;
         justify-content: space-between;
       }
+    }
+
+    .horizontal {
+      aspect-ratio: 2 / 1;
     }
 
     .vertical {
@@ -210,7 +211,7 @@ onUpdated(() => handleScroll())
 
   .project:nth-child(3n):has(.horizontal) {
     position: absolute;
-    top: calc(50% + 0.5rem);
+    top: calc(50% + 0.75rem);
     right: 0;
   }
 

@@ -22,7 +22,7 @@
       <logo-view size="3rem" />
 
       <address>
-        <h4 class="h4" title="My home web studio location">
+        <h4 class="h4" title="Location of my integrated home-office web development studio">
           Street Kniazia Ostrozkogo,<br />
           Boiarka, Kyivs'ka oblast,<br />
           08150
