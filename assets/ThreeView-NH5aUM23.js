@@ -1,7 +1,0 @@
-import{B as g,q as j,a as t,c as s,F as k,s as v,b as e,e as n,u as a,w,y as r,d as o,g as V,h as x}from"./index-LzW9pCbJ.js";import{g as y}from"./getPath-tNxSOAAP.js";import{g as C}from"./getThreeRandom-iTxOxvIf.js";const b={class:"three three-projects"},B={class:"frame"},N={class:"h4"},T={class:"p3"},A=e("span",{class:"dimmed"},"tech stack:  ",-1),E=e("br",null,null,-1),F=e("span",{class:"dimmed"},"tech area:   ",-1),I={__name:"ThreeView",setup(P){const i=V(()=>x(()=>import("./AsyncFrame-m27A2NoZ.js"),__vite__mapDeps([0,1,2,3]))),_=C(g);return(S,D)=>{const l=j("router-link");return t(),s("div",b,[(t(!0),s(k,null,v(a(_),({title:c,name:m,stack:d,tags:p,path:h,white_bg:u},f)=>(t(),s("div",{class:"card",key:f},[e("div",B,[n(a(i),{iframeSrc:a(y)(h),iframeClass:{white_bg:u,iframe:!0},three:!0},null,8,["iframeSrc","iframeClass"])]),e("h4",N,[n(l,{to:{name:"project",params:{projectName:m}},class:"text-wrap",title:"View more details about `"+c+"`"},{default:w(()=>[o(r(c),1)]),_:2},1032,["to","title"])]),e("p",T,[A,o(" "+r(d.join(" | ")),1),E,F,o(" "+r(p.join(", ")),1)])]))),128))])}}};export{I as default};
-function __vite__mapDeps(indexes) {
-  if (!__vite__mapDeps.viteFileDeps) {
-    __vite__mapDeps.viteFileDeps = ["assets/AsyncFrame-m27A2NoZ.js","assets/index-LzW9pCbJ.js","assets/index-N58HWD5Q.css","assets/AsyncFrame-NT8Dh4E1.css"]
-  }
-  return indexes.map((i) => __vite__mapDeps.viteFileDeps[i])
-}
