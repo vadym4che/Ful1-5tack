@@ -5,20 +5,27 @@
         About Me
         <high-light />
       </h2>
-      <p class="p3">
-        Little Brief About Myself
-      </p>
+      <p class="p3">Little Brief About Myself</p>
     </div>
 
     <div class="mission flex-col-start">
       <div class="mission-header">
         <h2 class="h2">
-          My mission is<br>to make<br>development<br>easier.
+          My mission is<br />to make<br />development<br />easier.
         </h2>
         <p class="mission-text">
-          As individuals, we are all born developers, constantly shaping our neural networks as we journey through life. Some of us, including myself, have chosen to transform this passion for development into a fulfilling career in web development. For me, it's not just a job but a calling that allows me to express my creativity and make a meaningful impact through technology.
-          <br><br><br>
-          We each have our own unique story to tell, and through the language of technology, we code our autobiographies, breathing life into our ideas on the digital canvas. I am deeply dedicated to creating user-friendly web applications and continually enhancing my skills to stay ahead in this ever-evolving industry.
+          As individuals, we are all born developers, constantly shaping our
+          neural networks as we journey through life. Some of us, including
+          myself, have chosen to transform this passion for development into a
+          fulfilling career in web development. For me, it's not just a job but
+          a calling that allows me to express my creativity and make a
+          meaningful impact through technology.
+          <br /><br /><br />
+          We each have our own unique story to tell, and through the language of
+          technology, we code our autobiographies, breathing life into our ideas
+          on the digital canvas. I am deeply dedicated to creating user-friendly
+          web applications and continually enhancing my skills to stay ahead in
+          this ever-evolving industry.
         </p>
       </div>
 
@@ -39,8 +46,8 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
-import HighLight from '@/components/HighLight.vue'
+import { onMounted } from "vue"
+import HighLight from "@/components/HighLight.vue"
 
 onMounted(() => window.scrollTo(0, 0))
 </script>
@@ -99,13 +106,13 @@ onMounted(() => window.scrollTo(0, 0))
 
     &::before {
       position: absolute;
-      content: '';
+      content: "";
       border: 0.125rem solid var(--accent0);
     }
   }
 
-  .photo1{
-    background-image: url('@/assets/photo-main.jpg');
+  .photo1 {
+    background-image: url("@/assets/photo-main.jpg");
     background-position: center;
 
     &::before {
@@ -116,8 +123,8 @@ onMounted(() => window.scrollTo(0, 0))
       top: 0;
     }
   }
-  .photo2{
-    background-image: url('@/assets/photo-additional.jpg');
+  .photo2 {
+    background-image: url("@/assets/photo-additional.jpg");
     background-position: 0 25%;
 
     &::before {

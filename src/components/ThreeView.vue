@@ -1,6 +1,10 @@
 <template>
   <div class="three three-projects">
-    <div class="card" v-for="{ title, name, stack, tags, path, white_bg }, i in three" :key="i">
+    <div
+      class="card"
+      v-for="{ title, name, stack, tags, path, white_bg }, i in three"
+      :key="i"
+    >
       <div class="frame">
         <async-frame
           :iframeSrc="getPath(path)"
@@ -13,10 +17,15 @@
       </div>
 
       <h4 class="h4">
-        <router-link :to="{ name: 'project', params: { projectName: name } }" class="text-wrap">
+        <router-link
+          :to="{ name: 'project', params: { projectName: name } }"
+          class="text-wrap"
+          :title="'View more details about `' + title + '`'"
+        >
           {{ title }}
         </router-link>
       </h4>
+
       <p class="p3">
         <span class="dimmed">tech stack: &nbsp;</span>
         {{ stack.join(' | ') }}<br>
@@ -50,25 +59,16 @@ const three = getThreeRandom(projects)
   justify-content: center;
   width: 100%;
   flex-direction: row;
-  gap: 1rem;
-
-  @media (orientation: landscape) {
-    & {
-    }
-  }
-
-  @media (orientation: portrait) {
-    & {
-    }
-  }
+  gap: 2rem;
+  height: calc(33.777dvw + 10rem);
 
   .card {
     overflow: hidden;
     display: grid;
-    width: 20dvw;
-    height: calc(35.55dvw + 10rem);
-    grid-template-rows: 35.55dvw 5rem 3rem;
-    gap: 1rem;
+    width: 15.75dvw;
+    height: calc(28dvw + 7.75rem);
+    grid-template-rows: 28dvw 4rem 2.75rem;
+    gap: 0.5rem;
     flex-grow: 0;
     flex-shrink: 1;
 

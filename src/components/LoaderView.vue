@@ -1,5 +1,13 @@
 <template>
-  <div class="loader flex-col-center" :class="{ 'vertical' : classes.vertical, 'horizontal' : classes.horizontal, 'iframe': classes.iframe, 'one-of-three': three }">
+  <div
+    class="loader flex-col-center"
+    :class="{
+      vertical: classes?.vertical,
+      horizontal: classes?.horizontal,
+      iframe: classes?.iframe,
+      'one-of-three': three,
+    }"
+  >
     <div class="circle2"></div>
   </div>
 </template>
@@ -7,10 +15,7 @@
 <script setup>
 import { defineProps, onMounted } from "vue"
 
-const { classes, three } = defineProps([
-  "classes",
-  "three",
-])
+const { classes, three } = defineProps(["classes", "three"])
 
 onMounted(() => console.log(typeof classes, classes))
 </script>
@@ -18,19 +23,19 @@ onMounted(() => console.log(typeof classes, classes))
 <style lang="scss" scoped>
 @keyframes loading {
   0% {
-    content: 'Loading...'
+    content: "Loading...";
   }
   25% {
-    content: 'Loading'
+    content: "Loading";
   }
   50% {
-    content: 'Loading.'
+    content: "Loading.";
   }
   75% {
-    content: 'Loading..'
+    content: "Loading..";
   }
   100% {
-    content: 'Loading...'
+    content: "Loading...";
   }
 }
 
@@ -42,10 +47,11 @@ onMounted(() => console.log(typeof classes, classes))
     transform: scale(10);
   }
   100% {
-    transform: scale(.1);
+    transform: scale(0.1);
   }
 }
-.loader, .circle2 {
+.loader,
+.circle2 {
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -56,7 +62,7 @@ onMounted(() => console.log(typeof classes, classes))
 .loader {
   &::before {
     overflow: hidden;
-    content: '';
+    content: "";
     position: absolute;
     width: 20dvw;
     text-align: left;
@@ -75,7 +81,60 @@ onMounted(() => console.log(typeof classes, classes))
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    clip-path: polygon(1% 5%, 1% 0%, 5% 0%, 5% 5%, 6% 6%, 8% 0%, 9% 3%, 20% 0%, 35% 3%, 35% 33%, 36% 0%, 66% 0%, 67% 3%, 68% 25%, 69% 3%, 86.5% 2%, 87% 15%, 86.25% 25%, 87% 45%, 87.5% 35%, 87.75% 25%, 88% 27%, 87.5% 25%, 87.25% 15%, 88% 2%, 95% 2%, 95% 95%, 96% 2%, 99% 3%, 99.5% 68%, 98.5% 100%, 97% 100%, 95.5% 95%, 95% 80%, 94% 100%, 55% 100%, 55% 95%, 53% 90%, 53% 100%, 36% 100%, 35% 50%, 34% 100%, 33% 99%, 20% 98%, 22% 94%, 8% 98%, 6% 96%, 5% 100%, 5.5% 35%, 4% 100%, 1% 100%, 0% 50%);
+    clip-path: polygon(
+      1% 5%,
+      1% 0%,
+      5% 0%,
+      5% 5%,
+      6% 6%,
+      8% 0%,
+      9% 3%,
+      20% 0%,
+      35% 3%,
+      35% 33%,
+      36% 0%,
+      66% 0%,
+      67% 3%,
+      68% 25%,
+      69% 3%,
+      86.5% 2%,
+      87% 15%,
+      86.25% 25%,
+      87% 45%,
+      87.5% 35%,
+      87.75% 25%,
+      88% 27%,
+      87.5% 25%,
+      87.25% 15%,
+      88% 2%,
+      95% 2%,
+      95% 95%,
+      96% 2%,
+      99% 3%,
+      99.5% 68%,
+      98.5% 100%,
+      97% 100%,
+      95.5% 95%,
+      95% 80%,
+      94% 100%,
+      55% 100%,
+      55% 95%,
+      53% 90%,
+      53% 100%,
+      36% 100%,
+      35% 50%,
+      34% 100%,
+      33% 99%,
+      20% 98%,
+      22% 94%,
+      8% 98%,
+      6% 96%,
+      5% 100%,
+      5.5% 35%,
+      4% 100%,
+      1% 100%,
+      0% 50%
+    );
   }
 
   @media (orientation: portrait) {
@@ -96,7 +155,7 @@ onMounted(() => console.log(typeof classes, classes))
 
   &::after {
     overflow: hidden;
-    content: '';
+    content: "";
     position: absolute;
     width: 8ch;
     height: 8ch;

@@ -6,7 +6,7 @@
     class="active-element"
     :style="{
       background: !isOutside
-        ? `radial-gradient(circle at ${elementX}px ${elementY}px, #fff, ${bg}, ${bg} 75%)`
+        ? `radial-gradient(circle at ${elementX}px ${elementY}px, var(--accent2), ${bg}, ${bg} 75%)`
         : bg,
       fontSize,
       padding,
@@ -23,7 +23,7 @@
     @click="handleClick"
     :style="{
       background: !isOutside
-        ? `radial-gradient(circle at ${elementX}px ${elementY}px, #fff, ${bg}, ${bg} 75%)`
+        ? `radial-gradient(circle at ${elementX}px ${elementY}px, var(--accent2), ${bg}, ${bg} 75%)`
         : bg,
       fontSize,
       padding,

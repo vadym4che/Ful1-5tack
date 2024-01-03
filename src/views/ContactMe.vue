@@ -1,30 +1,41 @@
 <template>
   <div class="flex-col-start">
     <div class="flex-col-start page-header padding-13">
-      <h2 class="h2" style="left: -0.2rem;">
+      <h2 class="h2" style="left: -0.2rem">
         Contact Me
         <high-light />
       </h2>
-      <p class="p3">
-        Hire Me For Your Awesome Project
-      </p>
+      <p class="p3">Hire Me For Your Awesome Project</p>
     </div>
 
     <div class="flex-col-start">
       <div class="grid-text-form">
-        <h2 class="h2">
-          Get in<br>Touch With<br>Me
-        </h2>
+        <h2 class="h2">Get in<br />Touch With<br />Me</h2>
 
         <form @submit.prevent="submitForm" class="flex-col-start form">
           <label data-text="NAME">
-            <input type="text" v-model="name" required aria-label="name-input">
+            <input
+              type="text"
+              v-model="name"
+              required
+              aria-label="name-input"
+            />
           </label>
           <label data-text="EMAIL">
-            <input type="email" v-model="email" required aria-label="email-input">
+            <input
+              type="email"
+              v-model="email"
+              required
+              aria-label="email-input"
+            />
           </label>
           <label data-text="SUBJECT">
-            <input type="text" v-model="subject" required aria-label="subject-input">
+            <input
+              type="text"
+              v-model="subject"
+              required
+              aria-label="subject-input"
+            />
           </label>
           <label data-text="MESSAGE">
             <textarea v-model="message"></textarea>
@@ -47,28 +58,49 @@
 
     <div class="address">
       <h4 class="h4">
-        <a href="https://t.me/vadym4che" class="link" style="padding: 0.5rem; margin: -0.5rem" title="contact me via telegram or other social media">@vadym4che</a>
+        <a
+          href="https://t.me/vadym4che"
+          class="link"
+          style="padding: 0.5rem; margin: -0.5rem"
+          title="Contact me via Telegram or any other social media"
+        >
+          @vadym4che
+        </a>
       </h4>
       <h4 class="h4">
-        <a href="tel:+380505444199" class="link" style="padding: 0.5rem; margin: -0.5rem" title="contact me via phone">+380-505-444-199</a>
+        <a
+          href="tel:+380505444199"
+          class="link"
+          style="padding: 0.5rem; margin: -0.5rem"
+          title="Contact me via phone"
+        >
+          +380-505-444-199
+        </a>
       </h4>
       <h4 class="h4">
-        <a href="mailto:vadym4che@gmail.com" class="link" style="padding: 0.5rem; margin: -0.5rem" title="contact me via email">vadym4che@gmail.com</a>
+        <a
+          href="mailto:vadym4che@gmail.com"
+          class="link"
+          style="padding: 0.5rem; margin: -0.5rem"
+          title="Contact me via e-mail"
+        >
+          vadym4che@gmail.com
+        </a>
       </h4>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
-import HighLight from '@/components/HighLight.vue'
-import ActiveElement from '@/components/ActiveElement.vue'
-import emailjs from 'emailjs-com'
+import { ref, onMounted } from "vue"
+import HighLight from "@/components/HighLight.vue"
+import ActiveElement from "@/components/ActiveElement.vue"
+import emailjs from "emailjs-com"
 
-const name = ref('')
-const email = ref('')
-const subject = ref('')
-const message = ref('')
+const name = ref("")
+const email = ref("")
+const subject = ref("")
+const message = ref("")
 
 const SERVICE_ID = import.meta.env.VITE_EMAILER_SERVICE_ID
 const TEMPLATE_ID = import.meta.env.VITE_EMAILER_TEMPLATE_ID
@@ -96,15 +128,15 @@ const submitForm = async () => {
       templateParams,
       USER_KEY
     )
-    console.log('Email sent successfully!', response)
+    console.log("Email sent successfully!", response)
   } catch (error) {
-    console.error('Error sending email:', error)
+    console.error("Error sending email:", error)
   }
 
-  name.value = ''
-  email.value = ''
-  subject.value = ''
-  message.value = ''
+  name.value = ""
+  email.value = ""
+  subject.value = ""
+  message.value = ""
 };
 
 onMounted(() => window.scrollTo(0, 0))
@@ -119,13 +151,13 @@ onMounted(() => window.scrollTo(0, 0))
 }
 
 .form {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   gap: 3.5rem;
   font-size: 1.5rem;
   font-weight: 400;
   color: var(--color0) !important;
 
-  label{
+  label {
     position: relative;
     background: transparent !important;
 
@@ -169,13 +201,15 @@ onMounted(() => window.scrollTo(0, 0))
     padding: 2rem 0 0rem 0;
   }
 
-  input, textarea {
+  input,
+  textarea {
     font-style: italic;
     font-family: monospace;
   }
 }
 
-input[type="submit"], button {
+input[type="submit"],
+button {
   width: 11rem;
   height: 3.5rem;
   background: var(--accent0);
@@ -194,7 +228,7 @@ input[type="submit"], button {
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
-input:-webkit-autofill:active  {
+input:-webkit-autofill:active {
   transition: background-color 5000s;
   -webkit-text-fill-color: var(--color0) !important;
   -webkit-background-clip: text !important;
@@ -209,7 +243,7 @@ textarea {
 
 .laptop {
   border-radius: 1rem;
-  background-image: url('@/assets/laptop.jpeg');
+  background-image: url("@/assets/laptop.jpeg");
   width: 100%;
   height: 55.5%;
   background-size: cover;

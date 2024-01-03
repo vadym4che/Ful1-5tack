@@ -11,7 +11,7 @@
     </div>
 
     <div class="project-details flex-col-start">
-      <async-frame 
+      <async-frame
         :iframeSrc="getPath(project.path)"
         :iframeClass="{ white_bg: project.white_bg, preview: true }"
       />
@@ -35,38 +35,49 @@
           <b>
             Source:&nbsp;
           </b>
-          <a :href="source" target="_blank">{{ source }}</a></p>
+          <a :href="source" target="_blank">{{ source }}</a>
+        </p>
         <p class="p4" v-if="project.deps.length">
           <b>Libraries usage:</b><br>
-          <ul>
-            <li v-for="d, i in project.deps" :key="i">{{ d }}</li>
-          </ul>
+        <ul>
+          <li v-for="d, i in project.deps" :key="i">{{ d }}</li>
+        </ul>
         </p>
         <p class="p4" v-else>
-          The project does not utilize any external libraries and relies solely on the standard built-in HTML, CSS, and JavaScript processing capabilities of modern browsers.
+          The project does not utilize any external libraries and relies solely on
+          the standard built-in HTML, CSS, and JavaScript processing capabilities
+          of modern browsers.
         </p>
         <p class="p4">
           <b>
             Description:
           </b>
           <br>
-          <pre v-if="project.desc">
+        <pre v-if="project.desc">
 {{ project.desc }}
           </pre>
-          <p class="p4" v-else>
-            It seems that there is no description attached, so let's suppose that this project is self-descriptive and needs no explicit descriptional words.
-          </p>
+        <p class="p4" v-else>
+          It seems that there is no description attached, so let's suppose that
+          this project is self-descriptive and needs no explicit descriptional
+          words.
+        </p>
         </p>
       </div>
     </div>
 
     <div class="navigation">
-      <router-link :to="{ name: 'project', params: { projectName: prev.name } }" class="nav-button prev">
+      <router-link
+        :to="{ name: 'project', params: { projectName: prev.name } }"
+        class="nav-button prev"
+      >
         <arrow-navigation />
         PREVIOUS WORK
       </router-link>
 
-      <router-link :to="{ name: 'project', params: { projectName: next.name } }" class="nav-button next">
+      <router-link
+        :to="{ name: 'project', params: { projectName: next.name } }"
+        class="nav-button next"
+      >
         NEXT WORK
         <arrow-navigation />
       </router-link>
@@ -77,15 +88,19 @@
 
       <div class="cards">
         <div class="card" v-for="p, i in others" :key="i">
-          <router-link :to="{ name: 'project', params: { projectName: p.name } }">
-            <async-frame 
+          <router-link
+            :to="{ name: 'project', params: { projectName: p.name } }"
+            :title="'View more details about `' + p.title + '`'"
+          >
+            <async-frame
               :iframeSrc="getPath(p.path)"
               :iframeClass="{ white_bg: p.white_bg, other: true }"
             />
 
             <div class="other-text flex-col-start">
               <h4 class="h4">{{ p.title }}</h4>
-              <p class="other-p">{{ p.stack.join(', ')}}</p>
+
+              <p class="other-p">{{ p.stack.join(', ') }}</p>
             </div>
           </router-link>
         </div>
@@ -146,7 +161,7 @@ onMounted(() => window.scrollTo(0, 0))
 </script>
 
 <style lang="scss">
-.project-page{
+.project-page {
   .preview {
     width: 100%;
     aspect-ratio: 1 / 1;

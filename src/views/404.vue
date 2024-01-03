@@ -3,15 +3,13 @@
     <h2 class="h2">
       404
       <high-light />
-      <br>
+      <br />
       <p class="p1">
-        In the vast realm of possibilities,<br>
-        the route <b>`{{ useRoute().path }}`</b> exists<br>
-        in the twilight between creation and nonexistence.<br>
-        <br>
-        <i>
-          It is a path not yet traveled or, perhaps, already forgotten...
-        </i>
+        In the vast realm of possibilities,<br />
+        the route <b>`{{ useRoute().path }}`</b> exists<br />
+        in the twilight between creation and nonexistence.<br />
+        <br />
+        <i> It is a path not yet traveled or, perhaps, already forgotten... </i>
       </p>
     </h2>
 
@@ -23,15 +21,15 @@
       :bg="'var(--bg50)'"
       class="font-variant"
     >
-    go back
+      go back
     </active-element>
   </div>
 </template>
 
 <script setup>
-import HighLight from '@/components/HighLight.vue'
-import ActiveElement from '@/components/ActiveElement.vue'
-import { useRoute, useRouter } from 'vue-router'
+import HighLight from "@/components/HighLight.vue"
+import ActiveElement from "@/components/ActiveElement.vue"
+import { useRoute, useRouter } from "vue-router"
 
 const router = useRouter()
 const goBack = () => {
@@ -49,11 +47,11 @@ const goBack = () => {
 }
 
 h2 {
-  top: -15rem;
+  top: -10rem;
   text-align: center;
   font-size: 20rem;
   position: relative;
-  margin-bottom: -10rem;
+  margin-bottom: -5rem;
   .highlight {
     position: absolute;
     top: -2rem;

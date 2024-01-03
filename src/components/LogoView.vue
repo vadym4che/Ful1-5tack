@@ -1,9 +1,20 @@
 <template>
-  <a href="http://bit.ly/Ful1-5tack" class="logo-link" :style="{ fontSize: size, lineHeight: size }" title="CV.pdf" :class="logoClass">
+  <a
+    href="http://bit.ly/Ful1-5tack"
+    class="logo-link"
+    title="My CV .pdf"
+    :class="logoClass"
+    :style="{ fontSize: size, lineHeight: size }"
+  >
     <span class="logo-span vadym font-variant">
       vadym4
     </span>
-      <img src="/logo.png" alt="logo" class="logo-image" :style="{ height: size }">
+      <img
+        src="/logo.png"
+        alt="logo"
+        class="logo-image"
+        :style="{ height: size }"
+      >
     <span class="logo-span he font-variant">
       he
     </span>

@@ -1,7 +1,7 @@
 <template>
   <section class="head content flex-col-center">
     <h1 class="h1">
-      Crafting Digital Solutions<br>from End to End.
+      Crafting Digital Solutions<br />from End to End.
       <high-light />
     </h1>
 
@@ -13,7 +13,17 @@
       :bg="'var(--accent0)'"
       class="font-variant"
     >
-      explore works <b style="display: inline-block; transform: scale(1.5, 2.5) translate(25%, 0%); position: relative; top: -12%;" content="→">→</b>
+      explore works
+      <b
+        style="
+          display: inline-block;
+          transform: scale(1.5, 2.5) translate(25%, 0%);
+          position: relative;
+          top: -12%;
+        "
+        content="→"
+        >→</b
+      >
     </active-element>
   </section>
 
@@ -22,11 +32,14 @@
       <div class="text">
         <h2 class="h2">
           <high-light />
-          Let’s get to<br>know me<br>closer
+          Let’s get to<br />know me<br />closer
         </h2>
 
         <p class="p3">
-          Hello, I am Vadym Chervoniak, a Full-stack developer based in Ukraine. My expertise includes HTML, CSS, JavaScript, React, Vue, Node.js, various databases, cloud computing, and integrating with different APIs, helping me to deliver complex web development solutions.
+          Hello, I am Vadym Chervoniak, a Full-stack developer based in Ukraine.
+          My expertise includes HTML, CSS, JavaScript, React, Vue, Node.js,
+          various databases, cloud computing, and integrating with different
+          APIs, helping me to deliver complex web development solutions.
         </p>
       </div>
 
@@ -42,8 +55,7 @@
       </active-element>
     </div>
 
-    <div class="right">
-    </div>
+    <div class="right"></div>
   </section>
 
   <section class="projects flex-col-center">
@@ -60,7 +72,17 @@
       :bg="'var(--bg50)'"
       class="font-variant"
     >
-      explore more <b style="display: inline-block; transform: scale(1.5, 2.5) translate(25%, 0%); position: relative; top: -0.2rem;" content="→">→</b>
+      explore more
+      <b
+        style="
+          display: inline-block;
+          transform: scale(1.5, 2.5) translate(25%, 0%);
+          position: relative;
+          top: -0.2rem;
+        "
+        content="→"
+        >→</b
+      >
     </active-element>
 
     <three-view />
@@ -70,12 +92,16 @@
 </template>
 
 <script setup>
-import { defineAsyncComponent, onMounted } from 'vue'
-import HighLight from '@/components/HighLight.vue'
-import ActiveElement from '@/components/ActiveElement.vue'
+import { defineAsyncComponent, onMounted } from "vue"
+import HighLight from "@/components/HighLight.vue"
+import ActiveElement from "@/components/ActiveElement.vue"
 
-const ThreeView = defineAsyncComponent(() => import('@/components/ThreeView.vue'))
-const TechStack = defineAsyncComponent(() => import('@/components/TechStack.vue'))
+const ThreeView = defineAsyncComponent(() =>
+  import("@/components/ThreeView.vue")
+)
+const TechStack = defineAsyncComponent(() =>
+  import("@/components/TechStack.vue")
+)
 
 onMounted(() => window.scrollTo(0, 0))
 </script>
@@ -127,7 +153,7 @@ onMounted(() => window.scrollTo(0, 0))
   .right {
     width: 100%;
     aspect-ratio: 9 / 10;
-    background: url('@/assets/photo-main.jpg');
+    background: url("@/assets/photo-main.jpg");
     background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -137,7 +163,7 @@ onMounted(() => window.scrollTo(0, 0))
     &::before,
     &::after {
       position: absolute;
-      content: '';
+      content: "";
       border: 0.125rem solid var(--accent0);
     }
 

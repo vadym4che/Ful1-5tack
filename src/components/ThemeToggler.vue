@@ -2,26 +2,28 @@
   <button
     @click="toggleTheme"
     class="theme-toggler"
-    :title="`Toggle theme to ${ theme === 'light' ? 'dark' : 'light' }`"
+    :title="`Toggle theme to ${theme === 'light' ? 'dark' : 'light'}`"
   >
     <span
       id="spot"
-      :style="{ background: `radial-gradient(ellipse at ${offsetX}% ${offsetY}%, var(--accent1), var(--color0))` }"
+      :style="{
+        background: `radial-gradient(ellipse at ${offsetX}% ${offsetY}%, var(--accent1), var(--color0))`,
+      }"
     >
-      {{ theme === 'light' ? '🌙' : '🌞' }}
+      {{ theme === "light" ? "🌙" : "🌞" }}
     </span>
 
-    <h2 style="display: none;">
-      {{ width }} {{ height }}<br>
-      {{ x }} {{ y }}<br>
+    <h2 style="display: none">
+      {{ width }} {{ height }}<br />
+      {{ x }} {{ y }}<br />
       {{ offsetX }} {{ offsetY }}
     </h2>
   </button>
 </template>
 
 <script setup>
-import { ref, onMounted, watch, onUpdated } from 'vue'
-import { useMouse, useWindowSize } from '@vueuse/core'
+import { ref, onMounted, watch, onUpdated } from "vue"
+import { useMouse, useWindowSize } from "@vueuse/core"
 
 const { x, y } = useMouse()
 const { width, height } = useWindowSize()
@@ -29,21 +31,21 @@ const offsetX = ref(50)
 const offsetY = ref(50)
 
 const theme = ref(
-  sessionStorage.getItem('theme')
-    ? sessionStorage.getItem('theme')
-    : window.matchMedia('(prefers-color-scheme: dark)').matches
-      ? 'dark'
-      : 'light'
-  )
+  sessionStorage.getItem("theme")
+    ? sessionStorage.getItem("theme")
+    : window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light"
+)
 
 const toggleTheme = () => {
-  theme.value = theme.value === 'light' ? 'dark' : 'light'
-  sessionStorage.setItem('theme', theme.value)
+  theme.value = theme.value === "light" ? "dark" : "light"
+  sessionStorage.setItem("theme", theme.value)
 }
 
 onMounted(() => {
-  document.documentElement.setAttribute('data-theme', theme.value)
-  sessionStorage.setItem('theme', theme.value)
+  document.documentElement.setAttribute("data-theme", theme.value)
+  sessionStorage.setItem("theme", theme.value)
 })
 
 onUpdated(() => {
@@ -51,7 +53,9 @@ onUpdated(() => {
   offsetY.value = (y.value / height.value) * 100 || 50
 })
 
-watch(theme, (newTheme) => document.documentElement.setAttribute('data-theme', newTheme))
+watch(theme, (newTheme) =>
+  document.documentElement.setAttribute("data-theme", newTheme)
+)
 </script>
 
 <style lang="scss">
@@ -69,17 +73,17 @@ watch(theme, (newTheme) => document.documentElement.setAttribute('data-theme', n
   --color2: #a8a8a8;
   --color3: #949494;
 
-  --accent1: #cb43cb;
-
   --accent0: #4c4;
-  --accent2: hsl(120, 57%, 66%);
   --accent50: #4c48;
+  --accent1: #cb43cb;
+  --accent2: hsl(120, 57%, 69%);
 
-  --scrollbar-thumb: rgb(54,54,54);
-  --scrollbar-track: rgb(90,90,90);
 
-  --scrollbar-thumb_hover: rgb(21,21,21);
-  --scrollbar-track_hover: rgb(106,106,106);
+  --scrollbar-thumb: rgb(54, 54, 54);
+  --scrollbar-track: rgb(90, 90, 90);
+
+  --scrollbar-thumb_hover: rgb(21, 21, 21);
+  --scrollbar-track_hover: rgb(106, 106, 106);
 
   --loader-bg-blend-mode: multiply;
 }
@@ -98,20 +102,19 @@ watch(theme, (newTheme) => document.documentElement.setAttribute('data-theme', n
   --color2: #575757;
   --color3: #6b6b6b;
 
-  --bborder: rgba(255, 255, 2507 0.30);
-  --bbg: rgba(3, 3, 4, 0.50);
-
-  --accent1: #4c4;
+  --bborder: rgba(255, 255, 2507 0.3);
+  --bbg: rgba(3, 3, 4, 0.5);
 
   --accent0: #cb43cb;
-  --accent2: hsl(300, 60%, 80%);
   --accent50: #cb43cb88;
+  --accent1: #4c4;
+  --accent2: hsl(300, 57%, 69%);
 
-  --scrollbar-thumb: rgb(145,145,145);
-  --scrollbar-track: rgb(242,242,242);
+  --scrollbar-thumb: rgb(145, 145, 145);
+  --scrollbar-track: rgb(242, 242, 242);
 
-  --scrollbar-thumb_hover: rgb(45,45,45);
-  --scrollbar-track_hover: rgb(226,226,226);
+  --scrollbar-thumb_hover: rgb(45, 45, 45);
+  --scrollbar-track_hover: rgb(226, 226, 226);
 
   --loader-bg-blend-mode: screen;
 }
@@ -138,7 +141,11 @@ watch(theme, (newTheme) => document.documentElement.setAttribute('data-theme', n
     width: 3.75rem;
     height: 3.75rem;
     border-radius: 50%;
-    background: radial-gradient(ellipse at 0% 0%, var(--accent2), var(--accent1));
+    background: radial-gradient(
+      ellipse at 0% 0%,
+      var(--accent2),
+      var(--accent1)
+    );
   }
 }
 </style>

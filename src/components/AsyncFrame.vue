@@ -34,5 +34,6 @@ onMounted(() => console.log(iframeClass))
 <style lang="scss" scoped>
 .placeholder {
   background-color: var(--bg50);
+  border-radius: 1rem;
 }
 </style>

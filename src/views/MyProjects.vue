@@ -1,44 +1,42 @@
 <template>
   <div class="flex-col-start projects-page">
     <div class="flex-col-start page-header padding-13">
-      <h2 class="h2" style="left: -0.2rem;">
+      <h2 class="h2" style="left: -0.2rem">
         My Works
         <high-light />
       </h2>
-      <p class="p3">
-        Showcase About Works
-      </p>
+      <p class="p3">Showcase About Works</p>
     </div>
 
     <div class="projects-container">
       <div
         class="three"
-        v-for="a, index in projectsToShow"
+        v-for="(a, index) in projectsToShow"
         :key="index"
         :id="'three-' + index"
       >
-        <div v-for="p, i in a" :key="i" class="project">
-          <async-frame 
+        <div v-for="(p, i) in a" :key="i" class="project">
+          <async-frame
             :iframeSrc="getPath(p.path)"
             :iframeClass="{
               vertical: p.orientation === '|',
               horizontal: p.orientation === '-',
               white_bg: p.white_bg,
-              iframe: true
+              iframe: true,
             }"
           />
 
           <div class="title-box">
             <p class="t3">
-              {{ p.tags.join(' | ') }}
+              {{ p.tags.join(" | ") }}
             </p>
 
             <router-link
               class="t2"
-              :to="{ name: 'project', params: { projectName: p.name }}"
-              :title="`get '${p.name}' details`"
+              :to="{ name: 'project', params: { projectName: p.name } }"
+              :title="'View more details about `' + p.title + '`'"
             >
-              {{p.title}}
+              {{ p.title }}
             </router-link>
           </div>
         </div>
@@ -60,16 +58,18 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUpdated } from 'vue'
-import HighLight from '@/components/HighLight.vue'
-import AsyncFrame from '@/components/AsyncFrame.vue'
-import ActiveElement from '@/components/ActiveElement.vue'
-import { chunkedProjects } from '@/assets/projects.js'
-import getPath from '@/helpers/getPath.js'
+import { ref, onMounted, onUpdated } from "vue"
+import HighLight from "@/components/HighLight.vue"
+import AsyncFrame from "@/components/AsyncFrame.vue"
+import ActiveElement from "@/components/ActiveElement.vue"
+import { chunkedProjects } from "@/assets/projects.js"
+import getPath from "@/helpers/getPath.js"
 
 const itemsToShow = ref(2)
 const projectsToShow = ref(chunkedProjects.slice(0, itemsToShow.value))
-const isLimitReached = ref(projectsToShow.value.length === chunkedProjects.length)
+const isLimitReached = ref(
+  projectsToShow.value.length === chunkedProjects.length
+)
 
 const handleLoadMore = () => {
   if (chunkedProjects.length - 1 > itemsToShow.value) {
@@ -86,7 +86,7 @@ const handleScroll = () => {
   const lastElement = document.getElementById(lastElementId)
 
   if (lastElement) {
-    lastElement.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    lastElement.scrollIntoView({ behavior: "smooth", block: "start" })
   }
 }
 
@@ -101,7 +101,8 @@ onUpdated(() => handleScroll())
     gap: 3rem;
   }
 
-  .projects-container, .three {
+  .projects-container,
+  .three {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -131,7 +132,7 @@ onUpdated(() => handleScroll())
     justify-content: space-between;
     padding-bottom: 0.5rem;
 
-    &:has(.vertical){
+    &:has(.vertical) {
       @media (orientation: landscape) {
         & {
           height: calc(1.2 * (40dvw * 0.666 - 1.5rem));
@@ -146,7 +147,7 @@ onUpdated(() => handleScroll())
       }
     }
 
-    &:has(.horizontal){
+    &:has(.horizontal) {
       @media (orientation: landscape) {
         & {
           height: calc(1.24 * (40dvw * 0.333 - 1.6rem));
@@ -225,7 +226,7 @@ onUpdated(() => handleScroll())
     }
   }
 
-  .load-more{
+  .load-more {
     display: inline-flex;
     align-items: center;
     justify-content: center;
