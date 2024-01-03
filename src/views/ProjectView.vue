@@ -110,16 +110,16 @@
 </template>
 
 <script setup>
-import { ref, watchEffect, computed, onMounted } from 'vue'
+import { ref, watchEffect, computed, onMounted, defineAsyncComponent } from 'vue'
 import { useRoute } from 'vue-router'
 import { projects } from '@/assets/projects.js'
 import HighLight from '@/components/HighLight.vue'
 import ArrowNavigation from '@/components/ArrowNavigation.vue'
-import AsyncFrame from '@/components/AsyncFrame.vue'
 import getPath from '@/helpers/getPath.js'
 import getSrc from '@/helpers/getSrc.js'
 import getThreeRandom from '@/helpers/getThreeRandom'
 
+const AsyncFrame = defineAsyncComponent(() => import("@/components/AsyncFrame.vue"))
 const route = useRoute()
 const projectName = ref(route.params.projectName)
 const project = ref(getProjectDetails(projectName.value))

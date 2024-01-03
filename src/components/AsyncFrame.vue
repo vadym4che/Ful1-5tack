@@ -17,8 +17,8 @@
 </template>
 
 <script setup>
-import { ref, defineProps, onMounted } from "vue"
-import LoaderView from "@/components/LoaderView.vue"
+import { ref, defineProps, onMounted, defineAsyncComponent } from "vue"
+const LoaderView = defineAsyncComponent(() => import("@/components/LoaderView.vue"))
 
 const { iframeSrc, iframeStyle, iframeClass, three } = defineProps([
   "iframeSrc",

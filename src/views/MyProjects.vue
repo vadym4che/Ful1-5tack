@@ -58,13 +58,13 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUpdated } from "vue"
+import { ref, onMounted, onUpdated, defineAsyncComponent } from "vue"
 import HighLight from "@/components/HighLight.vue"
-import AsyncFrame from "@/components/AsyncFrame.vue"
 import ActiveElement from "@/components/ActiveElement.vue"
 import { chunkedProjects } from "@/assets/projects.js"
 import getPath from "@/helpers/getPath.js"
 
+const AsyncFrame = defineAsyncComponent(() => import("@/components/AsyncFrame.vue"))
 const itemsToShow = ref(2)
 const projectsToShow = ref(chunkedProjects.slice(0, itemsToShow.value))
 const isLimitReached = ref(

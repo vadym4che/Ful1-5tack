@@ -37,11 +37,12 @@
 </template>
 
 <script setup>
+import { defineAsyncComponent } from "vue"
 import { projects } from '@/assets/projects.js'
-import AsyncFrame from '@/components/AsyncFrame.vue'
 import getPath from '@/helpers/getPath.js'
 import getThreeRandom from '@/helpers/getThreeRandom'
 
+const AsyncFrame = defineAsyncComponent(() => import("@/components/AsyncFrame.vue"))
 const three = getThreeRandom(projects)
 </script>
 
