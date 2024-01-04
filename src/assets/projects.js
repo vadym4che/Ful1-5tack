@@ -486,7 +486,7 @@ const horizontal = [
     name: 'my-server-io',
     stack: ['html' ,'css', 'js'],
     tags: ['UI', 'FE', 'API'],
-    desc: 'Discover the myserver.io project, a web application offering a seamless interface for downloading and accessing client data. This README provides an insightful overview of the project, showcasing various use-cases of modern CSS features. Witness the magic of custom-shaped areas that appear as if cut out from a paper-sheet, achieved through the clever use of CSS clip-path.',
+    desc: 'Discover the myserver.io project, a web application offering a seamless interface for downloading and accessing client data. The project, showcasing various use-cases of modern CSS features. Witness the magic of custom-shaped areas that appear as if cut out from a paper-sheet, achieved through the clever use of CSS clip-path.',
     path: 'my-server-io',
     orientation: '-',
     deps: [],
