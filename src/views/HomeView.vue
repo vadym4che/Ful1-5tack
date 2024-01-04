@@ -9,17 +9,15 @@
       path="projects"
       :padding="'1.5rem 2.5rem'"
       :fontSize="'1.625rem'"
-      :borderRadius="'6.5rem'"
+      :borderRadius="'2.3125rem'"
       :bg="'var(--accent0)'"
-      class="font-variant"
     >
-      explore works
+      EXPLORE WORKS
       <b
         style="
           display: inline-block;
-          transform: scale(1.5, 2.5) translate(25%, 0%);
+          transform: scale(1.5, 2.5) translate(25%, -8%);
           position: relative;
-          top: -12%;
         "
         content="→"
         >→</b
@@ -47,7 +45,7 @@
         path="about"
         :padding="'1.5rem 3rem'"
         :fontSize="'1.25rem'"
-        :borderRadius="'2rem'"
+        :borderRadius="'2.125rem'"
         :bg="'var(--accent0)'"
         class="font-variant"
       >
@@ -68,17 +66,15 @@
       path="projects"
       :padding="'1.5rem 2.5rem'"
       :fontSize="'1.33rem'"
-      :borderRadius="'6.5rem'"
+      :borderRadius="'2.166rem'"
       :bg="'var(--bg50)'"
-      class="font-variant"
     >
-      explore more
+      EXPLORE MORE
       <b
         style="
           display: inline-block;
-          transform: scale(1.5, 2.5) translate(25%, 0%);
+          transform: scale(1.5, 2.5) translate(25%, -8%);
           position: relative;
-          top: -0.2rem;
         "
         content="→"
         >→</b

@@ -15,7 +15,7 @@
         :action="goBack"
         :padding="'3rem 5rem'"
         :fontSize="'2.5rem'"
-        :borderRadius="'6.25rem'"
+        :borderRadius="'4.25rem'"
         :bg="'var(--bg50)'"
         class="font-variant go-back"
       >

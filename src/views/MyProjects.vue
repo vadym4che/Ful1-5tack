@@ -46,7 +46,7 @@
         v-if="!isLimitReached"
         :padding="'1.5rem 2.5rem'"
         :fontSize="'1.33rem'"
-        :borderRadius="'6.5rem'"
+        :borderRadius="'2.166rem'"
         :bg="'var(--bg50)'"
         class="font-variant load-more"
         :action="handleLoadMore"

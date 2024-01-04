@@ -42,9 +42,9 @@
           </label>
 
           <active-element
-            :padding="'0rem 0rem'"
+            :padding="'0'"
             :fontSize="'2.1rem'"
-            :borderRadius="'6.5rem'"
+            :borderRadius="'1.75rem'"
             :bg="'var(--accent0)'"
             class="font-variant"
           >
@@ -214,7 +214,7 @@ button {
   height: 3.5rem;
   background: var(--accent0);
   border-color: transparent;
-  border-radius: 2rem;
+  border-radius: 1.75rem;
   border-width: 0.125rem;
   padding: 0;
   margin: 0;
