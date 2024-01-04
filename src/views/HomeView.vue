@@ -13,7 +13,7 @@
       :bg="'var(--accent0)'"
     >
       EXPLORE WORKS&nbsp;
-      <arrow-right />
+      <arrow-right height="1.625rem"/>
     </active-element>
   </section>
 
@@ -62,7 +62,7 @@
       :bg="'var(--bg50)'"
     >
       EXPLORE MORE&nbsp;
-      <arrow-right />
+      <arrow-right height="1.33rem" />
     </active-element>
 
     <three-view />
