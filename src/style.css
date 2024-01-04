@@ -98,62 +98,72 @@ button:active {
 
 @keyframes jump-right {
   0% {
-    transform: scale(1.5, 2.5) translate(25%, -8%);
-    -webkit-transform: scale(1.5, 2.5) translate(25%, -8%);
-    -moz-transform: scale(1.5, 2.5) translate(25%, -8%);
-    -ms-transform: scale(1.5, 2.5) translate(25%, -8%);
-    -o-transform: scale(1.5, 2.5) translate(25%, -8%);
+    transform: translate(0);
+    -webkit-transform: translate(0);
+    -moz-transform: translate(0);
+    -ms-transform: translate(0);
+    -o-transform: translate(0);
 }
 
   16.666% {
-    transform: scale(1.5, 2.5) translate(50%, -8%);
-    -webkit-transform: scale(1.5, 2.5) translate(50%, -8%);
-    -moz-transform: scale(1.5, 2.5) translate(50%, -8%);
-    -ms-transform: scale(1.5, 2.5) translate(50%, -8%);
-    -o-transform: scale(1.5, 2.5) translate(50%, -8%);
+    transform: translateX(50%);
+    -webkit-transform: translateX(50%);
+    -moz-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    -o-transform: translateX(50%);
 }
 
   33.333% {
-    transform: scale(1.5, 2.5) translate(25%, -8%);
-    -webkit-transform: scale(1.5, 2.5) translate(25%, -8%);
-    -moz-transform: scale(1.5, 2.5) translate(25%, -8%);
-    -ms-transform: scale(1.5, 2.5) translate(25%, -8%);
-    -o-transform: scale(1.5, 2.5) translate(25%, -8%);
+    transform: translate(0);
+    -webkit-transform: translate(0);
+    -moz-transform: translate(0);
+    -ms-transform: translate(0);
+    -o-transform: translate(0);
 }
 
   50% {
-    transform: scale(1.5, 2.5) translate(66.6%, -8%);
-    -webkit-transform: scale(1.5, 2.5) translate(66.6%, -8%);
-    -moz-transform: scale(1.5, 2.5) translate(66.6%, -8%);
-    -ms-transform: scale(1.5, 2.5) translate(66.6%, -8%);
-    -o-transform: scale(1.5, 2.5) translate(66.6%, -8%);
+    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
 }
 
   66.666% {
-    transform: scale(1.5, 2.5) translate(25%, -8%);
-    -webkit-transform: scale(1.5, 2.5) translate(25%, -8%);
-    -moz-transform: scale(1.5, 2.5) translate(25%, -8%);
-    -ms-transform: scale(1.5, 2.5) translate(25%, -8%);
-    -o-transform: scale(1.5, 2.5) translate(25%, -8%);
+    transform: translate(0);
+    -webkit-transform: translate(0);
+    -moz-transform: translate(0);
+    -ms-transform: translate(0);
+    -o-transform: translate(0);
 }
   83.333% {
-    transform: scale(1.5, 2.5) translate(83.3%, -8%);
-    -webkit-transform: scale(1.5, 2.5) translate(83.3%, -8%);
-    -moz-transform: scale(1.5, 2.5) translate(83.3%, -8%);
-    -ms-transform: scale(1.5, 2.5) translate(83.3%, -8%);
-    -o-transform: scale(1.5, 2.5) translate(83.3%, -8%);
+    transform: translateX(150%);
+    -webkit-transform: translateX(150%);
+    -moz-transform: translateX(150%);
+    -ms-transform: translateX(150%);
+    -o-transform: translateX(150%);
 }
 
   100% {
-    transform: scale(1.5, 2.5) translate(25%, -8%);
-    -webkit-transform: scale(1.5, 2.5) translate(25%, -8%);
-    -moz-transform: scale(1.5, 2.5) translate(25%, -8%);
-    -ms-transform: scale(1.5, 2.5) translate(25%, -8%);
-    -o-transform: scale(1.5, 2.5) translate(25%, -8%);
+    transform: translate(0);
+    -webkit-transform: translate(0);
+    -moz-transform: translate(0);
+    -ms-transform: translate(0);
+    -o-transform: translate(0);
 }
 }
 
-*:has(b[content="→"]):hover>b {
+b[content='→'] {
+  position: absolute;
+  right: 2rem;
+  transform: scale(1.5, 2.5) translate(0, -27%);
+  -webkit-transform: scale(1.5, 2.5) translate(0, -27%);
+  -moz-transform: scale(1.5, 2.5) translate(0, -27%);
+  -ms-transform: scale(1.5, 2.5) translate(0, -27%);
+  -o-transform: scale(1.5, 2.5) translate(0, -27%);
+}
+
+*:has(.arrow-right):hover>.arrow-right {
   animation: jump-right 3s cubic-bezier(0.165, 0.84, 0.44, 1);
   -webkit-animation: jump-right 3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }

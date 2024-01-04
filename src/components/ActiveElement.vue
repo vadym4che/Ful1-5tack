@@ -63,8 +63,13 @@ const handleClick = () => {
 
 <style lang="scss">
 .active-element {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   color: var(--color0);
   text-shadow: 0 0 1rem var(--bg0);
+  line-height: 100%;
   position: relative;
   overflow: hidden;
   font-weight: bold;

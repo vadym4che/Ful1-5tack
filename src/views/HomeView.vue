@@ -12,16 +12,8 @@
       :borderRadius="'2.3125rem'"
       :bg="'var(--accent0)'"
     >
-      EXPLORE WORKS
-      <b
-        style="
-          display: inline-block;
-          transform: scale(1.5, 2.5) translate(25%, -8%);
-          position: relative;
-        "
-        content="→"
-        >→</b
-      >
+      EXPLORE WORKS&nbsp;
+      <arrow-right />
     </active-element>
   </section>
 
@@ -69,16 +61,8 @@
       :borderRadius="'2.166rem'"
       :bg="'var(--bg50)'"
     >
-      EXPLORE MORE
-      <b
-        style="
-          display: inline-block;
-          transform: scale(1.5, 2.5) translate(25%, -8%);
-          position: relative;
-        "
-        content="→"
-        >→</b
-      >
+      EXPLORE MORE&nbsp;
+      <arrow-right />
     </active-element>
 
     <three-view />
@@ -91,6 +75,7 @@
 import { defineAsyncComponent, onMounted } from 'vue'
 import HighLight from '@/components/HighLight.vue'
 import ActiveElement from '@/components/ActiveElement.vue'
+import ArrowRight from '../components/ArrowRight.vue';
 
 const ThreeView = defineAsyncComponent(() =>
   import('@/components/ThreeView.vue')
