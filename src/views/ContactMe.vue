@@ -18,6 +18,7 @@
               type="text"
               v-model="name"
               required
+              autocomplete="name"
               aria-label="name-input"
             />
           </label>
