@@ -103,9 +103,9 @@ onMounted(() => window.scrollTo(0, 0))
 }
 
 .hero {
+  width: 100%;
   display: grid;
   grid-template-columns: 4fr 3fr;
-  width: 100%;
   gap: 6rem;
   align-items: center;
   .left {

@@ -1,6 +1,6 @@
 <template>
   <div class="flex-col-center not-found">
-    <h2 class="h2">
+    <h2 class="h2 flex-col-center">
       404
       <high-light />
       <p class="p1">
@@ -40,9 +40,6 @@ const goBack = () => {
 .not-found {
   width: 100%;
   height: 100dvh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 h2 {
@@ -50,10 +47,6 @@ h2 {
   text-align: center;
   font-size: 20rem;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   width: 100%;
 
   .highlight {

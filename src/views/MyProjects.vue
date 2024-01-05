@@ -172,8 +172,8 @@ onUpdated(() => handleScroll())
     &:has(.vertical) .title-box {
       display: flex;
       flex-direction: column;
-      gap: 1rem;
       justify-content: space-between;
+      gap: 1rem;
     }
 
     @media (max-width: 1000px) {

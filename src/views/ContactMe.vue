@@ -254,11 +254,10 @@ textarea {
 }
 
 .address {
-  display: grid;
-  align-items: center;
-  gap: 3rem;
   display: flex;
+  align-items: center;
   justify-content: space-around;
+  gap: 3rem;
   margin-bottom: 10rem;
 }
 </style>
