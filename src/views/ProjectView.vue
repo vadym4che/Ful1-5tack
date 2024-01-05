@@ -12,7 +12,7 @@
 
     <div class="project-details flex-col-start">
       <async-frame
-        :iframeSrc="getPath(project.path)"
+        :iframeSrc="demo"
         :iframeClass="{ white_bg: project.white_bg, preview: true }"
       />
 
@@ -35,7 +35,13 @@
           <b>
             Source:&nbsp;
           </b>
-          <a :href="source" target="_blank" class="source">{{ source }}</a>
+          <a :href="source" target="_blank" class="source" title="GitHub Repository">{{ source }}</a>
+        </p>
+        <p class="p4">
+          <b>
+            Demo:&nbsp;
+          </b>
+          <a :href="demo" target="_blank" class="demo" title="Live Demo">{{ demo }}</a>
         </p>
         <p class="p4" v-if="project.deps.length">
           <b>Libraries usage:</b><br>
@@ -126,6 +132,7 @@ const route = useRoute()
 const projectName = ref(route.params.projectName)
 const project = ref(getProjectDetails(projectName.value))
 const source = computed(() => getSrc(projectName.value))
+const demo = computed(() => getPath(project.value.path))
 const curIdx = ref(getCurrentProjectIndex())
 const prev = ref(getPreviousProject())
 const next = ref(getNextProject())
@@ -189,7 +196,8 @@ onMounted(() => window.scrollTo(0, 0))
     font-size: 2rem;
   }
 
-  .source:not(:hover) {
+  .source:not(:hover),
+  .demo:not(:hover) {
     text-decoration: underline;
   }
 
