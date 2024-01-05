@@ -7,7 +7,7 @@
 
     <active-element
       path="projects"
-      :padding="'1.5rem 2.5rem'"
+      :padding="'1.5rem 2.67rem'"
       :fontSize="'1.625rem'"
       :borderRadius="'2.3125rem'"
       :bg="'var(--accent0)'"
