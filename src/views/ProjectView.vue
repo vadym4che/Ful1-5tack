@@ -21,13 +21,13 @@
 
         <p class="p4">
           <b>
-            Category:&nbsp;
+            Tech area:&nbsp;
           </b>
           {{ project.tags.join(' | ') }}
         </p>
         <p class="p4">
           <b>
-            Stack:&nbsp;
+            Tech stack:&nbsp;
           </b>
           {{ project.stack.join(', ') }}
         </p>
@@ -35,7 +35,7 @@
           <b>
             Source:&nbsp;
           </b>
-          <a :href="source" target="_blank">{{ source }}</a>
+          <a :href="source" target="_blank" class="source">{{ source }}</a>
         </p>
         <p class="p4" v-if="project.deps.length">
           <b>Libraries usage:</b><br>
@@ -187,6 +187,10 @@ onMounted(() => window.scrollTo(0, 0))
   .h3 {
     margin-top: 4rem;
     font-size: 2rem;
+  }
+
+  .source:not(:hover) {
+    text-decoration: underline;
   }
 
   pre {

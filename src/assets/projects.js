@@ -124,7 +124,7 @@ const vertical = [
     name: 'weather-app',
     stack: ['vue', 'js', 'css'],
     tags: ['UI', 'FE', 'API'],
-    desc: 'The Vue.js Weather App is a straightforward web application designed to provide users with real-time weather information for various cities. It offers essential features such as viewing weather data for multiple cities, sorting the city list by different criteria, adding new cities, and removing cities. The app boasts a responsive design for both landscape and portrait orientations, ensuring a user-friendly experience. Powered by Vue.js, the Progressive JavaScript Framework, it delivers a seamless and efficient weather viewing experience.',
+    desc: 'The Vue.js Weather App is a straightforward web application designed to provide users with real-time weather information for various cities. It offers essential features such as viewing weather data for multiple cities, sorting the city list by different criteria, adding new cities, and removing cities.\nThe app boasts a responsive design for both landscape and portrait orientations, ensuring a user-friendly experience. Powered by Vue.js, the Progressive JavaScript Framework, it delivers a seamless and efficient weather viewing experience.',
     path: 'weather-app',
     orientation: '|',
     deps: [
@@ -195,7 +195,18 @@ const vertical = [
     desc: 'Introducing MyBIKE™, a modern web page dedicated to providing information about diverse bike models and their features. This responsive web design exemplifies clean aesthetics and offers users an easy-to-navigate platform for exploring and comparing different bikes. The project employs semantic HTML and CSS to enhance the overall user experience, with a special touch added through shadow-glow and motive animations.',
     path: 'layout_miami',
     orientation: '|',
-    deps: [],
+    deps: [
+      "colors ^1.3.3",
+      "eslint ^5.16.0",
+      "eslint-plugin-node ^9.0.1",
+      "gh-pages 2.0.0",
+      "gulp-htmllint 0.0.16",
+      "node-sass ^4.14.1",
+      "parcel ^1.12.4",
+      "stylelint ^13.5.0",
+      "stylelint-config-recommended-scss ^3.3.0",
+      "stylelint-scss ^3.17.2"
+    ],
   },
   {
     title: 'Multilayout clock widget',
@@ -315,7 +326,7 @@ const horizontal = [
     name: 'abz-agency-test-assignment',
     stack: ['html', 'css', 'js', 'react'],
     tags: ['UI', 'FE', 'API'],
-    desc: 'This project encompasses a comprehensive set of tasks, covering various aspects of web development:\n\n1. **Working with Mockups (HTML/CSS):**\n   - Create a single page with a minimalist design, adhering to the Figma project mockup.\n\n2. **Working with REST API (GET):**\n   - Implement the \'Working with a GET request\' block following the API documentation.\n   - Display six users on the API request result page, sorted by registration date (newest first).\n   - Utilize the OpenAPI Documentation for reference.\n\n3. **Working with REST API (POST) - Registration Form:**\n   - Implement front-end validation and business logic based on mockups and API documentation.\n   - Upon successful registration, update the user list in the \'Working with a GET request\' block.\n\n4. **Website Optimization (Bonus Task):**\n   - Optimize CSS, JS, images, and other resources for improved performance.\n\nAdditionally, custom tooltip enhancements have been developed, providing a polished user interface comparable to popular UI libraries like MUI.',
+    desc: 'This project encompasses a comprehensive set of tasks, covering various aspects of web development:\n\n1. Working with Mockups (HTML/CSS):\n   - Create a single page with a minimalist design, adhering to the Figma project mockup.\n\n2. Working with REST API (GET):\n   - Implement the \'Working with a GET request\' block following the API documentation.\n   - Display six users on the API request result page, sorted by registration date (newest first).\n   - Utilize the OpenAPI Documentation for reference.\n\n3. Working with REST API (POST) - Registration Form:\n   - Implement front-end validation and business logic based on mockups and API documentation.\n   - Upon successful registration, update the user list in the \'Working with a GET request\' block.\n\n4. Website Optimization:\n   - Optimize CSS, JS, images, and other resources for improved performance.\n\nAdditionally, custom tooltip enhancements have been developed, providing a polished user interface comparable to popular UI libraries like MUI.',
     path: 'abz-agency-test-assignment',
     orientation: '-',
     deps: [
@@ -407,17 +418,26 @@ const horizontal = [
     name: 'react_dynamic-list-of-todos',
     stack: ['html' ,'css', 'js', 'react'],
     tags: ['UI', 'FE', 'API'],
-    desc: '',
+    desc: 'This is a React.js application that allows you to manage a dynamic list of todos. You can filter and search for todos based on their status and title. Additionally, it supports viewing individual todo details.\n\nFeatures:\n+ Display a list of todos.\n+ Filter todos by status (All, Active, Completed).\n+ Search for todos by title.\n+ View individual todo details in a modal.\n+ Error handling for failed data loading.',
     path: 'react_dynamic-list-of-todos',
     orientation: '-',
-    deps: [],
+    deps: [
+      "@cypress/react ^5.12.4",
+      "@fortawesome/fontawesome-free ^6.1.1",
+      "bulma ^0.9.4",
+      "classnames ^2.3.1",
+      "postcss ^8.4.12",
+      "react ^17.0.2",
+      "react-dom ^17.0.2",
+      "react-scripts ^4.0.3"
+    ],
   },
   {
     title: 'React router CRM-table',
     name: 'react_people-table-basics',
     stack: ['CSS', 'JS', 'React', 'Router'],
     tags: ['UI', 'FE', 'API'],
-    desc: 'This is a React.js application that displays a table of people and allows users to browse details of each person. It uses a React Router for navigation and displays information in a user-friendly manner.\n\n There are real people tables displayed with interesting heritage relationships, which are highlighted interactively.',
+    desc: 'This is a React.js application that displays a table of people and allows users to browse details of each person. It uses a React Router for navigation and displays information in a user-friendly manner.\n\nThere are real people tables displayed with interesting heritage relationships, which are highlighted interactively.',
     path: 'react_people-table-basics/#/people',
     orientation: '-',
     deps: [
@@ -435,10 +455,14 @@ const horizontal = [
     name: 'travel-app-vue',
     stack: ['vue', 'js', 'router'],
     tags: ['UI', 'FE', 'API'],
-    desc: '',
+    desc: 'This is implementation of course from:\nhttps://vueschool.io/courses/vue-router-for-everyone.\nUnlock the power of Vue.js Single Page Applications (SPA’s) with the Vue Router. This comprehensive course teaches you the ins and outs of creating dynamic and efficient SPAs, enhancing user experiences through impressive page load speed performance. Whether you\'re aiming to build rapid prototypes or full-blown Vue.js SPAs, this course has you covered.\nKey-points:\n* Scaffold a new Vue.js project with Vue Router using Vue CLI GUI.\n* Create routes, including named routes, for seamless navigation. Implement lazy loading for optimized resource usage.\n* Work with Vue Router Params and pass them as props to components. Master the creation of dynamic and nested routes.\n* Understand and enable HTML5 History Mode for cleaner URLs.\n* Enhance user experience with impressive route transitions.\n* Handle 404 errors gracefully with custom Vue Router pages.\n* Explore navigation guards and create authentication middleware.\n* And much more to elevate your Vue.js skills.\nPrerequisites:\nBasic understanding of Vue.js is recommended. If you\'re new to Vue.js and components, consider watching Vue.js Fundamentals and Vue.js Components Fundamentals before diving into this course.',
     path: 'travel-app-vue',
     orientation: '-',
-    deps: [],
+    deps: [
+      "core-js ^3.8.3",
+      "vue ^3.2.13",
+      "vue-router ^4.0.3"
+    ],
     white_bg: true,
   },
   {
@@ -518,7 +542,7 @@ const horizontal = [
     name: 'clicker-js',
     stack: ['html', 'css', 'js'],
     tags: ['UI', 'FE', 'API'],
-    desc: 'Engage in a thrilling clicking adventure with clicker.js, a web application that invites users to play a clicking game and keep tabs on their scores. Here\'s how to make the most of it:\n1. Open clicker.js in a web browser to kickstart the clicking excitement.\n2. Enter your nickname in the input field and click the \'start\' button to initiate the clicking game.\n3. Click the \'click me!\' button as rapidly as possible within the time limit.\n4. After the game concludes, receive your score and choose to view your all-time best result or clear your best result.\n5. Explore the leaderboard to see the best results from all users.\n6. Enjoy the clicking game and strive to surpass your own high score!\n\nTIP: Keep your mouse alive by not sticking around for too long with this game! :)\n\nHappy playing!',
+    desc: 'Engage in a thrilling clicking adventure with clicker.js, a web application that invites users to play a clicking game and keep tabs on their scores.\nHere\'s how to make the most of it:\n1. Open clicker.js in a web browser to kickstart the clicking excitement.\n2. Enter your nickname in the input field and click the \'start\' button to initiate the clicking game.\n3. Click the \'click me!\' button as rapidly as possible within the time limit.\n4. After the game concludes, receive your score and choose to view your all-time best result or clear your best result.\n5. Explore the leaderboard to see the best results from all users.\n6. Enjoy the clicking game and strive to surpass your own high score!\n\nTIP: Keep your mouse alive by not sticking around for too long with this game! :)\n\nHappy playing!',
     path: 'clicker-js',
     orientation: '-',
     deps: [],
