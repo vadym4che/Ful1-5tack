@@ -1,7 +1,0 @@
-import{C as g,s as j,o,c as r,F as k,t as v,b as e,e as n,u as c,w,z as s,d as t,g as C,h as V}from"./index-5n2k_kxt.js";import{g as x}from"./getPath-tNxSOAAP.js";import{g as b}from"./getThreeRandom-iTxOxvIf.js";const y={class:"three three-projects"},N={class:"frame"},T={class:"h4"},A={class:"gap2"},B=e("span",{class:"after"}," ------ ",-1),E={class:"p3"},F=e("span",{class:"dimmed"},"tech stack:  ",-1),P=e("br",null,null,-1),S=e("span",{class:"dimmed"},"tech area:   ",-1),q={__name:"ThreeView",setup(D){const i=C(()=>V(()=>import("./AsyncFrame-8GpwqAyn.js"),__vite__mapDeps([0,1,2,3]))),_=b(g);return(L,R)=>{const l=j("router-link");return o(),r("div",y,[(o(!0),r(k,null,v(c(_),({title:a,name:m,stack:d,tags:p,path:h,white_bg:u},f)=>(o(),r("div",{class:"card",key:f},[e("div",N,[n(c(i),{iframeSrc:c(x)(h),iframeClass:{white_bg:u,iframe:!0},three:!0},null,8,["iframeSrc","iframeClass"])]),e("h4",T,[n(l,{to:{name:"project",params:{projectName:m}},class:"text-wrap",title:"View more details about `"+a+"`"},{default:w(()=>[t(s(a.split(" ").slice(0,-1).join(" "))+" ",1),e("span",A,[t(s(a.split(" ").slice(-1).join(" "))+" ",1),B])]),_:2},1032,["to","title"])]),e("p",E,[F,t(" "+s(d.join(" | ")),1),P,S,t(" "+s(p.join(", ")),1)])]))),128))])}}};export{q as default};
-function __vite__mapDeps(indexes) {
-  if (!__vite__mapDeps.viteFileDeps) {
-    __vite__mapDeps.viteFileDeps = ["assets/AsyncFrame-8GpwqAyn.js","assets/index-5n2k_kxt.js","assets/index-S9qvS9tc.css","assets/AsyncFrame-RTQezexn.css"]
-  }
-  return indexes.map((i) => __vite__mapDeps.viteFileDeps[i])
-}
