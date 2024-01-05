@@ -203,8 +203,17 @@ onMounted(() => window.scrollTo(0, 0))
 
   input,
   textarea {
-    font-style: italic;
-    font-family: monospace;
+    font-family: 'Victor Mono', monospace;
+    font-size: 1.5rem;
+
+    &:not(:focus) {
+      font-weight: 500;
+    }
+
+    &:focus {
+      font-weight: 400;
+      font-style: italic;
+    }
   }
 }
 

@@ -8,7 +8,8 @@
         the route <b class="">{{ useRoute().path }}</b> exists<br />
         in the twilight between creation and nonexistence.<br />
         <hr />
-        <i> It is a path not yet traveled or, perhaps, already forgotten... </i>
+        <hr />
+        <i>...It is a path not yet traveled or, perhaps, already forgotten... </i>
       </p>
 
       <active-element
@@ -57,7 +58,7 @@ h2 {
   .p1 {
     font-size: 3rem;
     line-height: 3.5rem;
-    font-family: monospace;
+    font-family: 'Victor Mono', monospace;
 
     b {
       color: var(--bg0);
