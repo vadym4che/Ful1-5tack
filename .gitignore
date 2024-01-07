@@ -27,3 +27,4 @@ dist-ssr
 .vscode
 desktop.ini
 package-lock.json
+.env
