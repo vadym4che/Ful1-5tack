@@ -37,7 +37,7 @@
     <pre class="rhymes">
 <span>I've earned my own very first PC</span>
 <span>By working summer holidays in 2003</span>
-<span>I'm a `web dev loco` (if you will) code-addict</span>
+<span>I'm a `web dev <em lang="es">loco</em>` (if you will) code-addict</span>
 <span>Devoted to development with JavaScript</span>
 <span>I'm experienced enough to exactly know</span>
 <span>Using DOCs, AI, Google and Stackoverflow</span>
