@@ -76,7 +76,7 @@ onMounted(() => window.scrollTo(0, 0))
 
 .mission-text {
   margin: auto;
-  font-size: 0.9vmax;
+  font-size: 1rem;
   line-height: 1.35rem;
   font-weight: 400;
 
