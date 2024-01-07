@@ -64,6 +64,7 @@ onMounted(() => window.scrollTo(0, 0))
   padding-bottom: 10rem;
 
   span {
+    font-family: 'Victor Mono', monospace;
     display: inline-block;
     font-style: italic;
     width: min(42rem, 75%);
