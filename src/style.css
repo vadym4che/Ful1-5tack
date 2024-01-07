@@ -334,8 +334,8 @@ a.link:active::after {
 }
 
 .t3 {
-  font-size: 0.8125rem;
-  font-weight: 700;
+  font-size: 0.99rem;
+  font-weight: 600;
   line-height: normal;
   letter-spacing: 0.1rem;
 }

@@ -13,7 +13,7 @@
         <h2 class="h2">
           My mission is<br />to make<br />development<br />easier.
         </h2>
-        <p class="mission-text">
+        <p class="t3">
           As individuals, we are all born developers, constantly shaping our
           neural networks as we journey through life. Some of us, including
           myself, have chosen to transform this passion for development into a
@@ -74,15 +74,12 @@ onMounted(() => window.scrollTo(0, 0))
   }
 }
 
-.mission-text {
+.t3 {
   margin: auto;
-  font-size: 1rem;
-  line-height: 1.35rem;
-  font-weight: 400;
 
   @media (orientation: landscape) {
     & {
-      font-size: 175%;
+      font-size: 166%;
       line-height: normal;
     }
   }
