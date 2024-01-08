@@ -542,49 +542,49 @@ vertical.shuffle()
 horizontal.shuffle()
 
 const projects = [
-  vertical[10],
+  vertical[0],
   horizontal[0],
   horizontal[1],
 
-  vertical[6],
-  vertical[7],
-  vertical[8],
+  vertical[1],
+  vertical[2],
+  vertical[3],
 
-  vertical[12],
-  horizontal[4],
-  horizontal[5],
-
+  vertical[4],
   horizontal[2],
   horizontal[3],
-  vertical[11],
+
+  horizontal[4],
+  horizontal[5],
+  vertical[5],
 
   horizontal[6],
   horizontal[7],
-  vertical[13],
+  vertical[6],
 
-  vertical[14],
+  vertical[7],
   horizontal[8],
   horizontal[9],
 
-  vertical[1],
-  vertical[3],
-  vertical[0],
-
-  vertical[5],
-  vertical[2],
-  vertical[4],
-
+  vertical[8],
   vertical[9],
+  vertical[10],
+
+  vertical[11],
+  vertical[12],
+  vertical[13],
+
+  vertical[14],
+  horizontal[10],
+  horizontal[11],
+
   horizontal[12],
   horizontal[13],
+  vertical[15],
 
   horizontal[14],
   horizontal[15],
-  vertical[17],
-
-  horizontal[10],
-  horizontal[11],
-  vertical[15],
+  vertical[16],
 ]
 
 const chunkArray = (arr, chunkSize) => {
@@ -595,6 +595,7 @@ const chunkArray = (arr, chunkSize) => {
     chunkedArray.push(chunk)
   }
 
+  console.log(chunkedArray.length, chunkedArray)
   return chunkedArray
 }
 
